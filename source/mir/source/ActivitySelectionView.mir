@@ -1,0 +1,657 @@
+[ @file = "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\ActivitySelectionView.mc"; @line = 1; @symbol_importdef<0> = [Toybox,1,7,13]; @symbol_importdef<1> = [WatchUi,1,14,21]; ]
+import Toybox.WatchUi;
+[ @file = "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\ActivitySelectionView.mc"; @line = 2; @symbol_importdef<0> = [Toybox,2,7,13]; @symbol_importdef<1> = [Graphics,2,14,22]; ]
+import Toybox.Graphics;
+[ @file = "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\ActivitySelectionView.mc"; @line = 3; @symbol_importdef<0> = [Toybox,3,7,13]; @symbol_importdef<1> = [Timer,3,14,19]; ]
+import Toybox.Timer;
+[ @file = "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\ActivitySelectionView.mc"; @line = 4; @symbol_importdef<0> = [Toybox,4,7,13]; @symbol_importdef<1> = [Lang,4,14,18]; ]
+import Toybox.Lang;
+[ @file = "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\ActivitySelectionView.mc"; @line = 5; @symbol_importdef<0> = [Toybox,5,7,13]; @symbol_importdef<1> = [Application,5,14,25]; ]
+import Toybox.Application;
+[ @file = "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\ActivitySelectionView.mc"; @line = 8; @symbol_classdef = [ActivitySelectionView,8,6,27]; @symbol_extends<0> = [WatchUi,8,36,43]; @symbol_extends<1> = [View,8,44,48]; ]
+class ActivitySelectionView extends WatchUi.View {
+    [ @file = "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\ActivitySelectionView.mc"; @line = 8; ]
+    <init> {
+    }
+    [ @file = "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\ActivitySelectionView.mc"; @line = 8; ]
+    static
+    <init> {
+    }
+    [ @file = "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\ActivitySelectionView.mc"; @line = 9; @position = 16; @symbol_vardef = [mCallback,9,16,25]; ]
+    private
+    var mCallback;
+    [ @file = "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\ActivitySelectionView.mc"; @line = 10; @position = 16; @symbol_vardef = [mTimer,10,16,22]; @symbol_type<0> = [Timer,10,26,31]; @symbol_type<1> = [Timer,10,32,37]; ]
+    private
+    var mTimer as Timer.Timer or Null;
+    [ @file = "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\ActivitySelectionView.mc"; @line = 11; @position = 16; @symbol_vardef = [mTimeoutSeconds,11,16,31]; ]
+    private
+    var mTimeoutSeconds = 5;
+    [ @file = "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\ActivitySelectionView.mc"; @line = 12; @position = 16; @symbol_vardef = [mTimeLeft,12,16,25]; ]
+    private
+    var mTimeLeft;
+    [ @file = "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\ActivitySelectionView.mc"; @line = 15; @symbol_functiondef = [initialize,15,13,23]; @symbol_param<0> = [callback,15,24,32]; ]
+    function initialize(callback) as Void {
+C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_ActivitySelectionView_mc_15_34_19_4_start:
+[ "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\ActivitySelectionView.mc" 16 8 ]
+        symbol [ View %tmp.2 16 8 12 ];
+        %tmp.2 = getv ? :View;
+        symbol [ initialize %tmp.3 16 13 23 ];
+        %tmp.3 = getv function %tmp.2 :initialize;
+        invoke %tmp.2 %tmp.3();
+[ "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\ActivitySelectionView.mc" 17 8 ]
+        %tmp.4 = lgetv %callback;
+        symbol [ callback %tmp.4 17 20 28 ];
+        symbol [ mCallback ? 17 8 17 ];
+        putv self :mCallback %tmp.4;
+[ "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\ActivitySelectionView.mc" 18 8 ]
+        symbol [ mTimeoutSeconds %tmp.6 18 20 35 ];
+        %tmp.6 = getv ? :mTimeoutSeconds;
+        symbol [ mTimeLeft ? 18 8 17 ];
+        putv self :mTimeLeft %tmp.6;
+C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_ActivitySelectionView_mc_15_34_19_4_stop:
+    }
+    [ @file = "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\ActivitySelectionView.mc"; @line = 22; @symbol_functiondef = [onLayout,22,13,21]; @symbol_param<0> = [dc,22,22,24]; @symbol_param<0>_type<0> = [Dc,22,28,30]; ]
+    function onLayout(dc as Dc) as Void {
+    }
+    [ @file = "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\ActivitySelectionView.mc"; @line = 27; @symbol_functiondef = [onShow,27,13,19]; ]
+    function onShow() as Void {
+C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_ActivitySelectionView_mc_27_30_31_4_start:
+[ "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\ActivitySelectionView.mc" 28 8 ]
+        symbol [ mTimeoutSeconds %tmp.2 28 20 35 ];
+        %tmp.2 = getv ? :mTimeoutSeconds;
+        symbol [ mTimeLeft ? 28 8 17 ];
+        putv self :mTimeLeft %tmp.2;
+[ "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\ActivitySelectionView.mc" 29 8 ]
+        symbol [ Timer %tmp.5 29 21 26 ];
+        %tmp.5 = getm $.Toybox.Timer;
+        symbol [ Timer %tmp.6 29 27 32 ];
+        %tmp.6 = getv function ? %tmp.5 :Timer;
+        %tmp.3 = newc %tmp.6 ();
+        symbol [ mTimer ? 29 8 14 ];
+        putv self :mTimer %tmp.3;
+[ "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\ActivitySelectionView.mc" 30 8 ]
+        symbol [ mTimer %tmp.8 30 8 14 ];
+        %tmp.8 = getv ? :mTimer;
+        symbol [ start %tmp.9 30 15 20 ];
+        %tmp.9 = getv function %tmp.8 :start;
+        %tmp.10 = self;
+        symbol [ method %tmp.11 30 21 27 ];
+        %tmp.11 = getv function %tmp.10 :method;
+        %tmp.13 = const :onTimerTick;
+        symbol [ onTimerTick %tmp.13 30 29 40 const ];
+        %tmp.14 = invoke %tmp.10 %tmp.11(%tmp.13);
+        %tmp.15 = 1000;
+        %tmp.16 = true;
+        invoke %tmp.8 %tmp.9(%tmp.14, %tmp.15, %tmp.16);
+C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_ActivitySelectionView_mc_27_30_31_4_stop:
+    }
+    [ @file = "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\ActivitySelectionView.mc"; @line = 34; @symbol_functiondef = [onTimerTick,34,13,24]; ]
+    function onTimerTick() as Void {
+C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_ActivitySelectionView_mc_34_35_46_4_start:
+[ "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\ActivitySelectionView.mc" 35 8 ]
+        symbol [ mTimeLeft %tmp.2 35 20 29 ];
+        %tmp.2 = getv ? :mTimeLeft;
+        %tmp.3 = 1;
+        %tmp.4 = sub %tmp.2 %tmp.3;
+        symbol [ mTimeLeft ? 35 8 17 ];
+        putv self :mTimeLeft %tmp.4;
+[ "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\ActivitySelectionView.mc" 36 8 ]
+C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_ActivitySelectionView_mc_36_8_44_8_if_stmt:
+        symbol [ mTimeLeft %tmp.6 36 12 21 ];
+        %tmp.6 = getv ? :mTimeLeft;
+        %tmp.7 = 0;
+        %tmp.8 = lte %tmp.6 %tmp.7;
+        bf %tmp.8 @C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_ActivitySelectionView_mc_36_8_44_8_if_end;
+C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_ActivitySelectionView_mc_36_8_44_8_if_true:
+C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_ActivitySelectionView_mc_36_28_44_8_start:
+[ "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\ActivitySelectionView.mc" 38 12 ]
+C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_ActivitySelectionView_mc_38_12_41_12_if_stmt:
+        symbol [ mTimer %tmp.10 38 16 22 ];
+        %tmp.10 = getv ? :mTimer;
+        %tmp.11 = null;
+        %tmp.12 = ne %tmp.10 %tmp.11;
+        bf %tmp.12 @C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_ActivitySelectionView_mc_38_12_41_12_if_end;
+C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_ActivitySelectionView_mc_38_12_41_12_if_true:
+C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_ActivitySelectionView_mc_38_32_41_12_start:
+[ "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\ActivitySelectionView.mc" 39 16 ]
+        symbol [ mTimer %tmp.14 39 16 22 ];
+        %tmp.14 = getv ? :mTimer;
+        %tmp.15 = as %tmp.14 { (!Null) };
+        symbol [ stop %tmp.16 39 23 27 ];
+        %tmp.16 = getv function %tmp.15 :stop;
+        invoke %tmp.15 %tmp.16();
+[ "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\ActivitySelectionView.mc" 40 16 ]
+        %tmp.17 = null;
+        symbol [ mTimer ? 40 16 22 ];
+        putv self :mTimer %tmp.17;
+C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_ActivitySelectionView_mc_38_32_41_12_stop:
+        goto @C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_ActivitySelectionView_mc_38_12_41_12_if_end;
+C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_ActivitySelectionView_mc_38_12_41_12_if_end:
+[ "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\ActivitySelectionView.mc" 42 12 ]
+        symbol [ mCallback %tmp.19 42 12 21 ];
+        %tmp.19 = getv ? :mCallback;
+        symbol [ invoke %tmp.20 42 22 28 ];
+        %tmp.20 = getv function %tmp.19 :invoke;
+        symbol [ ACTIVITY_VAGUE %tmp.22 42 29 43 ];
+        %tmp.22 = getv ? :ACTIVITY_VAGUE;
+        invoke %tmp.19 %tmp.20(%tmp.22);
+[ "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\ActivitySelectionView.mc" 43 12 ]
+        symbol [ WatchUi %tmp.23 43 12 19 ];
+        %tmp.23 = getm $.Toybox.WatchUi;
+        symbol [ popView %tmp.24 43 20 27 ];
+        %tmp.24 = getv function %tmp.23 :popView;
+        symbol [ WatchUi %tmp.25 43 28 35 ];
+        %tmp.25 = getm $.Toybox.WatchUi;
+        symbol [ SLIDE_IMMEDIATE %tmp.26 43 36 51 ];
+        %tmp.26 = getv %tmp.25 :SLIDE_IMMEDIATE;
+        invoke %tmp.23 %tmp.24(%tmp.26);
+C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_ActivitySelectionView_mc_36_28_44_8_stop:
+        goto @C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_ActivitySelectionView_mc_36_8_44_8_if_end;
+C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_ActivitySelectionView_mc_36_8_44_8_if_end:
+[ "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\ActivitySelectionView.mc" 45 8 ]
+        symbol [ WatchUi %tmp.27 45 8 15 ];
+        %tmp.27 = getm $.Toybox.WatchUi;
+        symbol [ requestUpdate %tmp.28 45 16 29 ];
+        %tmp.28 = getv function %tmp.27 :requestUpdate;
+        invoke %tmp.27 %tmp.28();
+C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_ActivitySelectionView_mc_34_35_46_4_stop:
+    }
+    [ @file = "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\ActivitySelectionView.mc"; @line = 49; @symbol_functiondef = [onUpdate,49,13,21]; @symbol_param<0> = [dc,49,22,24]; @symbol_param<0>_type<0> = [Dc,49,28,30]; ]
+    function onUpdate(dc as Dc) as Void {
+C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_ActivitySelectionView_mc_49_40_87_4_start:
+[ "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\ActivitySelectionView.mc" 51 8 ]
+        %tmp.1 = lgetv %dc;
+        symbol [ dc %tmp.1 51 8 10 ];
+        symbol [ setColor %tmp.2 51 11 19 ];
+        %tmp.2 = getv function %tmp.1 :setColor;
+        symbol [ Graphics %tmp.3 51 20 28 ];
+        %tmp.3 = getm $.Toybox.Graphics;
+        symbol [ COLOR_BLACK %tmp.4 51 29 40 ];
+        %tmp.4 = getv %tmp.3 :COLOR_BLACK;
+        symbol [ Graphics %tmp.5 51 42 50 ];
+        %tmp.5 = getm $.Toybox.Graphics;
+        symbol [ COLOR_BLACK %tmp.6 51 51 62 ];
+        %tmp.6 = getv %tmp.5 :COLOR_BLACK;
+        invoke %tmp.1 %tmp.2(%tmp.4, %tmp.6);
+[ "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\ActivitySelectionView.mc" 52 8 ]
+        %tmp.7 = lgetv %dc;
+        symbol [ dc %tmp.7 52 8 10 ];
+        symbol [ clear %tmp.8 52 11 16 ];
+        %tmp.8 = getv function %tmp.7 :clear;
+        invoke %tmp.7 %tmp.8();
+[ "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\ActivitySelectionView.mc" 55 8 ]
+        [ "C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_ActivitySelectionView_mc_49_40_87_4_start" "C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_ActivitySelectionView_mc_49_40_87_4_stop" ]
+        %width.1 = local;
+        symbol [ width %width.1 55 12 17 ];
+        %tmp.9 = lgetv %dc;
+        symbol [ dc %tmp.9 55 20 22 ];
+        symbol [ getWidth %tmp.10 55 23 31 ];
+        %tmp.10 = getv function %tmp.9 :getWidth;
+        %tmp.11 = invoke %tmp.9 %tmp.10();
+        lputv %width.1 %tmp.11;
+        symbol [ width %width.1 55 12 17 ];
+[ "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\ActivitySelectionView.mc" 56 8 ]
+        [ "C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_ActivitySelectionView_mc_49_40_87_4_start" "C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_ActivitySelectionView_mc_49_40_87_4_stop" ]
+        %height.2 = local;
+        symbol [ height %height.2 56 12 18 ];
+        %tmp.12 = lgetv %dc;
+        symbol [ dc %tmp.12 56 21 23 ];
+        symbol [ getHeight %tmp.13 56 24 33 ];
+        %tmp.13 = getv function %tmp.12 :getHeight;
+        %tmp.14 = invoke %tmp.12 %tmp.13();
+        lputv %height.2 %tmp.14;
+        symbol [ height %height.2 56 12 18 ];
+[ "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\ActivitySelectionView.mc" 59 8 ]
+        %tmp.15 = lgetv %dc;
+        symbol [ dc %tmp.15 59 8 10 ];
+        symbol [ setColor %tmp.16 59 11 19 ];
+        %tmp.16 = getv function %tmp.15 :setColor;
+        symbol [ Graphics %tmp.17 59 20 28 ];
+        %tmp.17 = getm $.Toybox.Graphics;
+        symbol [ COLOR_WHITE %tmp.18 59 29 40 ];
+        %tmp.18 = getv %tmp.17 :COLOR_WHITE;
+        symbol [ Graphics %tmp.19 59 42 50 ];
+        %tmp.19 = getm $.Toybox.Graphics;
+        symbol [ COLOR_TRANSPARENT %tmp.20 59 51 68 ];
+        %tmp.20 = getv %tmp.19 :COLOR_TRANSPARENT;
+        invoke %tmp.15 %tmp.16(%tmp.18, %tmp.20);
+[ "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\ActivitySelectionView.mc" 60 8 ]
+        %tmp.21 = lgetv %dc;
+        symbol [ dc %tmp.21 60 8 10 ];
+        symbol [ drawText %tmp.22 60 11 19 ];
+        %tmp.22 = getv function %tmp.21 :drawText;
+        %tmp.23 = lgetv %width.1;
+        symbol [ width %tmp.23 60 20 25 ];
+        %tmp.24 = 2;
+        %tmp.25 = div %tmp.23 %tmp.24;
+        %tmp.26 = 10;
+        symbol [ Graphics %tmp.27 60 33 41 ];
+        %tmp.27 = getm $.Toybox.Graphics;
+        symbol [ FONT_SMALL %tmp.28 60 42 52 ];
+        %tmp.28 = getv %tmp.27 :FONT_SMALL;
+        %tmp.29 = "Select activity type";
+        symbol [ Graphics %tmp.30 60 78 86 ];
+        %tmp.30 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_CENTER %tmp.31 60 87 106 ];
+        %tmp.31 = getv %tmp.30 :TEXT_JUSTIFY_CENTER;
+        invoke %tmp.21 %tmp.22(%tmp.25, %tmp.26, %tmp.28, %tmp.29, %tmp.31);
+[ "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\ActivitySelectionView.mc" 63 8 ]
+        %tmp.32 = lgetv %dc;
+        symbol [ dc %tmp.32 63 8 10 ];
+        symbol [ drawText %tmp.33 63 11 19 ];
+        %tmp.33 = getv function %tmp.32 :drawText;
+        %tmp.34 = lgetv %width.1;
+        symbol [ width %tmp.34 63 20 25 ];
+        %tmp.35 = 2;
+        %tmp.36 = div %tmp.34 %tmp.35;
+        %tmp.37 = 30;
+        symbol [ Graphics %tmp.38 63 33 41 ];
+        %tmp.38 = getm $.Toybox.Graphics;
+        symbol [ FONT_TINY %tmp.39 63 42 51 ];
+        %tmp.39 = getv %tmp.38 :FONT_TINY;
+        %tmp.40 = "(";
+        symbol [ mTimeLeft %tmp.42 63 59 68 ];
+        %tmp.42 = getv ? :mTimeLeft;
+        %tmp.43 = add %tmp.40 %tmp.42;
+        %tmp.44 = "s)";
+        %tmp.45 = add %tmp.43 %tmp.44;
+        symbol [ Graphics %tmp.46 63 77 85 ];
+        %tmp.46 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_CENTER %tmp.47 63 86 105 ];
+        %tmp.47 = getv %tmp.46 :TEXT_JUSTIFY_CENTER;
+        invoke %tmp.32 %tmp.33(%tmp.36, %tmp.37, %tmp.39, %tmp.45, %tmp.47);
+[ "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\ActivitySelectionView.mc" 66 8 ]
+        [ "C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_ActivitySelectionView_mc_49_40_87_4_start" "C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_ActivitySelectionView_mc_49_40_87_4_stop" ]
+        %boxHeight.3 = local;
+        symbol [ boxHeight %boxHeight.3 66 12 21 ];
+        %tmp.48 = lgetv %height.2;
+        symbol [ height %tmp.48 66 25 31 ];
+        %tmp.49 = 80;
+        %tmp.50 = sub %tmp.48 %tmp.49;
+        %tmp.51 = 3;
+        %tmp.52 = div %tmp.50 %tmp.51;
+        lputv %boxHeight.3 %tmp.52;
+        symbol [ boxHeight %boxHeight.3 66 12 21 ];
+[ "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\ActivitySelectionView.mc" 67 8 ]
+        [ "C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_ActivitySelectionView_mc_49_40_87_4_start" "C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_ActivitySelectionView_mc_49_40_87_4_stop" ]
+        %boxMargin.4 = local;
+        symbol [ boxMargin %boxMargin.4 67 12 21 ];
+        %tmp.53 = 10;
+        lputv %boxMargin.4 %tmp.53;
+        symbol [ boxMargin %boxMargin.4 67 12 21 ];
+[ "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\ActivitySelectionView.mc" 68 8 ]
+        [ "C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_ActivitySelectionView_mc_49_40_87_4_start" "C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_ActivitySelectionView_mc_49_40_87_4_stop" ]
+        %boxWidth.5 = local;
+        symbol [ boxWidth %boxWidth.5 68 12 20 ];
+        %tmp.54 = lgetv %width.1;
+        symbol [ width %tmp.54 68 23 28 ];
+        %tmp.55 = 2;
+        %tmp.56 = lgetv %boxMargin.4;
+        symbol [ boxMargin %tmp.56 68 36 45 ];
+        %tmp.57 = mul %tmp.55 %tmp.56;
+        %tmp.58 = sub %tmp.54 %tmp.57;
+        lputv %boxWidth.5 %tmp.58;
+        symbol [ boxWidth %boxWidth.5 68 12 20 ];
+[ "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\ActivitySelectionView.mc" 71 8 ]
+        %tmp.59 = lgetv %dc;
+        symbol [ dc %tmp.59 71 8 10 ];
+        symbol [ setColor %tmp.60 71 11 19 ];
+        %tmp.60 = getv function %tmp.59 :setColor;
+        symbol [ Graphics %tmp.61 71 20 28 ];
+        %tmp.61 = getm $.Toybox.Graphics;
+        symbol [ COLOR_DK_GREEN %tmp.62 71 29 43 ];
+        %tmp.62 = getv %tmp.61 :COLOR_DK_GREEN;
+        symbol [ Graphics %tmp.63 71 45 53 ];
+        %tmp.63 = getm $.Toybox.Graphics;
+        symbol [ COLOR_BLACK %tmp.64 71 54 65 ];
+        %tmp.64 = getv %tmp.63 :COLOR_BLACK;
+        invoke %tmp.59 %tmp.60(%tmp.62, %tmp.64);
+[ "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\ActivitySelectionView.mc" 72 8 ]
+        %tmp.65 = lgetv %dc;
+        symbol [ dc %tmp.65 72 8 10 ];
+        symbol [ fillRectangle %tmp.66 72 11 24 ];
+        %tmp.66 = getv function %tmp.65 :fillRectangle;
+        %tmp.67 = lgetv %boxMargin.4;
+        symbol [ boxMargin %tmp.67 72 25 34 ];
+        %tmp.68 = 50;
+        %tmp.69 = lgetv %boxWidth.5;
+        symbol [ boxWidth %tmp.69 72 40 48 ];
+        %tmp.70 = lgetv %boxHeight.3;
+        symbol [ boxHeight %tmp.70 72 50 59 ];
+        invoke %tmp.65 %tmp.66(%tmp.67, %tmp.68, %tmp.69, %tmp.70);
+[ "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\ActivitySelectionView.mc" 73 8 ]
+        %tmp.71 = lgetv %dc;
+        symbol [ dc %tmp.71 73 8 10 ];
+        symbol [ setColor %tmp.72 73 11 19 ];
+        %tmp.72 = getv function %tmp.71 :setColor;
+        symbol [ Graphics %tmp.73 73 20 28 ];
+        %tmp.73 = getm $.Toybox.Graphics;
+        symbol [ COLOR_WHITE %tmp.74 73 29 40 ];
+        %tmp.74 = getv %tmp.73 :COLOR_WHITE;
+        symbol [ Graphics %tmp.75 73 42 50 ];
+        %tmp.75 = getm $.Toybox.Graphics;
+        symbol [ COLOR_TRANSPARENT %tmp.76 73 51 68 ];
+        %tmp.76 = getv %tmp.75 :COLOR_TRANSPARENT;
+        invoke %tmp.71 %tmp.72(%tmp.74, %tmp.76);
+[ "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\ActivitySelectionView.mc" 74 8 ]
+        %tmp.77 = lgetv %dc;
+        symbol [ dc %tmp.77 74 8 10 ];
+        symbol [ drawText %tmp.78 74 11 19 ];
+        %tmp.78 = getv function %tmp.77 :drawText;
+        %tmp.79 = lgetv %width.1;
+        symbol [ width %tmp.79 74 20 25 ];
+        %tmp.80 = 2;
+        %tmp.81 = div %tmp.79 %tmp.80;
+        %tmp.82 = 50;
+        %tmp.83 = lgetv %boxHeight.3;
+        symbol [ boxHeight %tmp.83 74 35 44 ];
+        %tmp.84 = 2;
+        %tmp.85 = div %tmp.83 %tmp.84;
+        %tmp.86 = add %tmp.82 %tmp.85;
+        symbol [ Graphics %tmp.87 74 49 57 ];
+        %tmp.87 = getm $.Toybox.Graphics;
+        symbol [ FONT_MEDIUM %tmp.88 74 58 69 ];
+        %tmp.88 = getv %tmp.87 :FONT_MEDIUM;
+        %tmp.89 = "Focused";
+        symbol [ Graphics %tmp.90 74 82 90 ];
+        %tmp.90 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_CENTER %tmp.91 74 91 110 ];
+        %tmp.91 = getv %tmp.90 :TEXT_JUSTIFY_CENTER;
+        invoke %tmp.77 %tmp.78(%tmp.81, %tmp.86, %tmp.88, %tmp.89, %tmp.91);
+[ "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\ActivitySelectionView.mc" 77 8 ]
+        %tmp.92 = lgetv %dc;
+        symbol [ dc %tmp.92 77 8 10 ];
+        symbol [ setColor %tmp.93 77 11 19 ];
+        %tmp.93 = getv function %tmp.92 :setColor;
+        symbol [ Graphics %tmp.94 77 20 28 ];
+        %tmp.94 = getm $.Toybox.Graphics;
+        symbol [ COLOR_BLUE %tmp.95 77 29 39 ];
+        %tmp.95 = getv %tmp.94 :COLOR_BLUE;
+        symbol [ Graphics %tmp.96 77 41 49 ];
+        %tmp.96 = getm $.Toybox.Graphics;
+        symbol [ COLOR_BLACK %tmp.97 77 50 61 ];
+        %tmp.97 = getv %tmp.96 :COLOR_BLACK;
+        invoke %tmp.92 %tmp.93(%tmp.95, %tmp.97);
+[ "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\ActivitySelectionView.mc" 78 8 ]
+        %tmp.98 = lgetv %dc;
+        symbol [ dc %tmp.98 78 8 10 ];
+        symbol [ fillRectangle %tmp.99 78 11 24 ];
+        %tmp.99 = getv function %tmp.98 :fillRectangle;
+        %tmp.100 = lgetv %boxMargin.4;
+        symbol [ boxMargin %tmp.100 78 25 34 ];
+        %tmp.101 = 50;
+        %tmp.102 = lgetv %boxHeight.3;
+        symbol [ boxHeight %tmp.102 78 41 50 ];
+        %tmp.103 = add %tmp.101 %tmp.102;
+        %tmp.104 = 5;
+        %tmp.105 = add %tmp.103 %tmp.104;
+        %tmp.106 = lgetv %boxWidth.5;
+        symbol [ boxWidth %tmp.106 78 56 64 ];
+        %tmp.107 = lgetv %boxHeight.3;
+        symbol [ boxHeight %tmp.107 78 66 75 ];
+        invoke %tmp.98 %tmp.99(%tmp.100, %tmp.105, %tmp.106, %tmp.107);
+[ "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\ActivitySelectionView.mc" 79 8 ]
+        %tmp.108 = lgetv %dc;
+        symbol [ dc %tmp.108 79 8 10 ];
+        symbol [ setColor %tmp.109 79 11 19 ];
+        %tmp.109 = getv function %tmp.108 :setColor;
+        symbol [ Graphics %tmp.110 79 20 28 ];
+        %tmp.110 = getm $.Toybox.Graphics;
+        symbol [ COLOR_WHITE %tmp.111 79 29 40 ];
+        %tmp.111 = getv %tmp.110 :COLOR_WHITE;
+        symbol [ Graphics %tmp.112 79 42 50 ];
+        %tmp.112 = getm $.Toybox.Graphics;
+        symbol [ COLOR_TRANSPARENT %tmp.113 79 51 68 ];
+        %tmp.113 = getv %tmp.112 :COLOR_TRANSPARENT;
+        invoke %tmp.108 %tmp.109(%tmp.111, %tmp.113);
+[ "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\ActivitySelectionView.mc" 80 8 ]
+        %tmp.114 = lgetv %dc;
+        symbol [ dc %tmp.114 80 8 10 ];
+        symbol [ drawText %tmp.115 80 11 19 ];
+        %tmp.115 = getv function %tmp.114 :drawText;
+        %tmp.116 = lgetv %width.1;
+        symbol [ width %tmp.116 80 20 25 ];
+        %tmp.117 = 2;
+        %tmp.118 = div %tmp.116 %tmp.117;
+        %tmp.119 = 50;
+        %tmp.120 = lgetv %boxHeight.3;
+        symbol [ boxHeight %tmp.120 80 34 43 ];
+        %tmp.121 = add %tmp.119 %tmp.120;
+        %tmp.122 = 5;
+        %tmp.123 = add %tmp.121 %tmp.122;
+        %tmp.124 = lgetv %boxHeight.3;
+        symbol [ boxHeight %tmp.124 80 51 60 ];
+        %tmp.125 = 2;
+        %tmp.126 = div %tmp.124 %tmp.125;
+        %tmp.127 = add %tmp.123 %tmp.126;
+        symbol [ Graphics %tmp.128 80 65 73 ];
+        %tmp.128 = getm $.Toybox.Graphics;
+        symbol [ FONT_MEDIUM %tmp.129 80 74 85 ];
+        %tmp.129 = getv %tmp.128 :FONT_MEDIUM;
+        %tmp.130 = "Neutral";
+        symbol [ Graphics %tmp.131 80 98 106 ];
+        %tmp.131 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_CENTER %tmp.132 80 107 126 ];
+        %tmp.132 = getv %tmp.131 :TEXT_JUSTIFY_CENTER;
+        invoke %tmp.114 %tmp.115(%tmp.118, %tmp.127, %tmp.129, %tmp.130, %tmp.132);
+[ "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\ActivitySelectionView.mc" 83 8 ]
+        %tmp.133 = lgetv %dc;
+        symbol [ dc %tmp.133 83 8 10 ];
+        symbol [ setColor %tmp.134 83 11 19 ];
+        %tmp.134 = getv function %tmp.133 :setColor;
+        symbol [ Graphics %tmp.135 83 20 28 ];
+        %tmp.135 = getm $.Toybox.Graphics;
+        symbol [ COLOR_LT_GRAY %tmp.136 83 29 42 ];
+        %tmp.136 = getv %tmp.135 :COLOR_LT_GRAY;
+        symbol [ Graphics %tmp.137 83 44 52 ];
+        %tmp.137 = getm $.Toybox.Graphics;
+        symbol [ COLOR_BLACK %tmp.138 83 53 64 ];
+        %tmp.138 = getv %tmp.137 :COLOR_BLACK;
+        invoke %tmp.133 %tmp.134(%tmp.136, %tmp.138);
+[ "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\ActivitySelectionView.mc" 84 8 ]
+        %tmp.139 = lgetv %dc;
+        symbol [ dc %tmp.139 84 8 10 ];
+        symbol [ fillRectangle %tmp.140 84 11 24 ];
+        %tmp.140 = getv function %tmp.139 :fillRectangle;
+        %tmp.141 = lgetv %boxMargin.4;
+        symbol [ boxMargin %tmp.141 84 25 34 ];
+        %tmp.142 = 50;
+        %tmp.143 = 2;
+        %tmp.144 = lgetv %boxHeight.3;
+        symbol [ boxHeight %tmp.144 84 46 55 ];
+        %tmp.145 = mul %tmp.143 %tmp.144;
+        %tmp.146 = add %tmp.142 %tmp.145;
+        %tmp.147 = 10;
+        %tmp.148 = add %tmp.146 %tmp.147;
+        %tmp.149 = lgetv %boxWidth.5;
+        symbol [ boxWidth %tmp.149 84 63 71 ];
+        %tmp.150 = lgetv %boxHeight.3;
+        symbol [ boxHeight %tmp.150 84 73 82 ];
+        invoke %tmp.139 %tmp.140(%tmp.141, %tmp.148, %tmp.149, %tmp.150);
+[ "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\ActivitySelectionView.mc" 85 8 ]
+        %tmp.151 = lgetv %dc;
+        symbol [ dc %tmp.151 85 8 10 ];
+        symbol [ setColor %tmp.152 85 11 19 ];
+        %tmp.152 = getv function %tmp.151 :setColor;
+        symbol [ Graphics %tmp.153 85 20 28 ];
+        %tmp.153 = getm $.Toybox.Graphics;
+        symbol [ COLOR_WHITE %tmp.154 85 29 40 ];
+        %tmp.154 = getv %tmp.153 :COLOR_WHITE;
+        symbol [ Graphics %tmp.155 85 42 50 ];
+        %tmp.155 = getm $.Toybox.Graphics;
+        symbol [ COLOR_TRANSPARENT %tmp.156 85 51 68 ];
+        %tmp.156 = getv %tmp.155 :COLOR_TRANSPARENT;
+        invoke %tmp.151 %tmp.152(%tmp.154, %tmp.156);
+[ "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\ActivitySelectionView.mc" 86 8 ]
+        %tmp.157 = lgetv %dc;
+        symbol [ dc %tmp.157 86 8 10 ];
+        symbol [ drawText %tmp.158 86 11 19 ];
+        %tmp.158 = getv function %tmp.157 :drawText;
+        %tmp.159 = lgetv %width.1;
+        symbol [ width %tmp.159 86 20 25 ];
+        %tmp.160 = 2;
+        %tmp.161 = div %tmp.159 %tmp.160;
+        %tmp.162 = 50;
+        %tmp.163 = 2;
+        %tmp.164 = lgetv %boxHeight.3;
+        symbol [ boxHeight %tmp.164 86 39 48 ];
+        %tmp.165 = mul %tmp.163 %tmp.164;
+        %tmp.166 = add %tmp.162 %tmp.165;
+        %tmp.167 = 10;
+        %tmp.168 = add %tmp.166 %tmp.167;
+        %tmp.169 = lgetv %boxHeight.3;
+        symbol [ boxHeight %tmp.169 86 58 67 ];
+        %tmp.170 = 2;
+        %tmp.171 = div %tmp.169 %tmp.170;
+        %tmp.172 = add %tmp.168 %tmp.171;
+        symbol [ Graphics %tmp.173 86 72 80 ];
+        %tmp.173 = getm $.Toybox.Graphics;
+        symbol [ FONT_MEDIUM %tmp.174 86 81 92 ];
+        %tmp.174 = getv %tmp.173 :FONT_MEDIUM;
+        %tmp.175 = "Vague";
+        symbol [ Graphics %tmp.176 86 103 111 ];
+        %tmp.176 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_CENTER %tmp.177 86 112 131 ];
+        %tmp.177 = getv %tmp.176 :TEXT_JUSTIFY_CENTER;
+        invoke %tmp.157 %tmp.158(%tmp.161, %tmp.172, %tmp.174, %tmp.175, %tmp.177);
+C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_ActivitySelectionView_mc_49_40_87_4_stop:
+    }
+    [ @file = "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\ActivitySelectionView.mc"; @line = 90; @symbol_functiondef = [onHide,90,13,19]; ]
+    function onHide() as Void {
+C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_ActivitySelectionView_mc_90_30_95_4_start:
+[ "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\ActivitySelectionView.mc" 91 8 ]
+C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_ActivitySelectionView_mc_91_8_94_8_if_stmt:
+        symbol [ mTimer %tmp.2 91 12 18 ];
+        %tmp.2 = getv ? :mTimer;
+        %tmp.3 = null;
+        %tmp.4 = ne %tmp.2 %tmp.3;
+        bf %tmp.4 @C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_ActivitySelectionView_mc_91_8_94_8_if_end;
+C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_ActivitySelectionView_mc_91_8_94_8_if_true:
+C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_ActivitySelectionView_mc_91_28_94_8_start:
+[ "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\ActivitySelectionView.mc" 92 12 ]
+        symbol [ mTimer %tmp.6 92 12 18 ];
+        %tmp.6 = getv ? :mTimer;
+        %tmp.7 = as %tmp.6 { (!Null) };
+        symbol [ stop %tmp.8 92 19 23 ];
+        %tmp.8 = getv function %tmp.7 :stop;
+        invoke %tmp.7 %tmp.8();
+[ "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\ActivitySelectionView.mc" 93 12 ]
+        %tmp.9 = null;
+        symbol [ mTimer ? 93 12 18 ];
+        putv self :mTimer %tmp.9;
+C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_ActivitySelectionView_mc_91_28_94_8_stop:
+        goto @C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_ActivitySelectionView_mc_91_8_94_8_if_end;
+C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_ActivitySelectionView_mc_91_8_94_8_if_end:
+C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_ActivitySelectionView_mc_90_30_95_4_stop:
+    }
+}
+[ @file = "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\ActivitySelectionView.mc"; @line = 99; @symbol_classdef = [ActivitySelectionDelegate,99,6,31]; @symbol_extends<0> = [WatchUi,99,40,47]; @symbol_extends<1> = [BehaviorDelegate,99,48,64]; ]
+class ActivitySelectionDelegate extends WatchUi.BehaviorDelegate {
+    [ @file = "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\ActivitySelectionView.mc"; @line = 99; ]
+    <init> {
+    }
+    [ @file = "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\ActivitySelectionView.mc"; @line = 99; ]
+    static
+    <init> {
+    }
+    [ @file = "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\ActivitySelectionView.mc"; @line = 100; @position = 16; @symbol_vardef = [mCallback,100,16,25]; ]
+    private
+    var mCallback;
+    [ @file = "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\ActivitySelectionView.mc"; @line = 103; @symbol_functiondef = [initialize,103,13,23]; @symbol_param<0> = [callback,103,24,32]; ]
+    function initialize(callback) as Void {
+C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_ActivitySelectionView_mc_103_34_106_4_start:
+[ "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\ActivitySelectionView.mc" 104 8 ]
+        symbol [ BehaviorDelegate %tmp.2 104 8 24 ];
+        %tmp.2 = getv ? :BehaviorDelegate;
+        symbol [ initialize %tmp.3 104 25 35 ];
+        %tmp.3 = getv function %tmp.2 :initialize;
+        invoke %tmp.2 %tmp.3();
+[ "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\ActivitySelectionView.mc" 105 8 ]
+        %tmp.4 = lgetv %callback;
+        symbol [ callback %tmp.4 105 20 28 ];
+        symbol [ mCallback ? 105 8 17 ];
+        putv self :mCallback %tmp.4;
+C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_ActivitySelectionView_mc_103_34_106_4_stop:
+    }
+    [ @file = "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\ActivitySelectionView.mc"; @line = 109; @symbol_functiondef = [onPreviousPage,109,13,27]; @symbol_return<0> = [Boolean,109,33,40]; ]
+    function onPreviousPage() as Boolean {
+C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_ActivitySelectionView_mc_109_41_114_4_start:
+[ "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\ActivitySelectionView.mc" 111 8 ]
+        symbol [ mCallback %tmp.2 111 8 17 ];
+        %tmp.2 = getv ? :mCallback;
+        symbol [ invoke %tmp.3 111 18 24 ];
+        %tmp.3 = getv function %tmp.2 :invoke;
+        symbol [ ACTIVITY_FOCUSED %tmp.5 111 25 41 ];
+        %tmp.5 = getv ? :ACTIVITY_FOCUSED;
+        invoke %tmp.2 %tmp.3(%tmp.5);
+[ "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\ActivitySelectionView.mc" 112 8 ]
+        symbol [ WatchUi %tmp.6 112 8 15 ];
+        %tmp.6 = getm $.Toybox.WatchUi;
+        symbol [ popView %tmp.7 112 16 23 ];
+        %tmp.7 = getv function %tmp.6 :popView;
+        symbol [ WatchUi %tmp.8 112 24 31 ];
+        %tmp.8 = getm $.Toybox.WatchUi;
+        symbol [ SLIDE_IMMEDIATE %tmp.9 112 32 47 ];
+        %tmp.9 = getv %tmp.8 :SLIDE_IMMEDIATE;
+        invoke %tmp.6 %tmp.7(%tmp.9);
+[ "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\ActivitySelectionView.mc" 113 8 ]
+        %tmp.10 = true;
+        ret %tmp.10;
+C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_ActivitySelectionView_mc_109_41_114_4_stop:
+    }
+    [ @file = "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\ActivitySelectionView.mc"; @line = 117; @symbol_functiondef = [onNextPage,117,13,23]; @symbol_return<0> = [Boolean,117,29,36]; ]
+    function onNextPage() as Boolean {
+C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_ActivitySelectionView_mc_117_37_122_4_start:
+[ "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\ActivitySelectionView.mc" 119 8 ]
+        symbol [ mCallback %tmp.2 119 8 17 ];
+        %tmp.2 = getv ? :mCallback;
+        symbol [ invoke %tmp.3 119 18 24 ];
+        %tmp.3 = getv function %tmp.2 :invoke;
+        symbol [ ACTIVITY_NEUTRAL %tmp.5 119 25 41 ];
+        %tmp.5 = getv ? :ACTIVITY_NEUTRAL;
+        invoke %tmp.2 %tmp.3(%tmp.5);
+[ "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\ActivitySelectionView.mc" 120 8 ]
+        symbol [ WatchUi %tmp.6 120 8 15 ];
+        %tmp.6 = getm $.Toybox.WatchUi;
+        symbol [ popView %tmp.7 120 16 23 ];
+        %tmp.7 = getv function %tmp.6 :popView;
+        symbol [ WatchUi %tmp.8 120 24 31 ];
+        %tmp.8 = getm $.Toybox.WatchUi;
+        symbol [ SLIDE_IMMEDIATE %tmp.9 120 32 47 ];
+        %tmp.9 = getv %tmp.8 :SLIDE_IMMEDIATE;
+        invoke %tmp.6 %tmp.7(%tmp.9);
+[ "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\ActivitySelectionView.mc" 121 8 ]
+        %tmp.10 = true;
+        ret %tmp.10;
+C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_ActivitySelectionView_mc_117_37_122_4_stop:
+    }
+    [ @file = "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\ActivitySelectionView.mc"; @line = 125; @symbol_functiondef = [onBack,125,13,19]; @symbol_return<0> = [Boolean,125,25,32]; ]
+    function onBack() as Boolean {
+C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_ActivitySelectionView_mc_125_33_130_4_start:
+[ "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\ActivitySelectionView.mc" 127 8 ]
+        symbol [ mCallback %tmp.2 127 8 17 ];
+        %tmp.2 = getv ? :mCallback;
+        symbol [ invoke %tmp.3 127 18 24 ];
+        %tmp.3 = getv function %tmp.2 :invoke;
+        symbol [ ACTIVITY_VAGUE %tmp.5 127 25 39 ];
+        %tmp.5 = getv ? :ACTIVITY_VAGUE;
+        invoke %tmp.2 %tmp.3(%tmp.5);
+[ "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\ActivitySelectionView.mc" 128 8 ]
+        symbol [ WatchUi %tmp.6 128 8 15 ];
+        %tmp.6 = getm $.Toybox.WatchUi;
+        symbol [ popView %tmp.7 128 16 23 ];
+        %tmp.7 = getv function %tmp.6 :popView;
+        symbol [ WatchUi %tmp.8 128 24 31 ];
+        %tmp.8 = getm $.Toybox.WatchUi;
+        symbol [ SLIDE_IMMEDIATE %tmp.9 128 32 47 ];
+        %tmp.9 = getv %tmp.8 :SLIDE_IMMEDIATE;
+        invoke %tmp.6 %tmp.7(%tmp.9);
+[ "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\ActivitySelectionView.mc" 129 8 ]
+        %tmp.10 = true;
+        ret %tmp.10;
+C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_ActivitySelectionView_mc_125_33_130_4_stop:
+    }
+}
+[ @file = "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\ActivitySelectionView.mc"; @line = 1; ]
+<init> {
+}

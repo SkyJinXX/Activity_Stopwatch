@@ -1,8 +1,21 @@
 <strings xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://developer.garmin.com/downloads/connect-iq/resources.xsd">
-    <string id="AppName">Activity_Stopwatch</string>
+    <string id="AppName">Activity Stopwatch</string>
 
     <string id="prompt">Click the menu button</string>
 
     <string id="menu_label_1">Item 1</string>
     <string id="menu_label_2">Item 2</string>
+
+    <string id="lap_label">Lap</string>
+    <string id="start_label">Start</string>
+    <string id="pause_label">Pause</string>
+    <string id="save_label">Save</string>
+    
+    <string id="focused_activity">Focused</string>
+    <string id="neutral_activity">Neutral</string>
+    <string id="vague_activity">Vague</string>
+    
+    <string id="select_activity">Select activity type</string>
+    <string id="no_laps">No laps recorded</string>
+    <string id="previous_laps">Previous Laps</string>
 </strings>

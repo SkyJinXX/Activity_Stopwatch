@@ -1,0 +1,776 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<debugInfo>
+    <manifest filename="C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\manifest.xml"/>
+    <pcToLineNum>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\Activity_StopwatchView.mc" id="1" lineNum="9" parent="globals/Activity_StopwatchView" pc="268435460" symbol="&lt;init&gt;"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\Activity_StopwatchApp.mc" id="2" lineNum="31" parent="globals" pc="268435472" symbol="getApp"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\Activity_StopwatchApp.mc" id="2" lineNum="32" parent="globals" pc="268435482" symbol="getApp"/>
+        <entry filename="c:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\bin\\gen\\006-B4432-00\\source\\Rez.mcgen" id="3" lineNum="7" parent="globals/Rez" pc="268435493" symbol="&lt;init&gt;"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\ActivitySelectionView.mc" id="4" lineNum="8" parent="globals/ActivitySelectionView" pc="268435513" symbol="&lt;init&gt;"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\Activity_StopwatchMenuDelegate.mc" id="5" lineNum="5" parent="globals/Activity_StopwatchMenuDelegate" pc="268435525" symbol="&lt;init&gt;"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\ActivitySelectionView.mc" id="6" lineNum="99" parent="globals/ActivitySelectionDelegate" pc="268435537" symbol="&lt;init&gt;"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\Activity_StopwatchApp.mc" id="7" lineNum="5" parent="globals/Activity_StopwatchApp" pc="268435549" symbol="&lt;init&gt;"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\Activity_StopwatchDelegate.mc" id="8" lineNum="5" parent="globals/Activity_StopwatchDelegate" pc="268435561" symbol="&lt;init&gt;"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\Activity_StopwatchView.mc" id="9" lineNum="20" parent="globals/Activity_StopwatchView" pc="268435573" symbol="onActivityTypeSelected"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\Activity_StopwatchView.mc" id="9" lineNum="21" parent="globals/Activity_StopwatchView" pc="268435575" symbol="onActivityTypeSelected"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\Activity_StopwatchView.mc" id="9" lineNum="23" parent="globals/Activity_StopwatchView" pc="268435591" symbol="onActivityTypeSelected"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\Activity_StopwatchView.mc" id="9" lineNum="24" parent="globals/Activity_StopwatchView" pc="268435606" symbol="onActivityTypeSelected"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\Activity_StopwatchView.mc" id="9" lineNum="26" parent="globals/Activity_StopwatchView" pc="268435621" symbol="onActivityTypeSelected"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\Activity_StopwatchView.mc" id="10" lineNum="54" parent="globals/Activity_StopwatchView" pc="268435633" symbol="scrollDown"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\Activity_StopwatchView.mc" id="10" lineNum="55" parent="globals/Activity_StopwatchView" pc="268435636" symbol="scrollDown"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\Activity_StopwatchView.mc" id="10" lineNum="56" parent="globals/Activity_StopwatchView" pc="268435649" symbol="scrollDown"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\Activity_StopwatchView.mc" id="10" lineNum="57" parent="globals/Activity_StopwatchView" pc="268435677" symbol="scrollDown"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\Activity_StopwatchView.mc" id="10" lineNum="58" parent="globals/Activity_StopwatchView" pc="268435692" symbol="scrollDown"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\Activity_StopwatchView.mc" id="12" lineNum="98" parent="globals/Activity_StopwatchView" pc="268435707" symbol="onLayout"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\Activity_StopwatchView.mc" id="13" lineNum="35" parent="globals/Activity_StopwatchView" pc="268435710" symbol="getActivityColor"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\Activity_StopwatchView.mc" id="13" lineNum="36" parent="globals/Activity_StopwatchView" pc="268435712" symbol="getActivityColor"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\Activity_StopwatchView.mc" id="13" lineNum="37" parent="globals/Activity_StopwatchView" pc="268435720" symbol="getActivityColor"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\Activity_StopwatchView.mc" id="13" lineNum="38" parent="globals/Activity_StopwatchView" pc="268435728" symbol="getActivityColor"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\Activity_StopwatchView.mc" id="13" lineNum="39" parent="globals/Activity_StopwatchView" pc="268435736" symbol="getActivityColor"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\Activity_StopwatchView.mc" id="13" lineNum="41" parent="globals/Activity_StopwatchView" pc="268435744" symbol="getActivityColor"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\Activity_StopwatchView.mc" id="14" lineNum="46" parent="globals/Activity_StopwatchView" pc="268435751" symbol="scrollUp"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\Activity_StopwatchView.mc" id="14" lineNum="47" parent="globals/Activity_StopwatchView" pc="268435753" symbol="scrollUp"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\Activity_StopwatchView.mc" id="14" lineNum="48" parent="globals/Activity_StopwatchView" pc="268435763" symbol="scrollUp"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\Activity_StopwatchView.mc" id="14" lineNum="49" parent="globals/Activity_StopwatchView" pc="268435778" symbol="scrollUp"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\Activity_StopwatchView.mc" id="15" lineNum="63" parent="globals/Activity_StopwatchView" pc="268435793" symbol="addLap"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\Activity_StopwatchView.mc" id="15" lineNum="65" parent="globals/Activity_StopwatchView" pc="268435796" symbol="addLap"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\Activity_StopwatchView.mc" id="15" lineNum="66" parent="globals/Activity_StopwatchView" pc="268435810" symbol="addLap"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\Activity_StopwatchView.mc" id="15" lineNum="70" parent="globals/Activity_StopwatchView" pc="268435825" symbol="addLap"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\Activity_StopwatchView.mc" id="15" lineNum="71" parent="globals/Activity_StopwatchView" pc="268435840" symbol="addLap"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\Activity_StopwatchView.mc" id="15" lineNum="72" parent="globals/Activity_StopwatchView" pc="268435866" symbol="addLap"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\Activity_StopwatchView.mc" id="15" lineNum="73" parent="globals/Activity_StopwatchView" pc="268435892" symbol="addLap"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\Activity_StopwatchView.mc" id="16" lineNum="30" parent="globals/Activity_StopwatchView" pc="268435912" symbol="onStopwatchUpdate"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\Activity_StopwatchView.mc" id="16" lineNum="31" parent="globals/Activity_StopwatchView" pc="268435914" symbol="onStopwatchUpdate"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\Activity_StopwatchView.mc" id="17" lineNum="83" parent="globals/Activity_StopwatchView" pc="268435926" symbol="saveActivity"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\Activity_StopwatchView.mc" id="17" lineNum="84" parent="globals/Activity_StopwatchView" pc="268435929" symbol="saveActivity"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\Activity_StopwatchView.mc" id="17" lineNum="86" parent="globals/Activity_StopwatchView" pc="268435944" symbol="saveActivity"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\Activity_StopwatchView.mc" id="17" lineNum="87" parent="globals/Activity_StopwatchView" pc="268435957" symbol="saveActivity"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\Activity_StopwatchView.mc" id="17" lineNum="91" parent="globals/Activity_StopwatchView" pc="268435970" symbol="saveActivity"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\Activity_StopwatchView.mc" id="17" lineNum="92" parent="globals/Activity_StopwatchView" pc="268435982" symbol="saveActivity"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\Activity_StopwatchView.mc" id="17" lineNum="93" parent="globals/Activity_StopwatchView" pc="268435990" symbol="saveActivity"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\Activity_StopwatchView.mc" id="18" lineNum="14" parent="globals/Activity_StopwatchView" pc="268436005" symbol="initialize"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\Activity_StopwatchView.mc" id="18" lineNum="15" parent="globals/Activity_StopwatchView" pc="268436007" symbol="initialize"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\Activity_StopwatchView.mc" id="18" lineNum="16" parent="globals/Activity_StopwatchView" pc="268436019" symbol="initialize"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\Activity_StopwatchView.mc" id="19" lineNum="77" parent="globals/Activity_StopwatchView" pc="268436062" symbol="toggleStopwatch"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\Activity_StopwatchView.mc" id="19" lineNum="78" parent="globals/Activity_StopwatchView" pc="268436064" symbol="toggleStopwatch"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\Activity_StopwatchView.mc" id="19" lineNum="79" parent="globals/Activity_StopwatchView" pc="268436076" symbol="toggleStopwatch"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\Activity_StopwatchView.mc" id="21" lineNum="108" parent="globals/Activity_StopwatchView" pc="268436088" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\Activity_StopwatchView.mc" id="21" lineNum="110" parent="globals/Activity_StopwatchView" pc="268436091" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\Activity_StopwatchView.mc" id="21" lineNum="111" parent="globals/Activity_StopwatchView" pc="268436103" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\Activity_StopwatchView.mc" id="21" lineNum="114" parent="globals/Activity_StopwatchView" pc="268436111" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\Activity_StopwatchView.mc" id="21" lineNum="115" parent="globals/Activity_StopwatchView" pc="268436120" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\Activity_StopwatchView.mc" id="21" lineNum="118" parent="globals/Activity_StopwatchView" pc="268436129" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\Activity_StopwatchView.mc" id="21" lineNum="119" parent="globals/Activity_StopwatchView" pc="268436146" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\Activity_StopwatchView.mc" id="21" lineNum="120" parent="globals/Activity_StopwatchView" pc="268436171" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\Activity_StopwatchView.mc" id="21" lineNum="124" parent="globals/Activity_StopwatchView" pc="268436238" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\Activity_StopwatchView.mc" id="21" lineNum="127" parent="globals/Activity_StopwatchView" pc="268436261" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\Activity_StopwatchView.mc" id="21" lineNum="130" parent="globals/Activity_StopwatchView" pc="268436271" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\Activity_StopwatchView.mc" id="21" lineNum="131" parent="globals/Activity_StopwatchView" pc="268436284" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\Activity_StopwatchView.mc" id="21" lineNum="132" parent="globals/Activity_StopwatchView" pc="268436305" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\Activity_StopwatchView.mc" id="21" lineNum="135" parent="globals/Activity_StopwatchView" pc="268436331" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\Activity_StopwatchView.mc" id="21" lineNum="136" parent="globals/Activity_StopwatchView" pc="268436344" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\Activity_StopwatchView.mc" id="21" lineNum="137" parent="globals/Activity_StopwatchView" pc="268436365" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\Activity_StopwatchView.mc" id="21" lineNum="140" parent="globals/Activity_StopwatchView" pc="268436397" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\Activity_StopwatchView.mc" id="21" lineNum="143" parent="globals/Activity_StopwatchView" pc="268436426" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\Activity_StopwatchView.mc" id="21" lineNum="144" parent="globals/Activity_StopwatchView" pc="268436439" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\Activity_StopwatchView.mc" id="21" lineNum="145" parent="globals/Activity_StopwatchView" pc="268436448" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\Activity_StopwatchView.mc" id="21" lineNum="147" parent="globals/Activity_StopwatchView" pc="268436455" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\Activity_StopwatchView.mc" id="21" lineNum="148" parent="globals/Activity_StopwatchView" pc="268436462" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\Activity_StopwatchView.mc" id="21" lineNum="149" parent="globals/Activity_StopwatchView" pc="268436479" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\Activity_StopwatchView.mc" id="21" lineNum="152" parent="globals/Activity_StopwatchView" pc="268436508" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\Activity_StopwatchView.mc" id="21" lineNum="153" parent="globals/Activity_StopwatchView" pc="268436521" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\Activity_StopwatchView.mc" id="21" lineNum="154" parent="globals/Activity_StopwatchView" pc="268436534" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\Activity_StopwatchView.mc" id="21" lineNum="154" parent="globals/Activity_StopwatchView" pc="268436541" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\Activity_StopwatchView.mc" id="21" lineNum="157" parent="globals/Activity_StopwatchView" pc="268436547" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\Activity_StopwatchView.mc" id="21" lineNum="158" parent="globals/Activity_StopwatchView" pc="268436559" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\Activity_StopwatchView.mc" id="21" lineNum="159" parent="globals/Activity_StopwatchView" pc="268436566" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\Activity_StopwatchView.mc" id="21" lineNum="160" parent="globals/Activity_StopwatchView" pc="268436582" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\Activity_StopwatchView.mc" id="21" lineNum="163" parent="globals/Activity_StopwatchView" pc="268436607" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\Activity_StopwatchView.mc" id="21" lineNum="164" parent="globals/Activity_StopwatchView" pc="268436621" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\Activity_StopwatchView.mc" id="21" lineNum="167" parent="globals/Activity_StopwatchView" pc="268436639" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\Activity_StopwatchView.mc" id="21" lineNum="168" parent="globals/Activity_StopwatchView" pc="268436656" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\Activity_StopwatchView.mc" id="21" lineNum="169" parent="globals/Activity_StopwatchView" pc="268436685" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\Activity_StopwatchView.mc" id="21" lineNum="171" parent="globals/Activity_StopwatchView" pc="268436707" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\Activity_StopwatchView.mc" id="21" lineNum="175" parent="globals/Activity_StopwatchView" pc="268436724" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\Activity_StopwatchView.mc" id="21" lineNum="176" parent="globals/Activity_StopwatchView" pc="268436735" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\Activity_StopwatchView.mc" id="21" lineNum="178" parent="globals/Activity_StopwatchView" pc="268436745" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\Activity_StopwatchView.mc" id="21" lineNum="179" parent="globals/Activity_StopwatchView" pc="268436762" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\Activity_StopwatchView.mc" id="21" lineNum="182" parent="globals/Activity_StopwatchView" pc="268436793" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\Activity_StopwatchView.mc" id="21" lineNum="184" parent="globals/Activity_StopwatchView" pc="268436810" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\Activity_StopwatchView.mc" id="21" lineNum="185" parent="globals/Activity_StopwatchView" pc="268436827" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\ActivitySelectionView.mc" id="22" lineNum="27" parent="globals/ActivitySelectionView" pc="268436859" symbol="onShow"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\ActivitySelectionView.mc" id="22" lineNum="28" parent="globals/ActivitySelectionView" pc="268436861" symbol="onShow"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\ActivitySelectionView.mc" id="22" lineNum="29" parent="globals/ActivitySelectionView" pc="268436873" symbol="onShow"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\ActivitySelectionView.mc" id="22" lineNum="30" parent="globals/ActivitySelectionView" pc="268436902" symbol="onShow"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\ActivitySelectionView.mc" id="23" lineNum="34" parent="globals/ActivitySelectionView" pc="268436934" symbol="onTimerTick"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\ActivitySelectionView.mc" id="23" lineNum="35" parent="globals/ActivitySelectionView" pc="268436936" symbol="onTimerTick"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\ActivitySelectionView.mc" id="23" lineNum="36" parent="globals/ActivitySelectionView" pc="268436951" symbol="onTimerTick"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\ActivitySelectionView.mc" id="23" lineNum="38" parent="globals/ActivitySelectionView" pc="268436961" symbol="onTimerTick"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\ActivitySelectionView.mc" id="23" lineNum="39" parent="globals/ActivitySelectionView" pc="268436970" symbol="onTimerTick"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\ActivitySelectionView.mc" id="23" lineNum="40" parent="globals/ActivitySelectionView" pc="268436982" symbol="onTimerTick"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\ActivitySelectionView.mc" id="23" lineNum="42" parent="globals/ActivitySelectionView" pc="268436993" symbol="onTimerTick"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\ActivitySelectionView.mc" id="23" lineNum="43" parent="globals/ActivitySelectionView" pc="268437008" symbol="onTimerTick"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\ActivitySelectionView.mc" id="23" lineNum="45" parent="globals/ActivitySelectionView" pc="268437025" symbol="onTimerTick"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\ActivitySelectionView.mc" id="24" lineNum="22" parent="globals/ActivitySelectionView" pc="268437037" symbol="onLayout"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\ActivitySelectionView.mc" id="25" lineNum="15" parent="globals/ActivitySelectionView" pc="268437040" symbol="initialize"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\ActivitySelectionView.mc" id="25" lineNum="16" parent="globals/ActivitySelectionView" pc="268437042" symbol="initialize"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\ActivitySelectionView.mc" id="25" lineNum="17" parent="globals/ActivitySelectionView" pc="268437054" symbol="initialize"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\ActivitySelectionView.mc" id="25" lineNum="18" parent="globals/ActivitySelectionView" pc="268437063" symbol="initialize"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\ActivitySelectionView.mc" id="26" lineNum="90" parent="globals/ActivitySelectionView" pc="268437076" symbol="onHide"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\ActivitySelectionView.mc" id="26" lineNum="91" parent="globals/ActivitySelectionView" pc="268437078" symbol="onHide"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\ActivitySelectionView.mc" id="26" lineNum="92" parent="globals/ActivitySelectionView" pc="268437087" symbol="onHide"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\ActivitySelectionView.mc" id="26" lineNum="93" parent="globals/ActivitySelectionView" pc="268437099" symbol="onHide"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\ActivitySelectionView.mc" id="27" lineNum="49" parent="globals/ActivitySelectionView" pc="268437111" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\ActivitySelectionView.mc" id="27" lineNum="51" parent="globals/ActivitySelectionView" pc="268437114" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\ActivitySelectionView.mc" id="27" lineNum="52" parent="globals/ActivitySelectionView" pc="268437126" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\ActivitySelectionView.mc" id="27" lineNum="55" parent="globals/ActivitySelectionView" pc="268437134" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\ActivitySelectionView.mc" id="27" lineNum="56" parent="globals/ActivitySelectionView" pc="268437143" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\ActivitySelectionView.mc" id="27" lineNum="59" parent="globals/ActivitySelectionView" pc="268437152" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\ActivitySelectionView.mc" id="27" lineNum="60" parent="globals/ActivitySelectionView" pc="268437169" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\ActivitySelectionView.mc" id="27" lineNum="63" parent="globals/ActivitySelectionView" pc="268437195" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\ActivitySelectionView.mc" id="27" lineNum="66" parent="globals/ActivitySelectionView" pc="268437233" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\ActivitySelectionView.mc" id="27" lineNum="67" parent="globals/ActivitySelectionView" pc="268437243" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\ActivitySelectionView.mc" id="27" lineNum="68" parent="globals/ActivitySelectionView" pc="268437247" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\ActivitySelectionView.mc" id="27" lineNum="71" parent="globals/ActivitySelectionView" pc="268437257" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\ActivitySelectionView.mc" id="27" lineNum="72" parent="globals/ActivitySelectionView" pc="268437272" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\ActivitySelectionView.mc" id="27" lineNum="73" parent="globals/ActivitySelectionView" pc="268437290" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\ActivitySelectionView.mc" id="27" lineNum="74" parent="globals/ActivitySelectionView" pc="268437307" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\ActivitySelectionView.mc" id="27" lineNum="77" parent="globals/ActivitySelectionView" pc="268437339" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\ActivitySelectionView.mc" id="27" lineNum="78" parent="globals/ActivitySelectionView" pc="268437354" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\ActivitySelectionView.mc" id="27" lineNum="79" parent="globals/ActivitySelectionView" pc="268437378" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\ActivitySelectionView.mc" id="27" lineNum="80" parent="globals/ActivitySelectionView" pc="268437395" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\ActivitySelectionView.mc" id="27" lineNum="83" parent="globals/ActivitySelectionView" pc="268437433" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\ActivitySelectionView.mc" id="27" lineNum="84" parent="globals/ActivitySelectionView" pc="268437449" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\ActivitySelectionView.mc" id="27" lineNum="85" parent="globals/ActivitySelectionView" pc="268437476" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\ActivitySelectionView.mc" id="27" lineNum="86" parent="globals/ActivitySelectionView" pc="268437493" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\Activity_StopwatchMenuDelegate.mc" id="28" lineNum="11" parent="globals/Activity_StopwatchMenuDelegate" pc="268437535" symbol="onMenuItem"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\Activity_StopwatchMenuDelegate.mc" id="28" lineNum="12" parent="globals/Activity_StopwatchMenuDelegate" pc="268437537" symbol="onMenuItem"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\Activity_StopwatchMenuDelegate.mc" id="28" lineNum="13" parent="globals/Activity_StopwatchMenuDelegate" pc="268437548" symbol="onMenuItem"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\Activity_StopwatchMenuDelegate.mc" id="28" lineNum="14" parent="globals/Activity_StopwatchMenuDelegate" pc="268437569" symbol="onMenuItem"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\Activity_StopwatchMenuDelegate.mc" id="28" lineNum="15" parent="globals/Activity_StopwatchMenuDelegate" pc="268437580" symbol="onMenuItem"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\Activity_StopwatchMenuDelegate.mc" id="29" lineNum="7" parent="globals/Activity_StopwatchMenuDelegate" pc="268437602" symbol="initialize"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\Activity_StopwatchMenuDelegate.mc" id="29" lineNum="8" parent="globals/Activity_StopwatchMenuDelegate" pc="268437604" symbol="initialize"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\StopwatchModel.mc" id="30" lineNum="33" parent="globals/LapData" pc="268437617" symbol="fromDict"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\StopwatchModel.mc" id="30" lineNum="34" parent="globals/LapData" pc="268437619" symbol="fromDict"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\StopwatchModel.mc" id="31" lineNum="19" parent="globals/LapData" pc="268437666" symbol="initialize"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\StopwatchModel.mc" id="31" lineNum="20" parent="globals/LapData" pc="268437668" symbol="initialize"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\StopwatchModel.mc" id="31" lineNum="21" parent="globals/LapData" pc="268437677" symbol="initialize"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\StopwatchModel.mc" id="32" lineNum="25" parent="globals/LapData" pc="268437687" symbol="toDict"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\StopwatchModel.mc" id="32" lineNum="26" parent="globals/LapData" pc="268437689" symbol="toDict"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\ActivitySelectionView.mc" id="33" lineNum="125" parent="globals/ActivitySelectionDelegate" pc="268437717" symbol="onBack"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\ActivitySelectionView.mc" id="33" lineNum="127" parent="globals/ActivitySelectionDelegate" pc="268437719" symbol="onBack"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\ActivitySelectionView.mc" id="33" lineNum="128" parent="globals/ActivitySelectionDelegate" pc="268437734" symbol="onBack"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\ActivitySelectionView.mc" id="33" lineNum="129" parent="globals/ActivitySelectionDelegate" pc="268437748" symbol="onBack"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\ActivitySelectionView.mc" id="34" lineNum="109" parent="globals/ActivitySelectionDelegate" pc="268437750" symbol="onPreviousPage"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\ActivitySelectionView.mc" id="34" lineNum="111" parent="globals/ActivitySelectionDelegate" pc="268437752" symbol="onPreviousPage"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\ActivitySelectionView.mc" id="34" lineNum="112" parent="globals/ActivitySelectionDelegate" pc="268437768" symbol="onPreviousPage"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\ActivitySelectionView.mc" id="34" lineNum="113" parent="globals/ActivitySelectionDelegate" pc="268437782" symbol="onPreviousPage"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\ActivitySelectionView.mc" id="35" lineNum="103" parent="globals/ActivitySelectionDelegate" pc="268437784" symbol="initialize"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\ActivitySelectionView.mc" id="35" lineNum="104" parent="globals/ActivitySelectionDelegate" pc="268437786" symbol="initialize"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\ActivitySelectionView.mc" id="35" lineNum="105" parent="globals/ActivitySelectionDelegate" pc="268437798" symbol="initialize"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\ActivitySelectionView.mc" id="36" lineNum="117" parent="globals/ActivitySelectionDelegate" pc="268437808" symbol="onNextPage"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\ActivitySelectionView.mc" id="36" lineNum="119" parent="globals/ActivitySelectionDelegate" pc="268437810" symbol="onNextPage"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\ActivitySelectionView.mc" id="36" lineNum="120" parent="globals/ActivitySelectionDelegate" pc="268437826" symbol="onNextPage"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\ActivitySelectionView.mc" id="36" lineNum="121" parent="globals/ActivitySelectionDelegate" pc="268437840" symbol="onNextPage"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\Activity_StopwatchApp.mc" id="37" lineNum="12" parent="globals/Activity_StopwatchApp" pc="268437842" symbol="onStart"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\Activity_StopwatchApp.mc" id="38" lineNum="22" parent="globals/Activity_StopwatchApp" pc="268437845" symbol="getInitialView"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\Activity_StopwatchApp.mc" id="38" lineNum="23" parent="globals/Activity_StopwatchApp" pc="268437848" symbol="getInitialView"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\Activity_StopwatchApp.mc" id="38" lineNum="24" parent="globals/Activity_StopwatchApp" pc="268437872" symbol="getInitialView"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\Activity_StopwatchApp.mc" id="38" lineNum="25" parent="globals/Activity_StopwatchApp" pc="268437896" symbol="getInitialView"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\Activity_StopwatchApp.mc" id="38" lineNum="26" parent="globals/Activity_StopwatchApp" pc="268437908" symbol="getInitialView"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\Activity_StopwatchApp.mc" id="39" lineNum="7" parent="globals/Activity_StopwatchApp" pc="268437923" symbol="initialize"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\Activity_StopwatchApp.mc" id="39" lineNum="8" parent="globals/Activity_StopwatchApp" pc="268437925" symbol="initialize"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\Activity_StopwatchApp.mc" id="40" lineNum="17" parent="globals/Activity_StopwatchApp" pc="268437938" symbol="onStop"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\StopwatchModel.mc" id="41" lineNum="190" parent="globals/StopwatchModel" pc="268437941" symbol="onTick"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\StopwatchModel.mc" id="41" lineNum="191" parent="globals/StopwatchModel" pc="268437943" symbol="onTick"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\StopwatchModel.mc" id="41" lineNum="192" parent="globals/StopwatchModel" pc="268437952" symbol="onTick"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\StopwatchModel.mc" id="42" lineNum="197" parent="globals/StopwatchModel" pc="268437968" symbol="saveState"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\StopwatchModel.mc" id="42" lineNum="199" parent="globals/StopwatchModel" pc="268437971" symbol="saveState"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\StopwatchModel.mc" id="42" lineNum="200" parent="globals/StopwatchModel" pc="268437975" symbol="saveState"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\StopwatchModel.mc" id="42" lineNum="201" parent="globals/StopwatchModel" pc="268437995" symbol="saveState"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\StopwatchModel.mc" id="42" lineNum="204" parent="globals/StopwatchModel" pc="268438029" symbol="saveState"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\StopwatchModel.mc" id="42" lineNum="210" parent="globals/StopwatchModel" pc="268438077" symbol="saveState"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\StopwatchModel.mc" id="43" lineNum="97" parent="globals/StopwatchModel" pc="268438098" symbol="start"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\StopwatchModel.mc" id="43" lineNum="98" parent="globals/StopwatchModel" pc="268438100" symbol="start"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\StopwatchModel.mc" id="43" lineNum="99" parent="globals/StopwatchModel" pc="268438109" symbol="start"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\StopwatchModel.mc" id="43" lineNum="100" parent="globals/StopwatchModel" pc="268438126" symbol="start"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\StopwatchModel.mc" id="43" lineNum="101" parent="globals/StopwatchModel" pc="268438155" symbol="start"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\StopwatchModel.mc" id="43" lineNum="102" parent="globals/StopwatchModel" pc="268438185" symbol="start"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\StopwatchModel.mc" id="43" lineNum="103" parent="globals/StopwatchModel" pc="268438193" symbol="start"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\StopwatchModel.mc" id="43" lineNum="104" parent="globals/StopwatchModel" pc="268438217" symbol="start"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\StopwatchModel.mc" id="44" lineNum="170" parent="globals/StopwatchModel" pc="268438228" symbol="getCurrentLapTime"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\StopwatchModel.mc" id="44" lineNum="171" parent="globals/StopwatchModel" pc="268438230" symbol="getCurrentLapTime"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\StopwatchModel.mc" id="45" lineNum="214" parent="globals/StopwatchModel" pc="268438243" symbol="formatTime"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\StopwatchModel.mc" id="45" lineNum="216" parent="globals/StopwatchModel" pc="268438246" symbol="formatTime"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\StopwatchModel.mc" id="45" lineNum="217" parent="globals/StopwatchModel" pc="268438253" symbol="formatTime"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\StopwatchModel.mc" id="45" lineNum="221" parent="globals/StopwatchModel" pc="268438259" symbol="formatTime"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\StopwatchModel.mc" id="45" lineNum="222" parent="globals/StopwatchModel" pc="268438273" symbol="formatTime"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\StopwatchModel.mc" id="45" lineNum="223" parent="globals/StopwatchModel" pc="268438280" symbol="formatTime"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\StopwatchModel.mc" id="45" lineNum="225" parent="globals/StopwatchModel" pc="268438290" symbol="formatTime"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\StopwatchModel.mc" id="46" lineNum="137" parent="globals/StopwatchModel" pc="268438346" symbol="toggle"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\StopwatchModel.mc" id="46" lineNum="138" parent="globals/StopwatchModel" pc="268438348" symbol="toggle"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\StopwatchModel.mc" id="46" lineNum="139" parent="globals/StopwatchModel" pc="268438388" symbol="toggle"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\StopwatchModel.mc" id="46" lineNum="140" parent="globals/StopwatchModel" pc="268438396" symbol="toggle"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\StopwatchModel.mc" id="46" lineNum="142" parent="globals/StopwatchModel" pc="268438406" symbol="toggle"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\StopwatchModel.mc" id="47" lineNum="232" parent="globals/StopwatchModel" pc="268438414" symbol="formatTimeWithHours"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\StopwatchModel.mc" id="47" lineNum="234" parent="globals/StopwatchModel" pc="268438417" symbol="formatTimeWithHours"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\StopwatchModel.mc" id="47" lineNum="235" parent="globals/StopwatchModel" pc="268438424" symbol="formatTimeWithHours"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\StopwatchModel.mc" id="47" lineNum="239" parent="globals/StopwatchModel" pc="268438430" symbol="formatTimeWithHours"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\StopwatchModel.mc" id="47" lineNum="240" parent="globals/StopwatchModel" pc="268438444" symbol="formatTimeWithHours"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\StopwatchModel.mc" id="47" lineNum="241" parent="globals/StopwatchModel" pc="268438451" symbol="formatTimeWithHours"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\StopwatchModel.mc" id="47" lineNum="242" parent="globals/StopwatchModel" pc="268438461" symbol="formatTimeWithHours"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\StopwatchModel.mc" id="47" lineNum="244" parent="globals/StopwatchModel" pc="268438469" symbol="formatTimeWithHours"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\StopwatchModel.mc" id="48" lineNum="109" parent="globals/StopwatchModel" pc="268438542" symbol="pause"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\StopwatchModel.mc" id="48" lineNum="110" parent="globals/StopwatchModel" pc="268438544" symbol="pause"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\StopwatchModel.mc" id="48" lineNum="111" parent="globals/StopwatchModel" pc="268438552" symbol="pause"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\StopwatchModel.mc" id="48" lineNum="112" parent="globals/StopwatchModel" pc="268438561" symbol="pause"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\StopwatchModel.mc" id="48" lineNum="113" parent="globals/StopwatchModel" pc="268438573" symbol="pause"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\StopwatchModel.mc" id="48" lineNum="115" parent="globals/StopwatchModel" pc="268438584" symbol="pause"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\StopwatchModel.mc" id="48" lineNum="116" parent="globals/StopwatchModel" pc="268438613" symbol="pause"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\StopwatchModel.mc" id="48" lineNum="117" parent="globals/StopwatchModel" pc="268438621" symbol="pause"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\StopwatchModel.mc" id="48" lineNum="118" parent="globals/StopwatchModel" pc="268438645" symbol="pause"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\StopwatchModel.mc" id="49" lineNum="147" parent="globals/StopwatchModel" pc="268438656" symbol="addLap"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\StopwatchModel.mc" id="49" lineNum="148" parent="globals/StopwatchModel" pc="268438659" symbol="addLap"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\StopwatchModel.mc" id="49" lineNum="149" parent="globals/StopwatchModel" pc="268438667" symbol="addLap"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\StopwatchModel.mc" id="49" lineNum="150" parent="globals/StopwatchModel" pc="268438677" symbol="addLap"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\StopwatchModel.mc" id="49" lineNum="152" parent="globals/StopwatchModel" pc="268438686" symbol="addLap"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\StopwatchModel.mc" id="49" lineNum="153" parent="globals/StopwatchModel" pc="268438714" symbol="addLap"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\StopwatchModel.mc" id="49" lineNum="154" parent="globals/StopwatchModel" pc="268438730" symbol="addLap"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\StopwatchModel.mc" id="49" lineNum="155" parent="globals/StopwatchModel" pc="268438737" symbol="addLap"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\StopwatchModel.mc" id="50" lineNum="175" parent="globals/StopwatchModel" pc="268438740" symbol="getLaps"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\StopwatchModel.mc" id="50" lineNum="176" parent="globals/StopwatchModel" pc="268438742" symbol="getLaps"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\StopwatchModel.mc" id="51" lineNum="180" parent="globals/StopwatchModel" pc="268438748" symbol="getLapCount"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\StopwatchModel.mc" id="51" lineNum="181" parent="globals/StopwatchModel" pc="268438750" symbol="getLapCount"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\StopwatchModel.mc" id="52" lineNum="185" parent="globals/StopwatchModel" pc="268438762" symbol="isRunning"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\StopwatchModel.mc" id="52" lineNum="186" parent="globals/StopwatchModel" pc="268438764" symbol="isRunning"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\StopwatchModel.mc" id="53" lineNum="123" parent="globals/StopwatchModel" pc="268438770" symbol="reset"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\StopwatchModel.mc" id="53" lineNum="124" parent="globals/StopwatchModel" pc="268438772" symbol="reset"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\StopwatchModel.mc" id="53" lineNum="125" parent="globals/StopwatchModel" pc="268438781" symbol="reset"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\StopwatchModel.mc" id="53" lineNum="126" parent="globals/StopwatchModel" pc="268438793" symbol="reset"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\StopwatchModel.mc" id="53" lineNum="128" parent="globals/StopwatchModel" pc="268438804" symbol="reset"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\StopwatchModel.mc" id="53" lineNum="129" parent="globals/StopwatchModel" pc="268438812" symbol="reset"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\StopwatchModel.mc" id="53" lineNum="130" parent="globals/StopwatchModel" pc="268438820" symbol="reset"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\StopwatchModel.mc" id="53" lineNum="131" parent="globals/StopwatchModel" pc="268438828" symbol="reset"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\StopwatchModel.mc" id="53" lineNum="132" parent="globals/StopwatchModel" pc="268438836" symbol="reset"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\StopwatchModel.mc" id="53" lineNum="133" parent="globals/StopwatchModel" pc="268438845" symbol="reset"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\StopwatchModel.mc" id="54" lineNum="52" parent="globals/StopwatchModel" pc="268438853" symbol="initialize"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\StopwatchModel.mc" id="54" lineNum="53" parent="globals/StopwatchModel" pc="268438856" symbol="initialize"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\StopwatchModel.mc" id="54" lineNum="54" parent="globals/StopwatchModel" pc="268438865" symbol="initialize"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\StopwatchModel.mc" id="54" lineNum="57" parent="globals/StopwatchModel" pc="268438874" symbol="initialize"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\StopwatchModel.mc" id="54" lineNum="58" parent="globals/StopwatchModel" pc="268438893" symbol="initialize"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\StopwatchModel.mc" id="54" lineNum="59" parent="globals/StopwatchModel" pc="268438899" symbol="initialize"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\StopwatchModel.mc" id="54" lineNum="60" parent="globals/StopwatchModel" pc="268438916" symbol="initialize"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\StopwatchModel.mc" id="54" lineNum="61" parent="globals/StopwatchModel" pc="268438931" symbol="initialize"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\StopwatchModel.mc" id="54" lineNum="64" parent="globals/StopwatchModel" pc="268438943" symbol="initialize"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\StopwatchModel.mc" id="54" lineNum="65" parent="globals/StopwatchModel" pc="268438960" symbol="initialize"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\StopwatchModel.mc" id="54" lineNum="66" parent="globals/StopwatchModel" pc="268438975" symbol="initialize"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\StopwatchModel.mc" id="54" lineNum="69" parent="globals/StopwatchModel" pc="268438987" symbol="initialize"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\StopwatchModel.mc" id="54" lineNum="70" parent="globals/StopwatchModel" pc="268439004" symbol="initialize"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\StopwatchModel.mc" id="54" lineNum="71" parent="globals/StopwatchModel" pc="268439019" symbol="initialize"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\StopwatchModel.mc" id="54" lineNum="74" parent="globals/StopwatchModel" pc="268439031" symbol="initialize"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\StopwatchModel.mc" id="54" lineNum="75" parent="globals/StopwatchModel" pc="268439048" symbol="initialize"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\StopwatchModel.mc" id="54" lineNum="77" parent="globals/StopwatchModel" pc="268439063" symbol="initialize"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\StopwatchModel.mc" id="54" lineNum="78" parent="globals/StopwatchModel" pc="268439072" symbol="initialize"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\StopwatchModel.mc" id="54" lineNum="79" parent="globals/StopwatchModel" pc="268439089" symbol="initialize"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\StopwatchModel.mc" id="54" lineNum="80" parent="globals/StopwatchModel" pc="268439107" symbol="initialize"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\StopwatchModel.mc" id="54" lineNum="85" parent="globals/StopwatchModel" pc="268439159" symbol="initialize"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\StopwatchModel.mc" id="54" lineNum="87" parent="globals/StopwatchModel" pc="268439167" symbol="initialize"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\StopwatchModel.mc" id="54" lineNum="89" parent="globals/StopwatchModel" pc="268439175" symbol="initialize"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\StopwatchModel.mc" id="54" lineNum="90" parent="globals/StopwatchModel" pc="268439185" symbol="initialize"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\StopwatchModel.mc" id="55" lineNum="159" parent="globals/StopwatchModel" pc="268439203" symbol="getElapsedTime"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\StopwatchModel.mc" id="55" lineNum="160" parent="globals/StopwatchModel" pc="268439206" symbol="getElapsedTime"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\StopwatchModel.mc" id="55" lineNum="161" parent="globals/StopwatchModel" pc="268439214" symbol="getElapsedTime"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\StopwatchModel.mc" id="55" lineNum="162" parent="globals/StopwatchModel" pc="268439226" symbol="getElapsedTime"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\StopwatchModel.mc" id="55" lineNum="163" parent="globals/StopwatchModel" pc="268439242" symbol="getElapsedTime"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\StopwatchModel.mc" id="55" lineNum="165" parent="globals/StopwatchModel" pc="268439248" symbol="getElapsedTime"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\Activity_StopwatchDelegate.mc" id="56" lineNum="24" parent="globals/Activity_StopwatchDelegate" pc="268439255" symbol="onBack"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\Activity_StopwatchDelegate.mc" id="56" lineNum="26" parent="globals/Activity_StopwatchDelegate" pc="268439257" symbol="onBack"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\Activity_StopwatchDelegate.mc" id="56" lineNum="27" parent="globals/Activity_StopwatchDelegate" pc="268439297" symbol="onBack"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\Activity_StopwatchDelegate.mc" id="56" lineNum="28" parent="globals/Activity_StopwatchDelegate" pc="268439309" symbol="onBack"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\Activity_StopwatchDelegate.mc" id="56" lineNum="30" parent="globals/Activity_StopwatchDelegate" pc="268439314" symbol="onBack"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\Activity_StopwatchDelegate.mc" id="57" lineNum="34" parent="globals/Activity_StopwatchDelegate" pc="268439316" symbol="onPreviousPage"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\Activity_StopwatchDelegate.mc" id="57" lineNum="35" parent="globals/Activity_StopwatchDelegate" pc="268439318" symbol="onPreviousPage"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\Activity_StopwatchDelegate.mc" id="57" lineNum="36" parent="globals/Activity_StopwatchDelegate" pc="268439330" symbol="onPreviousPage"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\Activity_StopwatchDelegate.mc" id="58" lineNum="50" parent="globals/Activity_StopwatchDelegate" pc="268439332" symbol="onMenu"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\Activity_StopwatchDelegate.mc" id="58" lineNum="51" parent="globals/Activity_StopwatchDelegate" pc="268439334" symbol="onMenu"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\Activity_StopwatchDelegate.mc" id="59" lineNum="13" parent="globals/Activity_StopwatchDelegate" pc="268439336" symbol="setView"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\Activity_StopwatchDelegate.mc" id="59" lineNum="14" parent="globals/Activity_StopwatchDelegate" pc="268439338" symbol="setView"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\Activity_StopwatchDelegate.mc" id="60" lineNum="8" parent="globals/Activity_StopwatchDelegate" pc="268439348" symbol="initialize"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\Activity_StopwatchDelegate.mc" id="60" lineNum="9" parent="globals/Activity_StopwatchDelegate" pc="268439350" symbol="initialize"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\Activity_StopwatchDelegate.mc" id="61" lineNum="18" parent="globals/Activity_StopwatchDelegate" pc="268439363" symbol="onSelect"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\Activity_StopwatchDelegate.mc" id="61" lineNum="19" parent="globals/Activity_StopwatchDelegate" pc="268439365" symbol="onSelect"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\Activity_StopwatchDelegate.mc" id="61" lineNum="20" parent="globals/Activity_StopwatchDelegate" pc="268439377" symbol="onSelect"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\Activity_StopwatchDelegate.mc" id="62" lineNum="40" parent="globals/Activity_StopwatchDelegate" pc="268439379" symbol="onNextPage"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\Activity_StopwatchDelegate.mc" id="62" lineNum="41" parent="globals/Activity_StopwatchDelegate" pc="268439381" symbol="onNextPage"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\Activity_StopwatchDelegate.mc" id="62" lineNum="42" parent="globals/Activity_StopwatchDelegate" pc="268439400" symbol="onNextPage"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\Activity_StopwatchDelegate.mc" id="62" lineNum="44" parent="globals/Activity_StopwatchDelegate" pc="268439415" symbol="onNextPage"/>
+        <entry filename="C:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\source\\Activity_StopwatchDelegate.mc" id="62" lineNum="46" parent="globals/Activity_StopwatchDelegate" pc="268439427" symbol="onNextPage"/>
+        <entry filename="c:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\bin\\gen\\006-B4432-00\\source\\Rez.mcgen" id="63" lineNum="13" parent="globals/Rez/Layouts" pc="268439429" symbol="MainLayout"/>
+        <entry filename="c:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\bin\\gen\\006-B4432-00\\source\\Rez.mcgen" id="63" lineNum="14" parent="globals/Rez/Layouts" pc="268439439" symbol="MainLayout"/>
+        <entry filename="c:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\bin\\gen\\006-B4432-00\\source\\Rez.mcgen" id="64" lineNum="19" parent="globals/Rez/Menus/MainMenu" pc="268439442" symbol="&lt;init&gt;"/>
+        <entry filename="c:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\bin\\gen\\006-B4432-00\\source\\Rez.mcgen" id="65" lineNum="20" parent="globals/Rez/Menus/MainMenu" pc="268439454" symbol="initialize"/>
+        <entry filename="c:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\bin\\gen\\006-B4432-00\\source\\Rez.mcgen" id="65" lineNum="21" parent="globals/Rez/Menus/MainMenu" pc="268439456" symbol="initialize"/>
+        <entry filename="c:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\bin\\gen\\006-B4432-00\\source\\Rez.mcgen" id="65" lineNum="22" parent="globals/Rez/Menus/MainMenu" pc="268439468" symbol="initialize"/>
+        <entry filename="c:\\Users\\SkyJi\\Repositories\\Stopwatch_Garmin\\Activity_Stopwatch\\bin\\gen\\006-B4432-00\\source\\Rez.mcgen" id="65" lineNum="23" parent="globals/Rez/Menus/MainMenu" pc="268439513" symbol="initialize"/>
+    </pcToLineNum>
+    <symbolTable>
+        <entry field="true" id="31" symbol="&lt;globals/ActivitySelectionView/&lt;&gt;mTimeoutSeconds&gt;"/>
+        <entry id="8388639" module="true" symbol="Graphics"/>
+        <entry field="true" id="72" symbol="save_label"/>
+        <entry id="12" object="true" symbol="Activity_StopwatchDelegate"/>
+        <entry id="43" method="true" symbol="isRunning"/>
+        <entry id="8388632" method="true" symbol="&lt;init&gt;"/>
+        <entry id="6" module="true" symbol="globals/Rez/Menus"/>
+        <entry id="33" method="true" symbol="onTimerTick"/>
+        <entry id="60" method="true" symbol="MainLayout"/>
+        <entry field="true" id="74" symbol="start_label"/>
+        <entry field="true" id="63" symbol="focused_activity"/>
+        <entry id="8390424" module="true" symbol="Storage"/>
+        <entry field="true" id="49" symbol="&lt;globals/StopwatchModel/&lt;&gt;mStartTime&gt;"/>
+        <entry field="true" id="48" symbol="&lt;globals/StopwatchModel/&lt;&gt;mLastLapTime&gt;"/>
+        <entry id="8388924" module="true" symbol="Gregorian"/>
+        <entry id="40" method="true" symbol="getElapsedTime"/>
+        <entry field="true" id="8388611" module="true" symbol="Toybox"/>
+        <entry id="8392382" method="true" symbol="reset"/>
+        <entry id="22" method="true" symbol="onStopwatchUpdate"/>
+        <entry field="true" id="62" symbol="AppName"/>
+        <entry id="7" module="true" symbol="globals/Rez/Strings"/>
+        <entry id="55" method="true" symbol="formatTime"/>
+        <entry id="8389080" method="true" symbol="onMenu"/>
+        <entry field="true" id="47" symbol="&lt;globals/StopwatchModel/&lt;&gt;mLaps&gt;"/>
+        <entry id="54" method="true" symbol="toggle"/>
+        <entry id="8388648" module="true" symbol="WatchUi"/>
+        <entry id="8389081" method="true" symbol="onBack"/>
+        <entry id="58" method="true" symbol="setView"/>
+        <entry field="true" id="34" symbol="lapTime"/>
+        <entry id="3" module="true" symbol="globals/Rez"/>
+        <entry field="true" id="71" symbol="prompt"/>
+        <entry field="true" id="18" symbol="&lt;globals/Activity_StopwatchView/&lt;&gt;mMaxVisibleLaps&gt;"/>
+        <entry id="8389124" method="true" symbol="onUpdate"/>
+        <entry id="53" method="true" symbol="saveState"/>
+        <entry id="2" module="true" symbol="globals/LapData/&lt;statics&gt;"/>
+        <entry field="true" id="46" symbol="&lt;globals/StopwatchModel/&lt;&gt;mIsRunning&gt;"/>
+        <entry id="10" object="true" symbol="ActivitySelectionView"/>
+        <entry field="true" id="70" symbol="previous_laps"/>
+        <entry id="8388771" module="true" object="true" symbol="Drawables"/>
+        <entry id="8388880" method="true" symbol="addLap"/>
+        <entry field="true" id="69" symbol="pause_label"/>
+        <entry id="13" object="true" symbol="Activity_StopwatchMenuDelegate"/>
+        <entry id="77" symbol="item_2"/>
+        <entry id="76" symbol="item_1"/>
+        <entry id="8389079" method="true" symbol="onPreviousPage"/>
+        <entry id="28" module="true" symbol="Menus"/>
+        <entry id="8389275" method="true" symbol="getApp"/>
+        <entry id="5" module="true" symbol="globals/Rez/Layouts"/>
+        <entry id="14" object="true" symbol="Activity_StopwatchView"/>
+        <entry id="8389122" method="true" symbol="onLayout"/>
+        <entry id="8" module="true" symbol="globals/StopwatchModel/&lt;statics&gt;"/>
+        <entry field="true" id="75" symbol="vague_activity"/>
+        <entry id="41" method="true" symbol="getLapCount"/>
+        <entry id="16" object="true" symbol="StopwatchModel"/>
+        <entry id="4" module="true" symbol="globals/Rez/Drawables"/>
+        <entry id="24" method="true" symbol="scrollDown"/>
+        <entry id="61" object="true" symbol="MainMenu"/>
+        <entry id="56" method="true" symbol="formatTimeWithHours"/>
+        <entry id="15" object="true" symbol="LapData"/>
+        <entry id="21" method="true" symbol="onActivityTypeSelected"/>
+        <entry field="true" id="50" symbol="&lt;globals/StopwatchModel/&lt;&gt;mTimer&gt;"/>
+        <entry id="8388644" module="true" symbol="System"/>
+        <entry id="39" method="true" symbol="getCurrentLapTime"/>
+        <entry id="8389619" method="true" symbol="onSelect"/>
+        <entry id="8388645" module="true" symbol="Time"/>
+        <entry id="8388769" module="true" object="true" symbol="Rez"/>
+        <entry field="true" id="45" symbol="&lt;globals/StopwatchModel/&lt;&gt;mCallback&gt;"/>
+        <entry id="42" method="true" symbol="getLaps"/>
+        <entry id="26" method="true" symbol="toggleStopwatch"/>
+        <entry field="true" id="57" symbol="&lt;globals/Activity_StopwatchDelegate/&lt;&gt;mView&gt;"/>
+        <entry id="11" object="true" symbol="Activity_StopwatchApp"/>
+        <entry id="8388640" module="true" symbol="Lang"/>
+        <entry field="true" id="59" symbol="LauncherIcon"/>
+        <entry id="8388610" symbol="statics"/>
+        <entry id="8389123" method="true" symbol="onShow"/>
+        <entry field="true" id="73" symbol="select_activity"/>
+        <entry field="true" id="19" symbol="&lt;globals/Activity_StopwatchView/&lt;&gt;mScrollPosition&gt;"/>
+        <entry id="8389350" module="true" symbol="globals"/>
+        <entry field="true" id="30" symbol="&lt;globals/ActivitySelectionView/&lt;&gt;mTimeLeft&gt;"/>
+        <entry id="8388770" module="true" object="true" symbol="Strings"/>
+        <entry field="true" id="67" symbol="neutral_activity"/>
+        <entry id="36" method="true" symbol="toDict"/>
+        <entry id="51" method="true" symbol="onTick"/>
+        <entry id="8388702" method="true" symbol="initialize"/>
+        <entry id="8389279" method="true" symbol="onStart"/>
+        <entry field="true" id="64" symbol="lap_label"/>
+        <entry field="true" id="35" symbol="lapType"/>
+        <entry field="true" id="29" symbol="&lt;globals/ActivitySelectionView/&lt;&gt;mCallback&gt;"/>
+        <entry field="true" id="38" symbol="&lt;globals/ActivitySelectionDelegate/&lt;&gt;mCallback&gt;"/>
+        <entry id="8389280" method="true" symbol="getInitialView"/>
+        <entry id="8389281" method="true" symbol="onStop"/>
+        <entry id="8389109" method="true" symbol="onMenuItem"/>
+        <entry field="true" id="68" symbol="no_laps"/>
+        <entry id="23" method="true" symbol="saveActivity"/>
+        <entry field="true" id="32" symbol="&lt;globals/ActivitySelectionView/&lt;&gt;mTimer&gt;"/>
+        <entry id="17" method="true" symbol="getActivityColor"/>
+        <entry id="8388646" module="true" object="true" symbol="Timer"/>
+        <entry field="true" id="44" symbol="&lt;globals/StopwatchModel/&lt;&gt;mAccumulatedTime&gt;"/>
+        <entry id="27" module="true" symbol="Layouts"/>
+        <entry id="8388698" method="true" symbol="start"/>
+        <entry field="true" id="20" symbol="mStopwatch"/>
+        <entry id="9" object="true" symbol="ActivitySelectionDelegate"/>
+        <entry id="52" method="true" symbol="pause"/>
+        <entry id="8389125" method="true" symbol="onHide"/>
+        <entry id="8389078" method="true" symbol="onNextPage"/>
+        <entry id="8388635" module="true" symbol="Application"/>
+        <entry id="37" method="true" symbol="fromDict"/>
+        <entry field="true" id="66" symbol="menu_label_2"/>
+        <entry field="true" id="65" symbol="menu_label_1"/>
+        <entry id="25" method="true" symbol="scrollUp"/>
+    </symbolTable>
+    <localVars>
+        <entry arg="true" endPc="268435632" name="activityType" stackId="1" startPc="268435573"/>
+        <entry endPc="268435705" name="lapCount" stackId="1" startPc="268435636"/>
+        <entry arg="true" endPc="268435750" name="activityType" stackId="1" startPc="268435710"/>
+        <entry endPc="268435910" name="activitySelectCallback" stackId="1" startPc="268435796"/>
+        <entry endPc="268435910" name="view" stackId="2" startPc="268435796"/>
+        <entry endPc="268435910" name="delegate" stackId="3" startPc="268435796"/>
+        <entry endPc="268436000" name="laps" stackId="1" startPc="268435944"/>
+        <entry endPc="268436000" name="totalTime" stackId="2" startPc="268435944"/>
+        <entry arg="true" endPc="268436858" name="dc" stackId="1" startPc="268436088"/>
+        <entry endPc="268436857" name="width" stackId="2" startPc="268436091"/>
+        <entry endPc="268436857" name="height" stackId="3" startPc="268436091"/>
+        <entry endPc="268436857" name="clockTime" stackId="4" startPc="268436091"/>
+        <entry endPc="268436857" name="timeString" stackId="5" startPc="268436091"/>
+        <entry endPc="268436857" name="verticalCenter" stackId="6" startPc="268436091"/>
+        <entry endPc="268436857" name="totalTime" stackId="7" startPc="268436091"/>
+        <entry endPc="268436857" name="totalTimeStr" stackId="8" startPc="268436091"/>
+        <entry endPc="268436857" name="currentLapTime" stackId="9" startPc="268436091"/>
+        <entry endPc="268436857" name="currentLapTimeStr" stackId="10" startPc="268436091"/>
+        <entry endPc="268436857" name="laps" stackId="11" startPc="268436091"/>
+        <entry endPc="268436857" name="lapCount" stackId="12" startPc="268436091"/>
+        <entry endPc="268436857" name="yPos" stackId="13" startPc="268436091"/>
+        <entry endPc="268436857" name="startIdx" stackId="14" startPc="268436508"/>
+        <entry endPc="268436857" name="endIdx" stackId="15" startPc="268436508"/>
+        <entry endPc="268436723" name="i" stackId="16" startPc="268436559"/>
+        <entry endPc="268436713" name="lap" stackId="17" startPc="268436559"/>
+        <entry endPc="268436713" name="color" stackId="18" startPc="268436559"/>
+        <entry endPc="268436713" name="lapTimeStr" stackId="19" startPc="268436559"/>
+        <entry arg="true" endPc="268437075" name="callback" stackId="1" startPc="268437040"/>
+        <entry arg="true" endPc="268437534" name="dc" stackId="1" startPc="268437111"/>
+        <entry endPc="268437533" name="width" stackId="2" startPc="268437114"/>
+        <entry endPc="268437533" name="height" stackId="3" startPc="268437114"/>
+        <entry endPc="268437533" name="boxHeight" stackId="4" startPc="268437114"/>
+        <entry endPc="268437533" name="boxMargin" stackId="5" startPc="268437114"/>
+        <entry endPc="268437533" name="boxWidth" stackId="6" startPc="268437114"/>
+        <entry arg="true" endPc="268437601" name="item" stackId="1" startPc="268437535"/>
+        <entry arg="true" endPc="268437665" name="dict" stackId="1" startPc="268437617"/>
+        <entry arg="true" endPc="268437686" name="time" stackId="1" startPc="268437666"/>
+        <entry arg="true" endPc="268437686" name="type" stackId="2" startPc="268437666"/>
+        <entry arg="true" endPc="268437807" name="callback" stackId="1" startPc="268437784"/>
+        <entry endPc="268437922" name="view" stackId="1" startPc="268437848"/>
+        <entry endPc="268437922" name="delegate" stackId="2" startPc="268437848"/>
+        <entry endPc="268438096" name="lapDicts" stackId="1" startPc="268437971"/>
+        <entry endPc="268438028" name="i" stackId="2" startPc="268437995"/>
+        <entry endPc="268438096" name="state" stackId="3" startPc="268437971"/>
+        <entry arg="true" endPc="268438345" name="time" stackId="1" startPc="268438243"/>
+        <entry endPc="268438345" name="totalSeconds" stackId="2" startPc="268438246"/>
+        <entry endPc="268438345" name="seconds" stackId="3" startPc="268438246"/>
+        <entry endPc="268438345" name="minutes" stackId="4" startPc="268438246"/>
+        <entry arg="true" endPc="268438541" name="time" stackId="1" startPc="268438414"/>
+        <entry endPc="268438541" name="totalSeconds" stackId="2" startPc="268438417"/>
+        <entry endPc="268438541" name="seconds" stackId="3" startPc="268438417"/>
+        <entry endPc="268438541" name="minutes" stackId="4" startPc="268438417"/>
+        <entry endPc="268438541" name="hours" stackId="5" startPc="268438417"/>
+        <entry arg="true" endPc="268438739" name="activityType" stackId="1" startPc="268438656"/>
+        <entry endPc="268438739" name="currentTime" stackId="2" startPc="268438659"/>
+        <entry endPc="268438739" name="lapTime" stackId="3" startPc="268438659"/>
+        <entry endPc="268438739" name="lap" stackId="4" startPc="268438659"/>
+        <entry arg="true" endPc="268439202" name="callback" stackId="1" startPc="268438853"/>
+        <entry endPc="268439201" name="stored" stackId="2" startPc="268438856"/>
+        <entry endPc="268439198" name="accTime" stackId="3" startPc="268438899"/>
+        <entry endPc="268439198" name="lastLapTime" stackId="4" startPc="268438899"/>
+        <entry endPc="268439198" name="isRunning" stackId="5" startPc="268438899"/>
+        <entry endPc="268439198" name="storedLaps" stackId="6" startPc="268438899"/>
+        <entry endPc="268439155" name="i" stackId="7" startPc="268439089"/>
+        <entry endPc="268439244" name="currentTime" stackId="1" startPc="268439214"/>
+        <entry endPc="268439244" name="elapsed" stackId="2" startPc="268439214"/>
+        <entry arg="true" endPc="268439347" name="view" stackId="1" startPc="268439336"/>
+        <entry arg="true" endPc="268439441" name="dc" stackId="1" startPc="268439429"/>
+    </localVars>
+    <deviceInfo deviceVersion="810ede84fd9ce09eefda5d76cb08298db48e456c" partNumber="006-B4432-00"/>
+    <annotations>
+        <annotationEntry annotation="initialized" class="Drawables" module="globals/Rez" symbol="LauncherIcon"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="pause_label"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="neutral_activity"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="lap_label"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="select_activity"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="previous_laps"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="AppName"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="start_label"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="menu_label_2"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="vague_activity"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="menu_label_1"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="prompt"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="save_label"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="focused_activity"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="no_laps"/>
+    </annotations>
+    <dataEntryOffsetMappings>
+        <dataEntry label="globals" offset="85" parentId="" symbolId="globals" type="module"/>
+        <dataEntry label="globals/Activity_StopwatchView" offset="206" parentId="globals" symbolId="Activity_StopwatchView" type="class"/>
+        <dataEntry label="globals/Rez" offset="385" parentId="globals" symbolId="Rez" type="module"/>
+        <dataEntry label="globals/ActivitySelectionView" offset="447" parentId="globals" symbolId="ActivitySelectionView" type="class"/>
+        <dataEntry label="globals/Activity_StopwatchMenuDelegate" offset="572" parentId="globals" symbolId="Activity_StopwatchMenuDelegate" type="class"/>
+        <dataEntry label="globals/LapData" offset="625" parentId="globals" symbolId="LapData" type="class"/>
+        <dataEntry label="globals/LapData/&lt;statics&gt;" offset="700" parentId="LapData" symbolId="&lt;statics&gt;" type="module"/>
+        <dataEntry label="globals/ActivitySelectionDelegate" offset="731" parentId="globals" symbolId="ActivitySelectionDelegate" type="class"/>
+        <dataEntry label="globals/Activity_StopwatchApp" offset="811" parentId="globals" symbolId="Activity_StopwatchApp" type="class"/>
+        <dataEntry label="globals/StopwatchModel" offset="882" parentId="globals" symbolId="StopwatchModel" type="class"/>
+        <dataEntry label="globals/StopwatchModel/&lt;statics&gt;" offset="1101" parentId="StopwatchModel" symbolId="&lt;statics&gt;" type="module"/>
+        <dataEntry label="globals/Activity_StopwatchDelegate" offset="1141" parentId="globals" symbolId="Activity_StopwatchDelegate" type="class"/>
+        <dataEntry label="globals/Rez/Drawables" offset="1248" parentId="Rez" symbolId="Drawables" type="module"/>
+        <dataEntry label="globals/Rez/Layouts" offset="1283" parentId="Rez" symbolId="Layouts" type="module"/>
+        <dataEntry label="globals/Rez/Menus" offset="1318" parentId="Rez" symbolId="Menus" type="module"/>
+        <dataEntry label="globals/Rez/Strings" offset="1353" parentId="Rez" symbolId="Strings" type="module"/>
+        <dataEntry label="globals/Rez/Menus/MainMenu" offset="1505" parentId="Menus" symbolId="MainMenu" type="class"/>
+    </dataEntryOffsetMappings>
+    <functions>
+        <functionEntry accessMode="public" endPc="268435471" name="&lt;init&gt;" parent="Activity_StopwatchView" startPc="268435460">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435492" name="getApp" startPc="268435472">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435512" name="&lt;init&gt;" parent="Rez" startPc="268435493">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435524" name="&lt;init&gt;" parent="ActivitySelectionView" startPc="268435513">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435536" name="&lt;init&gt;" parent="Activity_StopwatchMenuDelegate" startPc="268435525">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="&lt;init&gt;" parent="LapData">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="&lt;init&gt;" parent="globals/LapData">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435548" name="&lt;init&gt;" parent="ActivitySelectionDelegate" startPc="268435537">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435560" name="&lt;init&gt;" parent="Activity_StopwatchApp" startPc="268435549">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="&lt;init&gt;" parent="StopwatchModel">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="&lt;init&gt;" parent="globals/StopwatchModel">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435572" name="&lt;init&gt;" parent="Activity_StopwatchDelegate" startPc="268435561">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435632" name="onActivityTypeSelected" parent="Activity_StopwatchView" startPc="268435573">
+            <param id="activityType"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435706" name="scrollDown" parent="Activity_StopwatchView" startPc="268435633">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="onShow" parent="Activity_StopwatchView">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435709" name="onLayout" parent="Activity_StopwatchView" startPc="268435707">
+            <param id="dc"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435750" name="getActivityColor" parent="Activity_StopwatchView" startPc="268435710">
+            <param id="activityType"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435792" name="scrollUp" parent="Activity_StopwatchView" startPc="268435751">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435911" name="addLap" parent="Activity_StopwatchView" startPc="268435793">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435925" name="onStopwatchUpdate" parent="Activity_StopwatchView" startPc="268435912">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268436004" name="saveActivity" parent="Activity_StopwatchView" startPc="268435926">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268436061" name="initialize" parent="Activity_StopwatchView" startPc="268436005">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268436087" name="toggleStopwatch" parent="Activity_StopwatchView" startPc="268436062">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="onHide" parent="Activity_StopwatchView">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268436858" name="onUpdate" parent="Activity_StopwatchView" startPc="268436088">
+            <param id="dc"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="&lt;init&gt;" parent="Drawables">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="&lt;init&gt;" parent="Layouts">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="&lt;init&gt;" parent="Menus">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="&lt;init&gt;" parent="Strings">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268436933" name="onShow" parent="ActivitySelectionView" startPc="268436859">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268437036" name="onTimerTick" parent="ActivitySelectionView" startPc="268436934">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268437039" name="onLayout" parent="ActivitySelectionView" startPc="268437037">
+            <param id="dc"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268437075" name="initialize" parent="ActivitySelectionView" startPc="268437040">
+            <param id="callback"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268437110" name="onHide" parent="ActivitySelectionView" startPc="268437076">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268437534" name="onUpdate" parent="ActivitySelectionView" startPc="268437111">
+            <param id="dc"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268437601" name="onMenuItem" parent="Activity_StopwatchMenuDelegate" startPc="268437535">
+            <param id="item"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268437616" name="initialize" parent="Activity_StopwatchMenuDelegate" startPc="268437602">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268437665" name="fromDict" parent="LapData" startPc="268437617">
+            <param id="dict"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268437686" name="initialize" parent="LapData" startPc="268437666">
+            <param id="time"/>
+            <param id="type"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268437716" name="toDict" parent="LapData" startPc="268437687">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268437749" name="onBack" parent="ActivitySelectionDelegate" startPc="268437717">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268437783" name="onPreviousPage" parent="ActivitySelectionDelegate" startPc="268437750">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268437807" name="initialize" parent="ActivitySelectionDelegate" startPc="268437784">
+            <param id="callback"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268437841" name="onNextPage" parent="ActivitySelectionDelegate" startPc="268437808">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268437844" name="onStart" parent="Activity_StopwatchApp" startPc="268437842">
+            <param id="state"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268437922" name="getInitialView" parent="Activity_StopwatchApp" startPc="268437845">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268437937" name="initialize" parent="Activity_StopwatchApp" startPc="268437923">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268437940" name="onStop" parent="Activity_StopwatchApp" startPc="268437938">
+            <param id="state"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268437967" name="onTick" parent="StopwatchModel" startPc="268437941">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268438097" name="saveState" parent="StopwatchModel" startPc="268437968">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268438227" name="start" parent="StopwatchModel" startPc="268438098">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268438242" name="getCurrentLapTime" parent="StopwatchModel" startPc="268438228">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268438345" name="formatTime" parent="StopwatchModel" startPc="268438243">
+            <param id="time"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268438413" name="toggle" parent="StopwatchModel" startPc="268438346">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268438541" name="formatTimeWithHours" parent="StopwatchModel" startPc="268438414">
+            <param id="time"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268438655" name="pause" parent="StopwatchModel" startPc="268438542">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268438739" name="addLap" parent="StopwatchModel" startPc="268438656">
+            <param id="activityType"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268438747" name="getLaps" parent="StopwatchModel" startPc="268438740">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268438761" name="getLapCount" parent="StopwatchModel" startPc="268438748">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268438769" name="isRunning" parent="StopwatchModel" startPc="268438762">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268438852" name="reset" parent="StopwatchModel" startPc="268438770">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268439202" name="initialize" parent="StopwatchModel" startPc="268438853">
+            <param id="callback"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268439254" name="getElapsedTime" parent="StopwatchModel" startPc="268439203">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268439315" name="onBack" parent="Activity_StopwatchDelegate" startPc="268439255">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268439331" name="onPreviousPage" parent="Activity_StopwatchDelegate" startPc="268439316">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268439335" name="onMenu" parent="Activity_StopwatchDelegate" startPc="268439332">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268439347" name="setView" parent="Activity_StopwatchDelegate" startPc="268439336">
+            <param id="view"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268439362" name="initialize" parent="Activity_StopwatchDelegate" startPc="268439348">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268439378" name="onSelect" parent="Activity_StopwatchDelegate" startPc="268439363">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268439428" name="onNextPage" parent="Activity_StopwatchDelegate" startPc="268439379">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268439441" name="MainLayout" parent="Layouts" startPc="268439429">
+            <param id="dc"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268439453" name="&lt;init&gt;" parent="MainMenu" startPc="268439442">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268439558" name="initialize" parent="MainMenu" startPc="268439454">
+            <documentation/>
+        </functionEntry>
+    </functions>
+</debugInfo>
