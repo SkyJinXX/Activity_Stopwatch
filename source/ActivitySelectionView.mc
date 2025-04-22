@@ -67,23 +67,23 @@ class ActivitySelectionView extends WatchUi.View {
         var boxMargin = 10;
         var boxWidth = width - (2 * boxMargin);
         
-        // Draw focused activity option (top)
-        dc.setColor(Graphics.COLOR_DK_GREEN, Graphics.COLOR_BLACK);
+        // Draw vague activity option (top)
+        dc.setColor(Graphics.COLOR_LT_GRAY, Graphics.COLOR_BLACK);
         dc.fillRectangle(boxMargin, 50, boxWidth, boxHeight);
         dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_TRANSPARENT);
-        dc.drawText(width/2, 50 + (boxHeight/2), Graphics.FONT_MEDIUM, "Focused", Graphics.TEXT_JUSTIFY_CENTER);
+        dc.drawText(width/2, 50 + (boxHeight/2), Graphics.FONT_MEDIUM, "Vague", Graphics.TEXT_JUSTIFY_CENTER);
         
-        // Draw neutral activity option (middle)
-        dc.setColor(Graphics.COLOR_BLUE, Graphics.COLOR_BLACK);
+        // Draw focused activity option (middle)
+        dc.setColor(Graphics.COLOR_DK_GREEN, Graphics.COLOR_BLACK);
         dc.fillRectangle(boxMargin, 50 + boxHeight + 5, boxWidth, boxHeight);
         dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_TRANSPARENT);
-        dc.drawText(width/2, 50 + boxHeight + 5 + (boxHeight/2), Graphics.FONT_MEDIUM, "Neutral", Graphics.TEXT_JUSTIFY_CENTER);
+        dc.drawText(width/2, 50 + boxHeight + 5 + (boxHeight/2), Graphics.FONT_MEDIUM, "Up", Graphics.TEXT_JUSTIFY_CENTER);
         
-        // Draw vague activity option (bottom)
-        dc.setColor(Graphics.COLOR_LT_GRAY, Graphics.COLOR_BLACK);
+        // Draw neutral activity option (bottom)
+        dc.setColor(Graphics.COLOR_YELLOW, Graphics.COLOR_BLACK);
         dc.fillRectangle(boxMargin, 50 + (2 * boxHeight) + 10, boxWidth, boxHeight);
         dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_TRANSPARENT);
-        dc.drawText(width/2, 50 + (2 * boxHeight) + 10 + (boxHeight/2), Graphics.FONT_MEDIUM, "Vague", Graphics.TEXT_JUSTIFY_CENTER);
+        dc.drawText(width/2, 50 + (2 * boxHeight) + 10 + (boxHeight/2), Graphics.FONT_MEDIUM, "Neutral", Graphics.TEXT_JUSTIFY_CENTER);
     }
     
     // Clean up when view is hidden

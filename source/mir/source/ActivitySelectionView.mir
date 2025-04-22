@@ -299,11 +299,11 @@ C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_ActivitySe
         %tmp.60 = getv function %tmp.59 :setColor;
         symbol [ Graphics %tmp.61 71 20 28 ];
         %tmp.61 = getm $.Toybox.Graphics;
-        symbol [ COLOR_DK_GREEN %tmp.62 71 29 43 ];
-        %tmp.62 = getv %tmp.61 :COLOR_DK_GREEN;
-        symbol [ Graphics %tmp.63 71 45 53 ];
+        symbol [ COLOR_LT_GRAY %tmp.62 71 29 42 ];
+        %tmp.62 = getv %tmp.61 :COLOR_LT_GRAY;
+        symbol [ Graphics %tmp.63 71 44 52 ];
         %tmp.63 = getm $.Toybox.Graphics;
-        symbol [ COLOR_BLACK %tmp.64 71 54 65 ];
+        symbol [ COLOR_BLACK %tmp.64 71 53 64 ];
         %tmp.64 = getv %tmp.63 :COLOR_BLACK;
         invoke %tmp.59 %tmp.60(%tmp.62, %tmp.64);
 [ "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\ActivitySelectionView.mc" 72 8 ]
@@ -352,10 +352,10 @@ C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_ActivitySe
         %tmp.87 = getm $.Toybox.Graphics;
         symbol [ FONT_MEDIUM %tmp.88 74 58 69 ];
         %tmp.88 = getv %tmp.87 :FONT_MEDIUM;
-        %tmp.89 = "Focused";
-        symbol [ Graphics %tmp.90 74 82 90 ];
+        %tmp.89 = "Vague";
+        symbol [ Graphics %tmp.90 74 80 88 ];
         %tmp.90 = getm $.Toybox.Graphics;
-        symbol [ TEXT_JUSTIFY_CENTER %tmp.91 74 91 110 ];
+        symbol [ TEXT_JUSTIFY_CENTER %tmp.91 74 89 108 ];
         %tmp.91 = getv %tmp.90 :TEXT_JUSTIFY_CENTER;
         invoke %tmp.77 %tmp.78(%tmp.81, %tmp.86, %tmp.88, %tmp.89, %tmp.91);
 [ "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\ActivitySelectionView.mc" 77 8 ]
@@ -365,11 +365,11 @@ C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_ActivitySe
         %tmp.93 = getv function %tmp.92 :setColor;
         symbol [ Graphics %tmp.94 77 20 28 ];
         %tmp.94 = getm $.Toybox.Graphics;
-        symbol [ COLOR_BLUE %tmp.95 77 29 39 ];
-        %tmp.95 = getv %tmp.94 :COLOR_BLUE;
-        symbol [ Graphics %tmp.96 77 41 49 ];
+        symbol [ COLOR_DK_GREEN %tmp.95 77 29 43 ];
+        %tmp.95 = getv %tmp.94 :COLOR_DK_GREEN;
+        symbol [ Graphics %tmp.96 77 45 53 ];
         %tmp.96 = getm $.Toybox.Graphics;
-        symbol [ COLOR_BLACK %tmp.97 77 50 61 ];
+        symbol [ COLOR_BLACK %tmp.97 77 54 65 ];
         %tmp.97 = getv %tmp.96 :COLOR_BLACK;
         invoke %tmp.92 %tmp.93(%tmp.95, %tmp.97);
 [ "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\ActivitySelectionView.mc" 78 8 ]
@@ -428,10 +428,10 @@ C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_ActivitySe
         %tmp.128 = getm $.Toybox.Graphics;
         symbol [ FONT_MEDIUM %tmp.129 80 74 85 ];
         %tmp.129 = getv %tmp.128 :FONT_MEDIUM;
-        %tmp.130 = "Neutral";
-        symbol [ Graphics %tmp.131 80 98 106 ];
+        %tmp.130 = "Up";
+        symbol [ Graphics %tmp.131 80 93 101 ];
         %tmp.131 = getm $.Toybox.Graphics;
-        symbol [ TEXT_JUSTIFY_CENTER %tmp.132 80 107 126 ];
+        symbol [ TEXT_JUSTIFY_CENTER %tmp.132 80 102 121 ];
         %tmp.132 = getv %tmp.131 :TEXT_JUSTIFY_CENTER;
         invoke %tmp.114 %tmp.115(%tmp.118, %tmp.127, %tmp.129, %tmp.130, %tmp.132);
 [ "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\ActivitySelectionView.mc" 83 8 ]
@@ -441,11 +441,11 @@ C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_ActivitySe
         %tmp.134 = getv function %tmp.133 :setColor;
         symbol [ Graphics %tmp.135 83 20 28 ];
         %tmp.135 = getm $.Toybox.Graphics;
-        symbol [ COLOR_LT_GRAY %tmp.136 83 29 42 ];
-        %tmp.136 = getv %tmp.135 :COLOR_LT_GRAY;
-        symbol [ Graphics %tmp.137 83 44 52 ];
+        symbol [ COLOR_YELLOW %tmp.136 83 29 41 ];
+        %tmp.136 = getv %tmp.135 :COLOR_YELLOW;
+        symbol [ Graphics %tmp.137 83 43 51 ];
         %tmp.137 = getm $.Toybox.Graphics;
-        symbol [ COLOR_BLACK %tmp.138 83 53 64 ];
+        symbol [ COLOR_BLACK %tmp.138 83 52 63 ];
         %tmp.138 = getv %tmp.137 :COLOR_BLACK;
         invoke %tmp.133 %tmp.134(%tmp.136, %tmp.138);
 [ "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\ActivitySelectionView.mc" 84 8 ]
@@ -508,10 +508,10 @@ C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_ActivitySe
         %tmp.173 = getm $.Toybox.Graphics;
         symbol [ FONT_MEDIUM %tmp.174 86 81 92 ];
         %tmp.174 = getv %tmp.173 :FONT_MEDIUM;
-        %tmp.175 = "Vague";
-        symbol [ Graphics %tmp.176 86 103 111 ];
+        %tmp.175 = "Neutral";
+        symbol [ Graphics %tmp.176 86 105 113 ];
         %tmp.176 = getm $.Toybox.Graphics;
-        symbol [ TEXT_JUSTIFY_CENTER %tmp.177 86 112 131 ];
+        symbol [ TEXT_JUSTIFY_CENTER %tmp.177 86 114 133 ];
         %tmp.177 = getv %tmp.176 :TEXT_JUSTIFY_CENTER;
         invoke %tmp.157 %tmp.158(%tmp.161, %tmp.172, %tmp.174, %tmp.175, %tmp.177);
 C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_ActivitySelectionView_mc_49_40_87_4_stop:

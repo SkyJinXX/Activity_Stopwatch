@@ -107,7 +107,7 @@ class StopwatchModel {
         if (!mIsRunning) {
             mStartTime = System.getTimer();
             mTimer = new Timer.Timer();
-            mTimer.start(method(:onTick), 100, true);
+            mTimer.start(method(:onTick), 1000, true);
             mIsRunning = true;
             System.println("Stopwatch started: " + mStartTime);
             saveState();

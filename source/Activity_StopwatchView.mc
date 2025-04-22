@@ -39,9 +39,22 @@ class Activity_StopwatchView extends WatchUi.View {
         if (activityType == ACTIVITY_FOCUSED) {
             return Graphics.COLOR_DK_GREEN;
         } else if (activityType == ACTIVITY_NEUTRAL) {
-            return Graphics.COLOR_BLUE;
+            return Graphics.COLOR_YELLOW;
         } else {
             return Graphics.COLOR_LT_GRAY;
+        }
+    }
+    
+    // Format time based on duration
+    function formatTimeDisplay(timeMs) {
+        var hours = timeMs / 3600000;
+        
+        if (hours >= 1) {
+            // Format as HH:MM:SS if time is an hour or more
+            return StopwatchModel.formatTimeWithHours(timeMs);
+        } else {
+            // Format as MM:SS if less than an hour
+            return StopwatchModel.formatTime(timeMs);
         }
     }
     
@@ -141,12 +154,22 @@ class Activity_StopwatchView extends WatchUi.View {
         // Get synchronized times to ensure consistent display
         var syncTimes = mStopwatch.getSynchronizedTimes();
         
+        // Get elapsed time in milliseconds
+        var elapsedTimeMs = syncTimes.get("elapsedTime");
+        var lapTimeMs = syncTimes.get("lapTime");
+        
+        // Format the times dynamically based on duration
+        var elapsedTimeFormatted = formatTimeDisplay(elapsedTimeMs);
+        var lapTimeFormatted = formatTimeDisplay(lapTimeMs);
+        
         // Draw total elapsed time - move closer to center
-        dc.drawText(width/2, verticalCenter - 30, Graphics.FONT_MEDIUM, syncTimes.get("elapsedTimeFormatted"), Graphics.TEXT_JUSTIFY_CENTER);
+        dc.drawText(width/2, verticalCenter - 30, Graphics.FONT_MEDIUM, elapsedTimeFormatted, Graphics.TEXT_JUSTIFY_CENTER);
         
         // Draw current lap time - center vertically
-        dc.drawText(width/2, verticalCenter + 30, Graphics.FONT_LARGE, "Lap: " + syncTimes.get("lapTimeFormatted"), Graphics.TEXT_JUSTIFY_CENTER);
-        
+        dc.setColor(Graphics.COLOR_YELLOW, Graphics.COLOR_TRANSPARENT);
+        dc.drawText(width/2, verticalCenter + 30, Graphics.FONT_LARGE, lapTimeFormatted, Graphics.TEXT_JUSTIFY_CENTER);
+        dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_TRANSPARENT);
+
         var laps = mStopwatch.getLaps();
         var lapCount = laps.size();
         var yPos = verticalCenter + 75;
@@ -171,11 +194,11 @@ class Activity_StopwatchView extends WatchUi.View {
             for (var i = startIdx; i >= endIdx; i--) {
                 var lap = laps[i];
                 var color = getActivityColor(lap.lapType);
-                var lapTimeStr = StopwatchModel.formatTime(lap.lapTime);
+                var lapTimeStr = formatTimeDisplay(lap.lapTime); // Use the dynamic formatting
                 
                 // Draw color indicator
                 dc.setColor(color, Graphics.COLOR_TRANSPARENT);
-                dc.fillRectangle(60, yPos + 5, 10, 20);
+                dc.fillRectangle(60, yPos + 15, 10, 20);
                 
                 // Draw lap number and time
                 dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_TRANSPARENT);
@@ -200,6 +223,22 @@ class Activity_StopwatchView extends WatchUi.View {
                 }
             }
         }
+        
+        // Draw battery level at the bottom of the screen
+        var battery = System.getSystemStats().battery;
+        var batteryStr = battery.format("%d") + "%";
+        
+        // Choose color based on battery level
+        if (battery <= 20) {
+            dc.setColor(Graphics.COLOR_RED, Graphics.COLOR_TRANSPARENT);
+        } else if (battery <= 40) {
+            dc.setColor(Graphics.COLOR_ORANGE, Graphics.COLOR_TRANSPARENT);
+        } else {
+            dc.setColor(Graphics.COLOR_LT_GRAY, Graphics.COLOR_TRANSPARENT);
+        }
+        
+        // Draw battery text at the bottom center
+        dc.drawText(width/2, height - 35, Graphics.FONT_TINY, batteryStr, Graphics.TEXT_JUSTIFY_CENTER);
     }
 
     // Called when this View is removed from the screen

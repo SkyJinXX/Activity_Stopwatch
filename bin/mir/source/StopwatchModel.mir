@@ -487,7 +487,7 @@ C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_StopwatchM
         %tmp.17 = const :onTick;
         symbol [ onTick %tmp.17 110 33 39 const ];
         %tmp.18 = invoke %tmp.14 %tmp.15(%tmp.17);
-        %tmp.19 = 100;
+        %tmp.19 = 1000;
         %tmp.20 = true;
         invoke %tmp.12 %tmp.13(%tmp.18, %tmp.19, %tmp.20);
 [ "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\StopwatchModel.mc" 111 12 ]

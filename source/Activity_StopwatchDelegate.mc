@@ -3,7 +3,7 @@ import Toybox.WatchUi;
 import Toybox.System;
 import Toybox.Application;
 
-class Activity_StopwatchDelegate extends WatchUi.BehaviorDelegate {
+class Activity_StopwatchDelegate extends WatchUi.InputDelegate {
     private var mView;
     private var mKeyPressedTime = 0;
     private var mIsKeyHeld = false;
@@ -11,7 +11,7 @@ class Activity_StopwatchDelegate extends WatchUi.BehaviorDelegate {
     private var mIsSwipeDetected = false;   // 用于追踪是否检测到滑动手势
 
     function initialize() {
-        BehaviorDelegate.initialize();
+        InputDelegate.initialize();
     }
     
     // Set the view reference
@@ -19,43 +19,51 @@ class Activity_StopwatchDelegate extends WatchUi.BehaviorDelegate {
         mView = view;
     }
 
-    // Handle Enter key (Start/Stop)
-    function onSelect() as Boolean {
-        mView.toggleStopwatch();
-        return true;
-    }
-    
-    // Handle Back key (Add lap)
-    function onBack() as Boolean {
-        System.println("onBack called");
+    // Handle key events
+    function onKey(evt) as Boolean {
+        var key = evt.getKey();
         
-        // 对于物理Back按键，按原有逻辑处理
-        if (mView.mStopwatch.isRunning() || mView.mStopwatch.getElapsedTime() > 0) {
-            mView.addLap();
+        // Handle Enter key (Start/Stop)
+        if (key == WatchUi.KEY_ENTER) {
+            mView.toggleStopwatch();
             return true;
         }
-        
-        // 如果秒表停止且无累计时间，则退出
-        return false;
-    }
-    
-    // Handle Up key (Scroll up)
-    function onPreviousPage() as Boolean {
-        if (!mIsKeyHeld) {
-            mView.scrollUp();
+        // Handle Back key (Add lap)
+        else if (key == WatchUi.KEY_ESC) {
+            System.println("Back key pressed");
+            
+            // 对于物理Back按键，按原有逻辑处理
+            if (mView.mStopwatch.isRunning() || mView.mStopwatch.getElapsedTime() > 0) {
+                mView.addLap();
+                return true;
+            }
+            
+            // 如果秒表停止且无累计时间，则退出
+            return false;
+        }
+        // Handle Up key (Scroll up)
+        else if (key == WatchUi.KEY_UP) {
+            if (!mIsKeyHeld) {
+                mView.scrollUp();
+                return true;
+            }
+            return false;
+        }
+        // Handle Down key (Scroll down or save)
+        else if (key == WatchUi.KEY_DOWN) {
+            if (mView.mStopwatch.isRunning()) {
+                mView.scrollDown();
+            } else {
+                mView.saveActivity();
+            }
             return true;
         }
-        return false;
-    }
-    
-    // Handle Down key (Scroll down or save)
-    function onNextPage() as Boolean {
-        if (mView.mStopwatch.isRunning()) {
-            mView.scrollDown();
-        } else {
-            mView.saveActivity();
+        // Handle Menu button
+        else if (key == WatchUi.KEY_MENU) {
+            return false; // Let system handle it for going to glances
         }
-        return true;
+        
+        return false;
     }
 
     // Handle physical button press
@@ -103,6 +111,7 @@ class Activity_StopwatchDelegate extends WatchUi.BehaviorDelegate {
     // Disable touch screen except for swipes
     function onTap(clickEvent) {
         // Return true to consume the event without doing anything
+        System.println("touch blocked?");
         return true;
     }
 
@@ -130,10 +139,5 @@ class Activity_StopwatchDelegate extends WatchUi.BehaviorDelegate {
         }
         
         return true;
-    }
-
-    // Handle menu button - let system handle it for going to glances
-    function onMenu() as Boolean {
-        return false;
     }
 }
