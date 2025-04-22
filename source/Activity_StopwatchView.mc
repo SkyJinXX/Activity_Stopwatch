@@ -5,11 +5,13 @@ import Toybox.Time.Gregorian;
 import Toybox.Timer;
 import Toybox.Lang;
 import Toybox.Application;
+import Toybox.System;
 
 class Activity_StopwatchView extends WatchUi.View {
     public var mStopwatch;
     private var mScrollPosition = 0;
     private var mMaxVisibleLaps = 3;
+    private var mPendingLapIndex = -1;  // Index of lap waiting for activity type selection
     
     function initialize() {
         View.initialize();
@@ -18,10 +20,11 @@ class Activity_StopwatchView extends WatchUi.View {
 
     // Called when a lap activity type is selected
     function onActivityTypeSelected(activityType) {
-        mStopwatch.addLap(activityType);
-        // Resume the stopwatch after lap is added
-        if (!mStopwatch.isRunning()) {
-            mStopwatch.start();
+        // Instead of adding a new lap, update the type of the previous lap
+        if (mPendingLapIndex >= 0 && mPendingLapIndex < mStopwatch.getLapCount()) {
+            // Update the type of the previously created lap
+            mStopwatch.updateLapType(mPendingLapIndex, activityType);
+            mPendingLapIndex = -1;  // Reset pending index
         }
         WatchUi.requestUpdate();
     }
@@ -61,16 +64,24 @@ class Activity_StopwatchView extends WatchUi.View {
     
     // Add a new lap
     function addLap() {
-        // Pause the stopwatch before showing the activity selection
-        if (mStopwatch.isRunning()) {
-            mStopwatch.pause();
+        if (!mStopwatch.isRunning()) {
+            // If stopped, start the timer first
+            mStopwatch.start();
         }
         
-        // Push the activity selection view
+        // Create a new lap immediately (initially with VAGUE type)
+        var newLap = mStopwatch.addLap(ACTIVITY_VAGUE);
+        
+        // Store the index of this lap so we can update its type later
+        mPendingLapIndex = mStopwatch.getLapCount() - 1;
+        
+        System.println("Added new lap with index: " + mPendingLapIndex);
+        
+        // Push the activity selection view to select activity type for the PREVIOUS lap
         var activitySelectCallback = method(:onActivityTypeSelected);
         var view = new ActivitySelectionView(activitySelectCallback);
         var delegate = new ActivitySelectionDelegate(activitySelectCallback);
-        WatchUi.pushView(view, delegate, WatchUi.SLIDE_UP);
+        WatchUi.pushView(view, delegate, WatchUi.SLIDE_DOWN);
     }
     
     // Toggle stopwatch state
@@ -90,6 +101,7 @@ class Activity_StopwatchView extends WatchUi.View {
             // For now, we just reset the stopwatch
             mStopwatch.reset();
             mScrollPosition = 0;
+            mPendingLapIndex = -1;  // Reset pending index
             WatchUi.requestUpdate();
         }
     }
@@ -126,27 +138,26 @@ class Activity_StopwatchView extends WatchUi.View {
         // Calculate vertical center for better spacing
         var verticalCenter = height / 2 - 80;  // Adjust to account for other elements
         
+        // Get synchronized times to ensure consistent display
+        var syncTimes = mStopwatch.getSynchronizedTimes();
+        
         // Draw total elapsed time - move closer to center
-        var totalTime = mStopwatch.getElapsedTime();
-        var totalTimeStr = StopwatchModel.formatTimeWithHours(totalTime);
-        dc.drawText(width/2, verticalCenter - 30, Graphics.FONT_MEDIUM, totalTimeStr, Graphics.TEXT_JUSTIFY_CENTER);
+        dc.drawText(width/2, verticalCenter - 30, Graphics.FONT_MEDIUM, syncTimes.get("elapsedTimeFormatted"), Graphics.TEXT_JUSTIFY_CENTER);
         
         // Draw current lap time - center vertically
-        var currentLapTime = mStopwatch.getCurrentLapTime();
-        var currentLapTimeStr = StopwatchModel.formatTime(currentLapTime);
-        dc.drawText(width/2, verticalCenter + 10, Graphics.FONT_MEDIUM, "Lap: " + currentLapTimeStr, Graphics.TEXT_JUSTIFY_CENTER);
+        dc.drawText(width/2, verticalCenter + 30, Graphics.FONT_LARGE, "Lap: " + syncTimes.get("lapTimeFormatted"), Graphics.TEXT_JUSTIFY_CENTER);
         
-        // Draw lap history section title - move below the lap time
         var laps = mStopwatch.getLaps();
         var lapCount = laps.size();
-        var yPos = verticalCenter + 70;
+        var yPos = verticalCenter + 75;
 
-        if (lapCount != 0) {
-            dc.drawText(width/2, yPos, Graphics.FONT_SMALL, "Previous Laps", Graphics.TEXT_JUSTIFY_CENTER);
-        }
+        // no need to show hint
+        // if (lapCount != 0) {
+        //     dc.drawText(width/2, yPos, Graphics.FONT_SMALL, "Previous Laps", Graphics.TEXT_JUSTIFY_CENTER);
+        // }
         
         // Draw previous laps - adjust starting position
-        yPos += 30;
+        yPos += 35;
         if (lapCount == 0) {
             dc.setColor(Graphics.COLOR_LT_GRAY, Graphics.COLOR_TRANSPARENT);
             // dc.drawText(width/2, yPos, Graphics.FONT_SMALL, "No laps recorded", Graphics.TEXT_JUSTIFY_CENTER);
@@ -164,14 +175,14 @@ class Activity_StopwatchView extends WatchUi.View {
                 
                 // Draw color indicator
                 dc.setColor(color, Graphics.COLOR_TRANSPARENT);
-                dc.fillRectangle(40, yPos, 10, 20);
+                dc.fillRectangle(60, yPos + 5, 10, 20);
                 
                 // Draw lap number and time
                 dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_TRANSPARENT);
-                dc.drawText(60, yPos, Graphics.FONT_SMALL, "Lap " + (i + 1), Graphics.TEXT_JUSTIFY_LEFT);
-                dc.drawText(width - 60, yPos, Graphics.FONT_SMALL, lapTimeStr, Graphics.TEXT_JUSTIFY_RIGHT);
+                dc.drawText(70, yPos, Graphics.FONT_SMALL, "Lap " + (i + 1), Graphics.TEXT_JUSTIFY_LEFT);
+                dc.drawText(width - 80, yPos, Graphics.FONT_SMALL, lapTimeStr, Graphics.TEXT_JUSTIFY_RIGHT);
                 
-                yPos += 25;
+                yPos += 30;
             }
             
             // Draw scroll indicators if needed

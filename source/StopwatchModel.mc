@@ -15,25 +15,34 @@ enum {
 class LapData {
     public var lapTime as Number;
     public var lapType as Number;
+    public var startTimeOffset as Number;  // Store when the lap started relative to total time
     
-    function initialize(time as Number, type as Number) {
+    function initialize(time as Number, type as Number, startOffset as Number) {
         lapTime = time;
         lapType = type;
+        startTimeOffset = startOffset;
     }
     
     // Convert to serializable dictionary
     function toDict() as Dictionary {
         return {
             "lapTime" => lapTime,
-            "lapType" => lapType
+            "lapType" => lapType,
+            "startOffset" => startTimeOffset
         };
     }
     
     // Create from dictionary
     static function fromDict(dict as Dictionary) as LapData {
+        var startOffset = 0;
+        if (dict.hasKey("startOffset") && dict.get("startOffset") instanceof Number) {
+            startOffset = dict.get("startOffset");
+        }
+        
         return new LapData(
             dict.get("lapTime") as Number,
-            dict.get("lapType") as Number
+            dict.get("lapType") as Number,
+            startOffset
         );
     }
 }
@@ -43,7 +52,7 @@ class StopwatchModel {
     private var mTimer as Timer.Timer?;
     private var mStartTime as Number = 0;
     private var mAccumulatedTime as Number = 0;
-    private var mLastLapTime as Number = 0;
+    private var mLastLapTimeOffset as Number = 0;  // Store lap time as offset from total elapsed time
     private var mIsRunning as Boolean = false;
     private var mLaps as Array<LapData>;
     private var mCallback;
@@ -63,7 +72,7 @@ class StopwatchModel {
             
             var lastLapTime = stored.get("lastLapTime");
             if (lastLapTime instanceof Number) {
-                mLastLapTime = lastLapTime;
+                mLastLapTimeOffset = lastLapTime;
             }
             
             var isRunning = stored.get("isRunning");
@@ -127,7 +136,7 @@ class StopwatchModel {
         }
         mStartTime = 0;
         mAccumulatedTime = 0;
-        mLastLapTime = 0;
+        mLastLapTimeOffset = 0;
         mIsRunning = false;
         mLaps = [] as Array<LapData>;
         saveState();
@@ -145,14 +154,33 @@ class StopwatchModel {
     
     // Add a new lap
     function addLap(activityType as Number) {
-        var currentTime = getElapsedTime();
-        var lapTime = currentTime - mLastLapTime;
-        mLastLapTime = currentTime;
+        // Get the precise current elapsed time
+        var currentElapsedTime = getElapsedTime();
         
-        var lap = new LapData(lapTime, activityType);
+        // Calculate lap time as the difference between current elapsed time and last lap offset
+        var lapTime = currentElapsedTime - mLastLapTimeOffset;
+        
+        // Update last lap time offset to current elapsed time
+        mLastLapTimeOffset = currentElapsedTime;
+        
+        System.println("New lap - Elapsed: " + currentElapsedTime + 
+                      ", Lap time: " + lapTime + 
+                      ", Last offset: " + mLastLapTimeOffset);
+        
+        // Create the lap with exact timing
+        var lap = new LapData(lapTime, activityType, mLastLapTimeOffset);
         mLaps.add(lap);
         saveState();
         return lap;
+    }
+    
+    // Update the activity type for a specific lap
+    function updateLapType(index as Number, activityType as Number) {
+        if (index >= 0 && index < mLaps.size()) {
+            mLaps[index].lapType = activityType;
+            System.println("Updated lap " + index + " type to " + activityType);
+            saveState();
+        }
     }
     
     // Get total elapsed time
@@ -168,7 +196,27 @@ class StopwatchModel {
     
     // Get current lap time
     function getCurrentLapTime() as Number {
-        return getElapsedTime() - mLastLapTime;
+        // Current lap time is exactly (total elapsed time - last lap time offset)
+        return getElapsedTime() - mLastLapTimeOffset;
+    }
+    
+    // Get the formatted display times that are guaranteed to be synchronized
+    function getSynchronizedTimes() as Dictionary {
+        var elapsedTime = getElapsedTime();
+        var lapTime = elapsedTime - mLastLapTimeOffset;
+        
+        // Process the times to ensure they're perfectly in sync
+        var elapsedSeconds = (elapsedTime / 1000).toNumber();
+        var lapSeconds = (lapTime / 1000).toNumber();
+        
+        return {
+            "elapsedTime" => elapsedTime,
+            "lapTime" => lapTime,
+            "elapsedSeconds" => elapsedSeconds,
+            "lapSeconds" => lapSeconds,
+            "elapsedTimeFormatted" => formatTimeWithHours(elapsedTime),
+            "lapTimeFormatted" => formatTime(lapTime)
+        };
     }
     
     // Get all laps
@@ -203,7 +251,7 @@ class StopwatchModel {
         
         var state = {
             "accTime" => mAccumulatedTime,
-            "lastLapTime" => mLastLapTime,
+            "lastLapTime" => mLastLapTimeOffset,
             "isRunning" => mIsRunning,
             "laps" => lapDicts
         };
