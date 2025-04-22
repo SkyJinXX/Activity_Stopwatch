@@ -124,12 +124,12 @@ class Activity_StopwatchView extends WatchUi.View {
         dc.drawText(width/2, 10, Graphics.FONT_SMALL, timeString, Graphics.TEXT_JUSTIFY_CENTER);
         
         // Calculate vertical center for better spacing
-        var verticalCenter = height / 2 - 40;  // Adjust to account for other elements
+        var verticalCenter = height / 2 - 80;  // Adjust to account for other elements
         
         // Draw total elapsed time - move closer to center
         var totalTime = mStopwatch.getElapsedTime();
         var totalTimeStr = StopwatchModel.formatTimeWithHours(totalTime);
-        dc.drawText(width/2, verticalCenter - 30, Graphics.FONT_LARGE, totalTimeStr, Graphics.TEXT_JUSTIFY_CENTER);
+        dc.drawText(width/2, verticalCenter - 30, Graphics.FONT_MEDIUM, totalTimeStr, Graphics.TEXT_JUSTIFY_CENTER);
         
         // Draw current lap time - center vertically
         var currentLapTime = mStopwatch.getCurrentLapTime();
@@ -137,16 +137,19 @@ class Activity_StopwatchView extends WatchUi.View {
         dc.drawText(width/2, verticalCenter + 10, Graphics.FONT_MEDIUM, "Lap: " + currentLapTimeStr, Graphics.TEXT_JUSTIFY_CENTER);
         
         // Draw lap history section title - move below the lap time
-        dc.drawText(width/2, verticalCenter + 50, Graphics.FONT_SMALL, "Previous Laps", Graphics.TEXT_JUSTIFY_CENTER);
-        
-        // Draw previous laps - adjust starting position
         var laps = mStopwatch.getLaps();
         var lapCount = laps.size();
-        var yPos = verticalCenter + 80;
+        var yPos = verticalCenter + 70;
+
+        if (lapCount != 0) {
+            dc.drawText(width/2, yPos, Graphics.FONT_SMALL, "Previous Laps", Graphics.TEXT_JUSTIFY_CENTER);
+        }
         
+        // Draw previous laps - adjust starting position
+        yPos += 30;
         if (lapCount == 0) {
             dc.setColor(Graphics.COLOR_LT_GRAY, Graphics.COLOR_TRANSPARENT);
-            dc.drawText(width/2, yPos, Graphics.FONT_SMALL, "No laps recorded", Graphics.TEXT_JUSTIFY_CENTER);
+            // dc.drawText(width/2, yPos, Graphics.FONT_SMALL, "No laps recorded", Graphics.TEXT_JUSTIFY_CENTER);
         } else {
             // Calculate visible range
             var startIdx = lapCount - 1 - mScrollPosition;
@@ -161,12 +164,12 @@ class Activity_StopwatchView extends WatchUi.View {
                 
                 // Draw color indicator
                 dc.setColor(color, Graphics.COLOR_TRANSPARENT);
-                dc.fillRectangle(10, yPos, 10, 20);
+                dc.fillRectangle(40, yPos, 10, 20);
                 
                 // Draw lap number and time
                 dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_TRANSPARENT);
-                dc.drawText(30, yPos, Graphics.FONT_SMALL, "Lap " + (i + 1), Graphics.TEXT_JUSTIFY_LEFT);
-                dc.drawText(width - 10, yPos, Graphics.FONT_SMALL, lapTimeStr, Graphics.TEXT_JUSTIFY_RIGHT);
+                dc.drawText(60, yPos, Graphics.FONT_SMALL, "Lap " + (i + 1), Graphics.TEXT_JUSTIFY_LEFT);
+                dc.drawText(width - 60, yPos, Graphics.FONT_SMALL, lapTimeStr, Graphics.TEXT_JUSTIFY_RIGHT);
                 
                 yPos += 25;
             }
