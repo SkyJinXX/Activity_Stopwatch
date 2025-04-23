@@ -4,88 +4,132 @@ import Toybox.Application;
 import Toybox.Lang;
 [ @file = "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\Activity_StopwatchApp.mc"; @line = 3; @symbol_importdef<0> = [Toybox,3,7,13]; @symbol_importdef<1> = [WatchUi,3,14,21]; ]
 import Toybox.WatchUi;
-[ @file = "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\Activity_StopwatchApp.mc"; @line = 5; @symbol_classdef = [Activity_StopwatchApp,5,6,27]; @symbol_extends<0> = [Application,5,36,47]; @symbol_extends<1> = [AppBase,5,48,55]; ]
+[ @file = "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\Activity_StopwatchApp.mc"; @line = 4; @symbol_importdef<0> = [Toybox,4,7,13]; @symbol_importdef<1> = [System,4,14,20]; ]
+import Toybox.System;
+[ @file = "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\Activity_StopwatchApp.mc"; @line = 6; @symbol_classdef = [Activity_StopwatchApp,6,6,27]; @symbol_extends<0> = [Application,6,36,47]; @symbol_extends<1> = [AppBase,6,48,55]; ]
 class Activity_StopwatchApp extends Application.AppBase {
-    [ @file = "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\Activity_StopwatchApp.mc"; @line = 5; ]
+    [ @file = "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\Activity_StopwatchApp.mc"; @line = 6; ]
     <init> {
     }
-    [ @file = "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\Activity_StopwatchApp.mc"; @line = 5; ]
+    [ @file = "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\Activity_StopwatchApp.mc"; @line = 6; ]
     static
     <init> {
     }
-    [ @file = "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\Activity_StopwatchApp.mc"; @line = 7; @symbol_functiondef = [initialize,7,13,23]; ]
+    [ @file = "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\Activity_StopwatchApp.mc"; @line = 7; @position = 16; @symbol_vardef = [mView,7,16,21]; ]
+    private
+    var mView;
+    [ @file = "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\Activity_StopwatchApp.mc"; @line = 9; @symbol_functiondef = [initialize,9,13,23]; ]
     function initialize() as Void {
-C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchApp_mc_7_26_9_4_start:
-[ "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\Activity_StopwatchApp.mc" 8 8 ]
-        symbol [ AppBase %tmp.2 8 8 15 ];
+C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchApp_mc_9_26_11_4_start:
+[ "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\Activity_StopwatchApp.mc" 10 8 ]
+        symbol [ AppBase %tmp.2 10 8 15 ];
         %tmp.2 = getv ? :AppBase;
-        symbol [ initialize %tmp.3 8 16 26 ];
+        symbol [ initialize %tmp.3 10 16 26 ];
         %tmp.3 = getv function %tmp.2 :initialize;
         invoke %tmp.2 %tmp.3();
-C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchApp_mc_7_26_9_4_stop:
+C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchApp_mc_9_26_11_4_stop:
     }
-    [ @file = "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\Activity_StopwatchApp.mc"; @line = 12; @symbol_functiondef = [onStart,12,13,20]; @symbol_param<0> = [state,12,21,26]; @symbol_param<0>_type<0> = [Dictionary,12,30,40]; ]
+    [ @file = "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\Activity_StopwatchApp.mc"; @line = 14; @symbol_functiondef = [onStart,14,13,20]; @symbol_param<0> = [state,14,21,26]; @symbol_param<0>_type<0> = [Dictionary,14,30,40]; ]
     function onStart(state as Dictionary or Null) as Void {
     }
-    [ @file = "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\Activity_StopwatchApp.mc"; @line = 17; @symbol_functiondef = [onStop,17,13,19]; @symbol_param<0> = [state,17,20,25]; @symbol_param<0>_type<0> = [Dictionary,17,29,39]; ]
+    [ @file = "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\Activity_StopwatchApp.mc"; @line = 19; @symbol_functiondef = [onStop,19,13,19]; @symbol_param<0> = [state,19,20,25]; @symbol_param<0>_type<0> = [Dictionary,19,29,39]; ]
     function onStop(state as Dictionary or Null) as Void {
+C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchApp_mc_19_50_25_4_start:
+[ "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\Activity_StopwatchApp.mc" 21 8 ]
+C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchApp_mc_21_8_24_8_if_stmt:
+C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchApp_mc_21_12_21_49_begin:
+        symbol [ mView %tmp.2 21 12 17 ];
+        %tmp.2 = getv ? :mView;
+        %tmp.3 = null;
+        %tmp.4 = ne %tmp.2 %tmp.3;
+        bf %tmp.4 @C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchApp_mc_21_8_24_8_if_end;
+C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchApp_mc_21_29_21_49_true:
+        symbol [ mView %tmp.6 21 29 34 ];
+        %tmp.6 = getv ? :mView;
+        %tmp.7 = as %tmp.6 { (!Null) };
+        symbol [ mStopwatch %tmp.8 21 35 45 ];
+        %tmp.8 = getv %tmp.7 :mStopwatch;
+        %tmp.9 = null;
+        %tmp.10 = ne %tmp.8 %tmp.9;
+        push %tmp.10;
+C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchApp_mc_21_29_21_49_end:
+        %tmp.11 = phi [%tmp.4 @C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchApp_mc_21_12_21_49_begin] [%tmp.10 @C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchApp_mc_21_29_21_49_true] [%tmp.11 @C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchApp_mc_21_29_21_49_end];
+        bf %tmp.11 @C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchApp_mc_21_8_24_8_if_end;
+C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchApp_mc_21_8_24_8_if_true:
+C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchApp_mc_21_55_24_8_start:
+[ "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\Activity_StopwatchApp.mc" 22 12 ]
+        symbol [ System %tmp.12 22 12 18 ];
+        %tmp.12 = getm $.Toybox.System;
+        symbol [ println %tmp.13 22 19 26 ];
+        %tmp.13 = getv function %tmp.12 :println;
+        %tmp.14 = "Saving stopwatch state...";
+        invoke %tmp.12 %tmp.13(%tmp.14);
+[ "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\Activity_StopwatchApp.mc" 23 12 ]
+        symbol [ mView %tmp.16 23 12 17 ];
+        %tmp.16 = getv ? :mView;
+        symbol [ mStopwatch %tmp.17 23 18 28 ];
+        %tmp.17 = getv %tmp.16 :mStopwatch;
+        symbol [ saveState %tmp.18 23 29 38 ];
+        %tmp.18 = getv function %tmp.17 :saveState;
+        invoke %tmp.17 %tmp.18();
+C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchApp_mc_21_55_24_8_stop:
+        goto @C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchApp_mc_21_8_24_8_if_end;
+C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchApp_mc_21_8_24_8_if_end:
+C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchApp_mc_19_50_25_4_stop:
     }
-    [ @file = "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\Activity_StopwatchApp.mc"; @line = 22; @symbol_functiondef = [getInitialView,22,13,27]; @symbol_return<0> = [Views,22,34,39]; @symbol_return<1> = [Views,22,45,50]; @symbol_return<2> = [InputDelegates,22,52,66]; ]
+    [ @file = "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\Activity_StopwatchApp.mc"; @line = 28; @symbol_functiondef = [getInitialView,28,13,27]; @symbol_return<0> = [Views,28,34,39]; @symbol_return<1> = [Views,28,45,50]; @symbol_return<2> = [InputDelegates,28,52,66]; ]
     function getInitialView() as [Views] or [Views, InputDelegates] {
-C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchApp_mc_22_68_27_4_start:
-[ "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\Activity_StopwatchApp.mc" 23 8 ]
-        [ "C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchApp_mc_22_68_27_4_start" "C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchApp_mc_22_68_27_4_stop" ]
-        %view.1 = local;
-        symbol [ view %view.1 23 12 16 ];
-        symbol [ Activity_StopwatchView %tmp.4 23 23 45 ];
+C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchApp_mc_28_68_33_4_start:
+[ "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\Activity_StopwatchApp.mc" 29 8 ]
+        symbol [ Activity_StopwatchView %tmp.4 29 20 42 ];
         %tmp.4 = getv ? :Activity_StopwatchView;
         %tmp.1 = newc %tmp.4 ();
-        lputv %view.1 %tmp.1;
-        symbol [ view %view.1 23 12 16 ];
-[ "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\Activity_StopwatchApp.mc" 24 8 ]
-        [ "C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchApp_mc_22_68_27_4_start" "C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchApp_mc_22_68_27_4_stop" ]
-        %delegate.2 = local;
-        symbol [ delegate %delegate.2 24 12 20 ];
-        symbol [ Activity_StopwatchDelegate %tmp.8 24 27 53 ];
+        symbol [ mView ? 29 8 13 ];
+        putv self :mView %tmp.1;
+[ "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\Activity_StopwatchApp.mc" 30 8 ]
+        [ "C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchApp_mc_28_68_33_4_start" "C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchApp_mc_28_68_33_4_stop" ]
+        %delegate.1 = local;
+        symbol [ delegate %delegate.1 30 12 20 ];
+        symbol [ Activity_StopwatchDelegate %tmp.8 30 27 53 ];
         %tmp.8 = getv ? :Activity_StopwatchDelegate;
         %tmp.5 = newc %tmp.8 ();
-        lputv %delegate.2 %tmp.5;
-        symbol [ delegate %delegate.2 24 12 20 ];
-[ "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\Activity_StopwatchApp.mc" 25 8 ]
-        %tmp.9 = lgetv %delegate.2;
-        symbol [ delegate %tmp.9 25 8 16 ];
-        symbol [ setView %tmp.10 25 17 24 ];
+        lputv %delegate.1 %tmp.5;
+        symbol [ delegate %delegate.1 30 12 20 ];
+[ "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\Activity_StopwatchApp.mc" 31 8 ]
+        %tmp.9 = lgetv %delegate.1;
+        symbol [ delegate %tmp.9 31 8 16 ];
+        symbol [ setView %tmp.10 31 17 24 ];
         %tmp.10 = getv function %tmp.9 :setView;
-        %tmp.11 = lgetv %view.1;
-        symbol [ view %tmp.11 25 25 29 ];
-        invoke %tmp.9 %tmp.10(%tmp.11);
-[ "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\Activity_StopwatchApp.mc" 26 8 ]
-        %tmp.12 = newa 2;
-        %tmp.13 = lgetv %view.1;
-        symbol [ view %tmp.13 26 17 21 ];
-        %tmp.14 = dup %tmp.12;
-        %tmp.15 = aputv %tmp.14 0 %tmp.13;
-        %tmp.16 = lgetv %delegate.2;
-        symbol [ delegate %tmp.16 26 23 31 ];
-        %tmp.17 = dup %tmp.15;
-        %tmp.18 = aputv %tmp.17 1 %tmp.16;
-        ret %tmp.18;
-C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchApp_mc_22_68_27_4_stop:
+        symbol [ mView %tmp.12 31 25 30 ];
+        %tmp.12 = getv ? :mView;
+        invoke %tmp.9 %tmp.10(%tmp.12);
+[ "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\Activity_StopwatchApp.mc" 32 8 ]
+        %tmp.13 = newa 2;
+        symbol [ mView %tmp.15 32 17 22 ];
+        %tmp.15 = getv ? :mView;
+        %tmp.16 = dup %tmp.13;
+        %tmp.17 = aputv %tmp.16 0 %tmp.15;
+        %tmp.18 = lgetv %delegate.1;
+        symbol [ delegate %tmp.18 32 24 32 ];
+        %tmp.19 = dup %tmp.17;
+        %tmp.20 = aputv %tmp.19 1 %tmp.18;
+        ret %tmp.20;
+C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchApp_mc_28_68_33_4_stop:
     }
 }
-[ @file = "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\Activity_StopwatchApp.mc"; @line = 31; @symbol_functiondef = [getApp,31,9,15]; @symbol_return<0> = [Activity_StopwatchApp,31,21,42]; ]
+[ @file = "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\Activity_StopwatchApp.mc"; @line = 37; @symbol_functiondef = [getApp,37,9,15]; @symbol_return<0> = [Activity_StopwatchApp,37,21,42]; ]
 function getApp() as Activity_StopwatchApp {
-C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchApp_mc_31_43_33_0_start:
-[ "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\Activity_StopwatchApp.mc" 32 4 ]
-    symbol [ Application %tmp.1 32 11 22 ];
+C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchApp_mc_37_43_39_0_start:
+[ "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\Activity_StopwatchApp.mc" 38 4 ]
+    symbol [ Application %tmp.1 38 11 22 ];
     %tmp.1 = getm $.Toybox.Application;
-    symbol [ getApp %tmp.2 32 23 29 ];
+    symbol [ getApp %tmp.2 38 23 29 ];
     %tmp.2 = getv function %tmp.1 :getApp;
     %tmp.3 = invoke %tmp.1 %tmp.2();
     %tmp.4 = as %tmp.3 Activity_StopwatchApp;
-    symbol [ Activity_StopwatchApp %tmp.4 32 35 56 ];
+    symbol [ Activity_StopwatchApp %tmp.4 38 35 56 ];
     ret %tmp.4;
-C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchApp_mc_31_43_33_0_stop:
+C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchApp_mc_37_43_39_0_stop:
 }
 [ @file = "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\Activity_StopwatchApp.mc"; @line = 1; ]
 <init> {

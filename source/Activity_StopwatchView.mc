@@ -16,6 +16,7 @@ class Activity_StopwatchView extends WatchUi.View {
     function initialize() {
         View.initialize();
         mStopwatch = new StopwatchModel(method(:onStopwatchUpdate));
+        System.println("Activity_StopwatchView initialized with StopwatchModel");
     }
 
     // Called when a lap activity type is selected
@@ -31,6 +32,7 @@ class Activity_StopwatchView extends WatchUi.View {
     
     // Stopwatch tick callback
     function onStopwatchUpdate() {
+        // System.println("Stopwatch update callback received");
         WatchUi.requestUpdate();
     }
     
@@ -126,7 +128,6 @@ class Activity_StopwatchView extends WatchUi.View {
 
     // Called when this View is shown
     function onShow() as Void {
-        // Nothing to do here
     }
 
     // Update the view
@@ -243,6 +244,5 @@ class Activity_StopwatchView extends WatchUi.View {
 
     // Called when this View is removed from the screen
     function onHide() as Void {
-        // Nothing to do here
     }
 }

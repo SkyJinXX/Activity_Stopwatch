@@ -119,6 +119,12 @@ class Activity_StopwatchDelegate extends WatchUi.InputDelegate {
     function exitToWatchFace() {
         System.println("Executing exitToWatchFace");
         
+        // Make sure state is saved before exiting
+        if (mView != null && mView.mStopwatch != null) {
+            System.println("Saving state before exit...");
+            mView.mStopwatch.saveState();
+        }
+        
         // 尝试多次弹出视图直到退出应用
         var popped = false;
         
