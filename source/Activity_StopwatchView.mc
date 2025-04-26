@@ -60,6 +60,39 @@ class Activity_StopwatchView extends WatchUi.View {
         }
     }
     
+    // Get current lap time color based on duration
+    function getLapTimeColor(timeMs) {
+        var minutes = timeMs / 60000.0; // make sure it's a float
+        var maxMinutes = 60;
+        if (minutes > maxMinutes) {
+            minutes = maxMinutes;
+        }
+        
+        var ratio = minutes / maxMinutes; // 0 ~ 1
+
+        if (ratio < 0.1) {
+            return 0xFFFFFF; // White
+        } else if (ratio < 0.2) {
+            return 0xFFFFAA; // White-Yellow
+        } else if (ratio < 0.3) {
+            return 0xFFFF55; // Light Yellow
+        } else if (ratio < 0.4) {
+            return 0xFFFF00; // Yellow
+        } else if (ratio < 0.5) {
+            return 0xFFDD00; // Yellow-Orange
+        } else if (ratio < 0.6) {
+            return 0xFFBB00; // Light Orange
+        } else if (ratio < 0.7) {
+            return 0xFF9900; // Orange
+        } else if (ratio < 0.8) {
+            return 0xFF6600; // Dark Orange
+        } else if (ratio < 0.9) {
+            return 0xFF3300; // Orange-Red
+        } else {
+            return 0xFF0000; // Red
+        }
+    }
+    
     // Scroll up in lap history
     function scrollUp() {
         if (mScrollPosition > 0) {
@@ -84,19 +117,11 @@ class Activity_StopwatchView extends WatchUi.View {
             mStopwatch.start();
         }
         
-        // Create a new lap immediately (initially with VAGUE type)
+        // Create a new lap immediately with ACTIVITY_NEUTRAL type
         var newLap = mStopwatch.addLap(ACTIVITY_VAGUE);
         
-        // Store the index of this lap so we can update its type later
-        mPendingLapIndex = mStopwatch.getLapCount() - 1;
-        
-        System.println("Added new lap with index: " + mPendingLapIndex);
-        
-        // Push the activity selection view to select activity type for the PREVIOUS lap
-        var activitySelectCallback = method(:onActivityTypeSelected);
-        var view = new ActivitySelectionView(activitySelectCallback);
-        var delegate = new ActivitySelectionDelegate(activitySelectCallback);
-        WatchUi.pushView(view, delegate, WatchUi.SLIDE_DOWN);
+        // No need to store the index or launch activity selection
+        WatchUi.requestUpdate();
     }
     
     // Toggle stopwatch state
@@ -167,8 +192,8 @@ class Activity_StopwatchView extends WatchUi.View {
         dc.drawText(width/2, verticalCenter - 30, Graphics.FONT_MEDIUM, elapsedTimeFormatted, Graphics.TEXT_JUSTIFY_CENTER);
         
         // Draw current lap time - center vertically
-        dc.setColor(Graphics.COLOR_YELLOW, Graphics.COLOR_TRANSPARENT);
-        dc.drawText(width/2, verticalCenter + 30, Graphics.FONT_LARGE, lapTimeFormatted, Graphics.TEXT_JUSTIFY_CENTER);
+        dc.setColor(getLapTimeColor(lapTimeMs), Graphics.COLOR_TRANSPARENT);
+        dc.drawText(width/2, verticalCenter + 25, Graphics.FONT_NUMBER_MILD, lapTimeFormatted, Graphics.TEXT_JUSTIFY_CENTER);
         dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_TRANSPARENT);
 
         var laps = mStopwatch.getLaps();
@@ -194,17 +219,18 @@ class Activity_StopwatchView extends WatchUi.View {
             // Draw lap entries
             for (var i = startIdx; i >= endIdx; i--) {
                 var lap = laps[i];
-                var color = getActivityColor(lap.lapType);
+                var color = getLapTimeColor(lap.lapTime);
                 var lapTimeStr = formatTimeDisplay(lap.lapTime); // Use the dynamic formatting
                 
                 // Draw color indicator
-                dc.setColor(color, Graphics.COLOR_TRANSPARENT);
-                dc.fillRectangle(60, yPos + 15, 10, 20);
+                // dc.setColor(color, Graphics.COLOR_TRANSPARENT);
+                // dc.fillRectangle(15, yPos + 15, 10, 20);
                 
                 // Draw lap number and time
                 dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_TRANSPARENT);
-                dc.drawText(70, yPos, Graphics.FONT_SMALL, "Lap " + (i + 1), Graphics.TEXT_JUSTIFY_LEFT);
-                dc.drawText(width - 80, yPos, Graphics.FONT_SMALL, lapTimeStr, Graphics.TEXT_JUSTIFY_RIGHT);
+                dc.drawText(50, yPos, Graphics.FONT_SMALL, "Lap " + (i + 1), Graphics.TEXT_JUSTIFY_LEFT);
+                dc.setColor(color, Graphics.COLOR_TRANSPARENT);
+                dc.drawText(width - 50, yPos, Graphics.FONT_SMALL, lapTimeStr, Graphics.TEXT_JUSTIFY_RIGHT);
                 
                 yPos += 30;
             }
