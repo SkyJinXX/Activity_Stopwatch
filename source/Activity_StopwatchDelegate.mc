@@ -7,7 +7,7 @@ class Activity_StopwatchDelegate extends WatchUi.InputDelegate {
     private var mView;
     private var mKeyPressedTime = 0;
     private var mIsKeyHeld = false;
-    private const LONG_PRESS_THRESHOLD = 1000; // milliseconds
+    private const LONG_PRESS_THRESHOLD = 500; // milliseconds
     private var mIsSwipeDetected = false;   // 用于追踪是否检测到滑动手势
 
     function initialize() {
@@ -43,6 +43,7 @@ class Activity_StopwatchDelegate extends WatchUi.InputDelegate {
         }
         // Handle Up key (Scroll up)
         else if (key == WatchUi.KEY_UP) {
+            System.println("key onKey:"+key);
             if (!mIsKeyHeld) {
                 mView.scrollUp();
                 return true;
@@ -69,10 +70,14 @@ class Activity_StopwatchDelegate extends WatchUi.InputDelegate {
     // Handle physical button press
     function onKeyPressed(keyEvent) {
         var key = keyEvent.getKey();
+
+        System.println("key Pressed:"+key);
+        
         if (key == WatchUi.KEY_UP) {
             mKeyPressedTime = System.getTimer();
+            System.println("mKeyPressedTime:"+mKeyPressedTime);
             mIsKeyHeld = false;
-            return true;
+            return false;
         }
         return false;
     }
@@ -80,8 +85,14 @@ class Activity_StopwatchDelegate extends WatchUi.InputDelegate {
     // Handle physical button release
     function onKeyReleased(keyEvent) {
         var key = keyEvent.getKey();
+
+        System.println("key released:"+key);
+
         if (key == WatchUi.KEY_UP) {
             var pressDuration = System.getTimer() - mKeyPressedTime;
+
+            System.println("pressDuration: "+pressDuration + " system_time: " + System.getTimer() + " mKeyPressedTime: "+mKeyPressedTime);
+            System.println("LONG_PRESS_THRESHOLD: "+LONG_PRESS_THRESHOLD);
             if (pressDuration >= LONG_PRESS_THRESHOLD) {
                 // Long press detected - exit to watch face
                 mIsKeyHeld = true;
@@ -91,6 +102,11 @@ class Activity_StopwatchDelegate extends WatchUi.InputDelegate {
                 exitToWatchFace();
                 return true;
             }
+        } else if (key == WatchUi.KEY_MENU) { // forerunner 165 doesn't have a menu button, so long pressing Key_UP will be regarded as menu button pressed
+            mIsKeyHeld = true;
+            System.println("Long press detected - exiting to watch face");
+            exitToWatchFace();
+            return true;
         }
         return false;
     }
