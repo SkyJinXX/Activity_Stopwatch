@@ -1,0 +1,25 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+# Activity Stopwatch for Garmin - Project Overview
+
+This is a Garmin Connect IQ application that provides an optimized stopwatch with activity tracking capabilities. The app is designed to maximize battery life while providing precise timing functionality.
+
+## Key Files and Structure
+
+- [manifest.xml](mdc:manifest.xml) - Main application manifest defining app metadata and target devices
+- [source/Activity_StopwatchApp.mc](mdc:source/Activity_StopwatchApp.mc) - Main application entry point
+- [source/Activity_StopwatchView.mc](mdc:source/Activity_StopwatchView.mc) - Primary UI view implementation
+- [source/StopwatchModel.mc](mdc:source/StopwatchModel.mc) - Core stopwatch functionality and data model
+- [source/Activity_StopwatchDelegate.mc](mdc:source/Activity_StopwatchDelegate.mc) - Handles user input
+- [source/ActivitySelectionView.mc](mdc:source/ActivitySelectionView.mc) - Selection UI for activity types
+- [source/Activity_StopwatchMenuDelegate.mc](mdc:source/Activity_StopwatchMenuDelegate.mc) - Menu handling
+
+## Resource Structure
+- [resources/layouts/](mdc:resources/layouts) - UI layout definitions
+- [resources/strings/](mdc:resources/strings) - Localized strings
+- [resources/drawables/](mdc:resources/drawables) - Images and icons
+- [resources/menus/](mdc:resources/menus) - Menu definitions
+

@@ -53,9 +53,9 @@ C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_S
     }
     [ @file = "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\Activity_StopwatchDelegate.mc"; @line = 23; @symbol_functiondef = [onKey,23,13,18]; @symbol_param<0> = [evt,23,19,22]; @symbol_return<0> = [Boolean,23,27,34]; ]
     function onKey(evt) as Boolean {
-C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_23_35_68_4_start:
+C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_23_35_93_4_start:
 [ "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\Activity_StopwatchDelegate.mc" 24 8 ]
-        [ "C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_23_35_68_4_start" "C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_23_35_68_4_stop" ]
+        [ "C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_23_35_93_4_start" "C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_23_35_93_4_stop" ]
         %key.1 = local;
         symbol [ key %key.1 24 12 15 ];
         %tmp.1 = lgetv %evt;
@@ -66,7 +66,7 @@ C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_S
         lputv %key.1 %tmp.3;
         symbol [ key %key.1 24 12 15 ];
 [ "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\Activity_StopwatchDelegate.mc" 27 8 ]
-C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_27_8_65_8_if_stmt:
+C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_27_8_36_8_if_stmt:
         %tmp.4 = lgetv %key.1;
         symbol [ key %tmp.4 27 12 15 ];
         symbol [ WatchUi %tmp.5 27 19 26 ];
@@ -74,659 +74,808 @@ C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_S
         symbol [ KEY_ENTER %tmp.6 27 27 36 ];
         %tmp.6 = getv %tmp.5 :KEY_ENTER;
         %tmp.7 = eq %tmp.4 %tmp.6;
-        bf %tmp.7 @C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_27_8_65_8_if_false;
-C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_27_8_65_8_if_true:
-C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_27_38_30_8_start:
+        bf %tmp.7 @C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_27_8_36_8_if_end;
+C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_27_8_36_8_if_true:
+C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_27_38_36_8_start:
 [ "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\Activity_StopwatchDelegate.mc" 28 12 ]
-        symbol [ mView %tmp.9 28 12 17 ];
+C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_28_12_34_12_if_stmt:
+C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_28_16_28_53_begin:
+        symbol [ mView %tmp.9 28 16 21 ];
         %tmp.9 = getv ? :mView;
-        symbol [ toggleStopwatch %tmp.10 28 18 33 ];
-        %tmp.10 = getv function %tmp.9 :toggleStopwatch;
-        invoke %tmp.9 %tmp.10();
-[ "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\Activity_StopwatchDelegate.mc" 29 12 ]
-        %tmp.11 = true;
-        ret %tmp.11;
-C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_27_38_30_8_stop:
-        goto @C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_27_8_65_8_if_end;
-C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_27_8_65_8_if_false:
-[ "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\Activity_StopwatchDelegate.mc" 32 13 ]
-C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_32_13_65_8_if_stmt:
-        %tmp.12 = lgetv %key.1;
-        symbol [ key %tmp.12 32 17 20 ];
-        symbol [ WatchUi %tmp.13 32 24 31 ];
-        %tmp.13 = getm $.Toybox.WatchUi;
-        symbol [ KEY_ESC %tmp.14 32 32 39 ];
-        %tmp.14 = getv %tmp.13 :KEY_ESC;
-        %tmp.15 = eq %tmp.12 %tmp.14;
-        bf %tmp.15 @C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_32_13_65_8_if_false;
-C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_32_13_65_8_if_true:
-C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_32_41_43_8_start:
-[ "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\Activity_StopwatchDelegate.mc" 33 12 ]
-        symbol [ System %tmp.16 33 12 18 ];
-        %tmp.16 = getm $.Toybox.System;
-        symbol [ println %tmp.17 33 19 26 ];
-        %tmp.17 = getv function %tmp.16 :println;
-        %tmp.18 = "Back key pressed";
-        invoke %tmp.16 %tmp.17(%tmp.18);
-[ "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\Activity_StopwatchDelegate.mc" 36 12 ]
-C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_36_12_39_12_if_stmt:
-C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_36_16_36_84_begin:
-        symbol [ mView %tmp.20 36 16 21 ];
+        %tmp.10 = null;
+        %tmp.11 = ne %tmp.9 %tmp.10;
+        bf %tmp.11 @C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_28_12_34_12_if_end;
+C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_28_33_28_53_true:
+        symbol [ mView %tmp.13 28 33 38 ];
+        %tmp.13 = getv ? :mView;
+        %tmp.14 = as %tmp.13 { (!Null) };
+        symbol [ mStopwatch %tmp.15 28 39 49 ];
+        %tmp.15 = getv %tmp.14 :mStopwatch;
+        %tmp.16 = null;
+        %tmp.17 = ne %tmp.15 %tmp.16;
+        push %tmp.17;
+C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_28_33_28_53_end:
+        %tmp.18 = phi [%tmp.11 @C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_28_16_28_53_begin] [%tmp.17 @C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_28_33_28_53_true] [%tmp.18 @C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_28_33_28_53_end];
+        bf %tmp.18 @C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_28_12_34_12_if_end;
+C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_28_12_34_12_if_true:
+C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_28_59_34_12_start:
+[ "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\Activity_StopwatchDelegate.mc" 29 16 ]
+C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_29_16_33_16_if_stmt:
+        symbol [ mView %tmp.20 29 20 25 ];
         %tmp.20 = getv ? :mView;
-        symbol [ mStopwatch %tmp.21 36 22 32 ];
-        %tmp.21 = getv %tmp.20 :mStopwatch;
-        symbol [ isRunning %tmp.22 36 33 42 ];
-        %tmp.22 = getv function %tmp.21 :isRunning;
-        %tmp.23 = invoke %tmp.21 %tmp.22();
-        bt %tmp.23 @C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_36_12_39_12_if_true;
-C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_36_48_36_84_false:
-        symbol [ mView %tmp.25 36 48 53 ];
-        %tmp.25 = getv ? :mView;
-        symbol [ mStopwatch %tmp.26 36 54 64 ];
-        %tmp.26 = getv %tmp.25 :mStopwatch;
-        symbol [ getElapsedTime %tmp.27 36 65 79 ];
-        %tmp.27 = getv function %tmp.26 :getElapsedTime;
-        %tmp.28 = invoke %tmp.26 %tmp.27();
-        %tmp.29 = 0;
-        %tmp.30 = gt %tmp.28 %tmp.29;
-        push %tmp.30;
-C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_36_48_36_84_end:
-        %tmp.31 = phi [%tmp.23 @C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_36_16_36_84_begin] [%tmp.30 @C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_36_48_36_84_false] [%tmp.31 @C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_36_48_36_84_end];
-        bf %tmp.31 @C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_36_12_39_12_if_end;
-C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_36_12_39_12_if_true:
-C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_36_87_39_12_start:
-[ "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\Activity_StopwatchDelegate.mc" 37 16 ]
-        symbol [ mView %tmp.33 37 16 21 ];
-        %tmp.33 = getv ? :mView;
-        symbol [ addLap %tmp.34 37 22 28 ];
-        %tmp.34 = getv function %tmp.33 :addLap;
-        invoke %tmp.33 %tmp.34();
-[ "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\Activity_StopwatchDelegate.mc" 38 16 ]
-        %tmp.35 = true;
-        ret %tmp.35;
-C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_36_87_39_12_stop:
-        goto @C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_36_12_39_12_if_end;
-C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_36_12_39_12_if_end:
-[ "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\Activity_StopwatchDelegate.mc" 42 12 ]
-        %tmp.36 = false;
-        ret %tmp.36;
-C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_32_41_43_8_stop:
-        goto @C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_32_13_65_8_if_end;
-C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_32_13_65_8_if_false:
-[ "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\Activity_StopwatchDelegate.mc" 45 13 ]
-C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_45_13_65_8_if_stmt:
-        %tmp.37 = lgetv %key.1;
-        symbol [ key %tmp.37 45 17 20 ];
-        symbol [ WatchUi %tmp.38 45 24 31 ];
-        %tmp.38 = getm $.Toybox.WatchUi;
-        symbol [ KEY_UP %tmp.39 45 32 38 ];
-        %tmp.39 = getv %tmp.38 :KEY_UP;
-        %tmp.40 = eq %tmp.37 %tmp.39;
-        bf %tmp.40 @C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_45_13_65_8_if_false;
-C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_45_13_65_8_if_true:
-C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_45_40_52_8_start:
-[ "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\Activity_StopwatchDelegate.mc" 46 12 ]
-        symbol [ System %tmp.41 46 12 18 ];
-        %tmp.41 = getm $.Toybox.System;
-        symbol [ println %tmp.42 46 19 26 ];
-        %tmp.42 = getv function %tmp.41 :println;
-        %tmp.43 = "key onKey:";
-        %tmp.44 = lgetv %key.1;
-        symbol [ key %tmp.44 46 40 43 ];
-        %tmp.45 = add %tmp.43 %tmp.44;
-        invoke %tmp.41 %tmp.42(%tmp.45);
-[ "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\Activity_StopwatchDelegate.mc" 47 12 ]
-C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_47_12_50_12_if_stmt:
-        symbol [ mIsKeyHeld %tmp.47 47 17 27 ];
-        %tmp.47 = getv ? :mIsKeyHeld;
-        %tmp.48 = not %tmp.47;
-        bf %tmp.48 @C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_47_12_50_12_if_end;
-C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_47_12_50_12_if_true:
-C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_47_29_50_12_start:
-[ "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\Activity_StopwatchDelegate.mc" 48 16 ]
-        symbol [ mView %tmp.50 48 16 21 ];
-        %tmp.50 = getv ? :mView;
-        symbol [ scrollUp %tmp.51 48 22 30 ];
-        %tmp.51 = getv function %tmp.50 :scrollUp;
-        invoke %tmp.50 %tmp.51();
-[ "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\Activity_StopwatchDelegate.mc" 49 16 ]
-        %tmp.52 = true;
-        ret %tmp.52;
-C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_47_29_50_12_stop:
-        goto @C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_47_12_50_12_if_end;
-C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_47_12_50_12_if_end:
-[ "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\Activity_StopwatchDelegate.mc" 51 12 ]
-        %tmp.53 = false;
-        ret %tmp.53;
-C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_45_40_52_8_stop:
-        goto @C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_45_13_65_8_if_end;
-C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_45_13_65_8_if_false:
-[ "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\Activity_StopwatchDelegate.mc" 54 13 ]
-C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_54_13_65_8_if_stmt:
-        %tmp.54 = lgetv %key.1;
-        symbol [ key %tmp.54 54 17 20 ];
-        symbol [ WatchUi %tmp.55 54 24 31 ];
-        %tmp.55 = getm $.Toybox.WatchUi;
-        symbol [ KEY_DOWN %tmp.56 54 32 40 ];
-        %tmp.56 = getv %tmp.55 :KEY_DOWN;
-        %tmp.57 = eq %tmp.54 %tmp.56;
-        bf %tmp.57 @C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_54_13_65_8_if_false;
-C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_54_13_65_8_if_true:
-C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_54_42_61_8_start:
-[ "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\Activity_StopwatchDelegate.mc" 55 12 ]
-C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_55_12_59_12_if_stmt:
-        symbol [ mView %tmp.59 55 16 21 ];
-        %tmp.59 = getv ? :mView;
-        symbol [ mStopwatch %tmp.60 55 22 32 ];
-        %tmp.60 = getv %tmp.59 :mStopwatch;
-        symbol [ isRunning %tmp.61 55 33 42 ];
-        %tmp.61 = getv function %tmp.60 :isRunning;
-        %tmp.62 = invoke %tmp.60 %tmp.61();
-        bf %tmp.62 @C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_55_12_59_12_if_else_false;
-C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_55_12_59_12_if_true:
-C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_55_46_57_12_start:
-[ "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\Activity_StopwatchDelegate.mc" 56 16 ]
-        symbol [ mView %tmp.64 56 16 21 ];
-        %tmp.64 = getv ? :mView;
-        symbol [ scrollDown %tmp.65 56 22 32 ];
-        %tmp.65 = getv function %tmp.64 :scrollDown;
-        invoke %tmp.64 %tmp.65();
-C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_55_46_57_12_stop:
-        goto @C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_55_12_59_12_if_end;
-C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_55_12_59_12_if_else_false:
-C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_57_19_59_12_start:
-[ "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\Activity_StopwatchDelegate.mc" 58 16 ]
-        symbol [ mView %tmp.67 58 16 21 ];
-        %tmp.67 = getv ? :mView;
-        symbol [ saveActivity %tmp.68 58 22 34 ];
-        %tmp.68 = getv function %tmp.67 :saveActivity;
-        invoke %tmp.67 %tmp.68();
-C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_57_19_59_12_stop:
-C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_55_12_59_12_if_end:
-[ "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\Activity_StopwatchDelegate.mc" 60 12 ]
-        %tmp.69 = true;
-        ret %tmp.69;
-C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_54_42_61_8_stop:
-        goto @C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_54_13_65_8_if_end;
-C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_54_13_65_8_if_false:
-[ "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\Activity_StopwatchDelegate.mc" 63 13 ]
-C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_63_13_65_8_if_stmt:
-        %tmp.70 = lgetv %key.1;
-        symbol [ key %tmp.70 63 17 20 ];
-        symbol [ WatchUi %tmp.71 63 24 31 ];
-        %tmp.71 = getm $.Toybox.WatchUi;
-        symbol [ KEY_MENU %tmp.72 63 32 40 ];
-        %tmp.72 = getv %tmp.71 :KEY_MENU;
-        %tmp.73 = eq %tmp.70 %tmp.72;
-        bf %tmp.73 @C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_63_13_65_8_if_end;
-C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_63_13_65_8_if_true:
-C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_63_42_65_8_start:
+        %tmp.21 = as %tmp.20 { (!Null) };
+        symbol [ mStopwatch %tmp.22 29 26 36 ];
+        %tmp.22 = getv %tmp.21 :mStopwatch;
+        symbol [ isRunning %tmp.23 29 37 46 ];
+        %tmp.23 = getv function %tmp.22 :isRunning;
+        %tmp.24 = invoke %tmp.22 %tmp.23();
+        bf %tmp.24 @C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_29_16_33_16_if_else_false;
+C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_29_16_33_16_if_true:
+C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_29_50_31_16_start:
+[ "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\Activity_StopwatchDelegate.mc" 30 20 ]
+        symbol [ mView %tmp.26 30 20 25 ];
+        %tmp.26 = getv ? :mView;
+        symbol [ mStopwatch %tmp.27 30 26 36 ];
+        %tmp.27 = getv %tmp.26 :mStopwatch;
+        symbol [ pause %tmp.28 30 37 42 ];
+        %tmp.28 = getv function %tmp.27 :pause;
+        invoke %tmp.27 %tmp.28();
+C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_29_50_31_16_stop:
+        goto @C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_29_16_33_16_if_end;
+C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_29_16_33_16_if_else_false:
+C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_31_23_33_16_start:
+[ "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\Activity_StopwatchDelegate.mc" 32 20 ]
+        symbol [ mView %tmp.30 32 20 25 ];
+        %tmp.30 = getv ? :mView;
+        %tmp.31 = as %tmp.30 { (!Null) };
+        symbol [ mStopwatch %tmp.32 32 26 36 ];
+        %tmp.32 = getv %tmp.31 :mStopwatch;
+        symbol [ start %tmp.33 32 37 42 ];
+        %tmp.33 = getv function %tmp.32 :start;
+        invoke %tmp.32 %tmp.33();
+C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_31_23_33_16_stop:
+C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_29_16_33_16_if_end:
+C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_28_59_34_12_stop:
+        goto @C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_28_12_34_12_if_end;
+C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_28_12_34_12_if_end:
+[ "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\Activity_StopwatchDelegate.mc" 35 12 ]
+        %tmp.34 = true;
+        ret %tmp.34;
+C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_27_38_36_8_stop:
+        goto @C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_27_8_36_8_if_end;
+C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_27_8_36_8_if_end:
+[ "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\Activity_StopwatchDelegate.mc" 39 8 ]
+C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_39_8_90_8_if_stmt:
+        %tmp.35 = lgetv %key.1;
+        symbol [ key %tmp.35 39 12 15 ];
+        symbol [ WatchUi %tmp.36 39 19 26 ];
+        %tmp.36 = getm $.Toybox.WatchUi;
+        symbol [ KEY_ESC %tmp.37 39 27 34 ];
+        %tmp.37 = getv %tmp.36 :KEY_ESC;
+        %tmp.38 = eq %tmp.35 %tmp.37;
+        bf %tmp.38 @C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_39_8_90_8_if_false;
+C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_39_8_90_8_if_true:
+C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_39_36_65_8_start:
+[ "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\Activity_StopwatchDelegate.mc" 40 12 ]
+C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_40_12_63_12_if_stmt:
+C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_40_16_40_53_begin:
+        symbol [ mView %tmp.40 40 16 21 ];
+        %tmp.40 = getv ? :mView;
+        %tmp.41 = null;
+        %tmp.42 = ne %tmp.40 %tmp.41;
+        bf %tmp.42 @C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_40_12_63_12_if_end;
+C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_40_33_40_53_true:
+        symbol [ mView %tmp.44 40 33 38 ];
+        %tmp.44 = getv ? :mView;
+        %tmp.45 = as %tmp.44 { (!Null) };
+        symbol [ mStopwatch %tmp.46 40 39 49 ];
+        %tmp.46 = getv %tmp.45 :mStopwatch;
+        %tmp.47 = null;
+        %tmp.48 = ne %tmp.46 %tmp.47;
+        push %tmp.48;
+C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_40_33_40_53_end:
+        %tmp.49 = phi [%tmp.42 @C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_40_16_40_53_begin] [%tmp.48 @C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_40_33_40_53_true] [%tmp.49 @C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_40_33_40_53_end];
+        bf %tmp.49 @C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_40_12_63_12_if_end;
+C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_40_12_63_12_if_true:
+C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_40_59_63_12_start:
+[ "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\Activity_StopwatchDelegate.mc" 42 16 ]
+C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_42_16_44_16_if_stmt:
+        symbol [ mView %tmp.51 42 20 25 ];
+        %tmp.51 = getv ? :mView;
+        %tmp.52 = as %tmp.51 { (!Null) };
+        symbol [ mStopwatch %tmp.53 42 26 36 ];
+        %tmp.53 = getv %tmp.52 :mStopwatch;
+        symbol [ isRunning %tmp.54 42 37 46 ];
+        %tmp.54 = getv function %tmp.53 :isRunning;
+        %tmp.55 = invoke %tmp.53 %tmp.54();
+        bf %tmp.55 @C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_42_16_44_16_if_end;
+C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_42_16_44_16_if_true:
+C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_42_50_44_16_start:
+[ "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\Activity_StopwatchDelegate.mc" 43 20 ]
+        symbol [ mView %tmp.57 43 20 25 ];
+        %tmp.57 = getv ? :mView;
+        symbol [ mStopwatch %tmp.58 43 26 36 ];
+        %tmp.58 = getv %tmp.57 :mStopwatch;
+        symbol [ pause %tmp.59 43 37 42 ];
+        %tmp.59 = getv function %tmp.58 :pause;
+        invoke %tmp.58 %tmp.59();
+C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_42_50_44_16_stop:
+        goto @C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_42_16_44_16_if_end;
+C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_42_16_44_16_if_end:
+[ "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\Activity_StopwatchDelegate.mc" 47 16 ]
+        [ "C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_40_59_63_12_start" "C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_40_59_63_12_stop" ]
+        %currentCount.2 = local;
+        symbol [ currentCount %currentCount.2 47 20 32 ];
+        symbol [ mView %tmp.61 47 35 40 ];
+        %tmp.61 = getv ? :mView;
+        symbol [ mStopwatch %tmp.62 47 41 51 ];
+        %tmp.62 = getv %tmp.61 :mStopwatch;
+        symbol [ getLapCount %tmp.63 47 52 63 ];
+        %tmp.63 = getv function %tmp.62 :getLapCount;
+        %tmp.64 = invoke %tmp.62 %tmp.63();
+        lputv %currentCount.2 %tmp.64;
+        symbol [ currentCount %currentCount.2 47 20 32 ];
+[ "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\Activity_StopwatchDelegate.mc" 50 16 ]
+        symbol [ mView %tmp.66 50 16 21 ];
+        %tmp.66 = getv ? :mView;
+        symbol [ addLap %tmp.67 50 22 28 ];
+        %tmp.67 = getv function %tmp.66 :addLap;
+        symbol [ ACTIVITY_NEUTRAL %tmp.69 50 29 45 ];
+        %tmp.69 = getv ? :ACTIVITY_NEUTRAL;
+        invoke %tmp.66 %tmp.67(%tmp.69);
+[ "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\Activity_StopwatchDelegate.mc" 53 16 ]
+C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_53_16_57_16_if_stmt:
+        symbol [ mView %tmp.71 53 20 25 ];
+        %tmp.71 = getv ? :mView;
+        symbol [ mStopwatch %tmp.72 53 26 36 ];
+        %tmp.72 = getv %tmp.71 :mStopwatch;
+        symbol [ getLapCount %tmp.73 53 37 48 ];
+        %tmp.73 = getv function %tmp.72 :getLapCount;
+        %tmp.74 = invoke %tmp.72 %tmp.73();
+        %tmp.75 = lgetv %currentCount.2;
+        symbol [ currentCount %tmp.75 53 53 65 ];
+        %tmp.76 = gt %tmp.74 %tmp.75;
+        bf %tmp.76 @C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_53_16_57_16_if_else_false;
+C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_53_16_57_16_if_true:
+C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_53_67_55_16_start:
+[ "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\Activity_StopwatchDelegate.mc" 54 20 ]
+        symbol [ System %tmp.77 54 20 26 ];
+        %tmp.77 = getm $.Toybox.System;
+        symbol [ println %tmp.78 54 27 34 ];
+        %tmp.78 = getv function %tmp.77 :println;
+        %tmp.79 = "Successfully recorded lap for countdown";
+        invoke %tmp.77 %tmp.78(%tmp.79);
+C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_53_67_55_16_stop:
+        goto @C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_53_16_57_16_if_end;
+C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_53_16_57_16_if_else_false:
+C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_55_23_57_16_start:
+[ "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\Activity_StopwatchDelegate.mc" 56 20 ]
+        symbol [ System %tmp.80 56 20 26 ];
+        %tmp.80 = getm $.Toybox.System;
+        symbol [ println %tmp.81 56 27 34 ];
+        %tmp.81 = getv function %tmp.80 :println;
+        %tmp.82 = "Failed to record lap for countdown";
+        invoke %tmp.80 %tmp.81(%tmp.82);
+C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_55_23_57_16_stop:
+C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_53_16_57_16_if_end:
+[ "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\Activity_StopwatchDelegate.mc" 60 16 ]
+        [ "C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_40_59_63_12_start" "C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_40_59_63_12_stop" ]
+        %countdownView.3 = local;
+        symbol [ countdownView %countdownView.3 60 20 33 ];
+        symbol [ CountdownSelectionView %tmp.86 60 40 62 ];
+        %tmp.86 = getv ? :CountdownSelectionView;
+        %tmp.83 = newc %tmp.86 ();
+        lputv %countdownView.3 %tmp.83;
+        symbol [ countdownView %countdownView.3 60 20 33 ];
+[ "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\Activity_StopwatchDelegate.mc" 61 16 ]
+        [ "C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_40_59_63_12_start" "C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_40_59_63_12_stop" ]
+        %countdownDelegate.4 = local;
+        symbol [ countdownDelegate %countdownDelegate.4 61 20 37 ];
+        symbol [ CountdownSelectionDelegate %tmp.90 61 44 70 ];
+        %tmp.90 = getv ? :CountdownSelectionDelegate;
+        %tmp.91 = lgetv %countdownView.3;
+        symbol [ countdownView %tmp.91 61 71 84 ];
+        symbol [ mView %tmp.93 61 86 91 ];
+        %tmp.93 = getv ? :mView;
+        %tmp.87 = newc %tmp.90 (%tmp.91, %tmp.93);
+        lputv %countdownDelegate.4 %tmp.87;
+        symbol [ countdownDelegate %countdownDelegate.4 61 20 37 ];
+[ "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\Activity_StopwatchDelegate.mc" 62 16 ]
+        symbol [ WatchUi %tmp.94 62 16 23 ];
+        %tmp.94 = getm $.Toybox.WatchUi;
+        symbol [ pushView %tmp.95 62 24 32 ];
+        %tmp.95 = getv function %tmp.94 :pushView;
+        %tmp.96 = lgetv %countdownView.3;
+        symbol [ countdownView %tmp.96 62 33 46 ];
+        %tmp.97 = lgetv %countdownDelegate.4;
+        symbol [ countdownDelegate %tmp.97 62 48 65 ];
+        symbol [ WatchUi %tmp.98 62 67 74 ];
+        %tmp.98 = getm $.Toybox.WatchUi;
+        symbol [ SLIDE_IMMEDIATE %tmp.99 62 75 90 ];
+        %tmp.99 = getv %tmp.98 :SLIDE_IMMEDIATE;
+        invoke %tmp.94 %tmp.95(%tmp.96, %tmp.97, %tmp.99);
+C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_40_59_63_12_stop:
+        goto @C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_40_12_63_12_if_end;
+C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_40_12_63_12_if_end:
 [ "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\Activity_StopwatchDelegate.mc" 64 12 ]
-        %tmp.74 = false;
-        ret %tmp.74;
-C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_63_42_65_8_stop:
-        goto @C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_63_13_65_8_if_end;
-C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_63_13_65_8_if_end:
-C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_54_13_65_8_if_end:
-C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_45_13_65_8_if_end:
-C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_32_13_65_8_if_end:
-C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_27_8_65_8_if_end:
-[ "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\Activity_StopwatchDelegate.mc" 67 8 ]
-        %tmp.75 = false;
-        ret %tmp.75;
-C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_23_35_68_4_stop:
+        %tmp.100 = true;
+        ret %tmp.100;
+C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_39_36_65_8_stop:
+        goto @C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_39_8_90_8_if_end;
+C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_39_8_90_8_if_false:
+[ "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\Activity_StopwatchDelegate.mc" 68 13 ]
+C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_68_13_90_8_if_stmt:
+        %tmp.101 = lgetv %key.1;
+        symbol [ key %tmp.101 68 17 20 ];
+        symbol [ WatchUi %tmp.102 68 24 31 ];
+        %tmp.102 = getm $.Toybox.WatchUi;
+        symbol [ KEY_UP %tmp.103 68 32 38 ];
+        %tmp.103 = getv %tmp.102 :KEY_UP;
+        %tmp.104 = eq %tmp.101 %tmp.103;
+        bf %tmp.104 @C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_68_13_90_8_if_false;
+C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_68_13_90_8_if_true:
+C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_68_40_75_8_start:
+[ "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\Activity_StopwatchDelegate.mc" 69 12 ]
+        symbol [ System %tmp.105 69 12 18 ];
+        %tmp.105 = getm $.Toybox.System;
+        symbol [ println %tmp.106 69 19 26 ];
+        %tmp.106 = getv function %tmp.105 :println;
+        %tmp.107 = "key onKey:";
+        %tmp.108 = lgetv %key.1;
+        symbol [ key %tmp.108 69 40 43 ];
+        %tmp.109 = add %tmp.107 %tmp.108;
+        invoke %tmp.105 %tmp.106(%tmp.109);
+[ "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\Activity_StopwatchDelegate.mc" 70 12 ]
+C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_70_12_73_12_if_stmt:
+        symbol [ mIsKeyHeld %tmp.111 70 17 27 ];
+        %tmp.111 = getv ? :mIsKeyHeld;
+        %tmp.112 = not %tmp.111;
+        bf %tmp.112 @C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_70_12_73_12_if_end;
+C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_70_12_73_12_if_true:
+C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_70_29_73_12_start:
+[ "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\Activity_StopwatchDelegate.mc" 71 16 ]
+        symbol [ mView %tmp.114 71 16 21 ];
+        %tmp.114 = getv ? :mView;
+        symbol [ scrollUp %tmp.115 71 22 30 ];
+        %tmp.115 = getv function %tmp.114 :scrollUp;
+        invoke %tmp.114 %tmp.115();
+[ "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\Activity_StopwatchDelegate.mc" 72 16 ]
+        %tmp.116 = true;
+        ret %tmp.116;
+C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_70_29_73_12_stop:
+        goto @C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_70_12_73_12_if_end;
+C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_70_12_73_12_if_end:
+[ "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\Activity_StopwatchDelegate.mc" 74 12 ]
+        %tmp.117 = false;
+        ret %tmp.117;
+C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_68_40_75_8_stop:
+        goto @C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_68_13_90_8_if_end;
+C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_68_13_90_8_if_false:
+[ "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\Activity_StopwatchDelegate.mc" 78 13 ]
+C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_78_13_90_8_if_stmt:
+        %tmp.118 = lgetv %key.1;
+        symbol [ key %tmp.118 78 17 20 ];
+        symbol [ WatchUi %tmp.119 78 24 31 ];
+        %tmp.119 = getm $.Toybox.WatchUi;
+        symbol [ KEY_DOWN %tmp.120 78 32 40 ];
+        %tmp.120 = getv %tmp.119 :KEY_DOWN;
+        %tmp.121 = eq %tmp.118 %tmp.120;
+        bf %tmp.121 @C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_78_13_90_8_if_false;
+C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_78_13_90_8_if_true:
+C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_78_42_85_8_start:
+[ "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\Activity_StopwatchDelegate.mc" 79 12 ]
+C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_79_12_83_12_if_stmt:
+        symbol [ mView %tmp.123 79 16 21 ];
+        %tmp.123 = getv ? :mView;
+        symbol [ mStopwatch %tmp.124 79 22 32 ];
+        %tmp.124 = getv %tmp.123 :mStopwatch;
+        symbol [ isRunning %tmp.125 79 33 42 ];
+        %tmp.125 = getv function %tmp.124 :isRunning;
+        %tmp.126 = invoke %tmp.124 %tmp.125();
+        bf %tmp.126 @C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_79_12_83_12_if_else_false;
+C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_79_12_83_12_if_true:
+C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_79_46_81_12_start:
+[ "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\Activity_StopwatchDelegate.mc" 80 16 ]
+        symbol [ mView %tmp.128 80 16 21 ];
+        %tmp.128 = getv ? :mView;
+        symbol [ scrollDown %tmp.129 80 22 32 ];
+        %tmp.129 = getv function %tmp.128 :scrollDown;
+        invoke %tmp.128 %tmp.129();
+C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_79_46_81_12_stop:
+        goto @C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_79_12_83_12_if_end;
+C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_79_12_83_12_if_else_false:
+C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_81_19_83_12_start:
+[ "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\Activity_StopwatchDelegate.mc" 82 16 ]
+        symbol [ mView %tmp.131 82 16 21 ];
+        %tmp.131 = getv ? :mView;
+        symbol [ saveActivity %tmp.132 82 22 34 ];
+        %tmp.132 = getv function %tmp.131 :saveActivity;
+        invoke %tmp.131 %tmp.132();
+C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_81_19_83_12_stop:
+C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_79_12_83_12_if_end:
+[ "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\Activity_StopwatchDelegate.mc" 84 12 ]
+        %tmp.133 = true;
+        ret %tmp.133;
+C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_78_42_85_8_stop:
+        goto @C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_78_13_90_8_if_end;
+C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_78_13_90_8_if_false:
+[ "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\Activity_StopwatchDelegate.mc" 88 13 ]
+C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_88_13_90_8_if_stmt:
+        %tmp.134 = lgetv %key.1;
+        symbol [ key %tmp.134 88 17 20 ];
+        symbol [ WatchUi %tmp.135 88 24 31 ];
+        %tmp.135 = getm $.Toybox.WatchUi;
+        symbol [ KEY_MENU %tmp.136 88 32 40 ];
+        %tmp.136 = getv %tmp.135 :KEY_MENU;
+        %tmp.137 = eq %tmp.134 %tmp.136;
+        bf %tmp.137 @C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_88_13_90_8_if_end;
+C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_88_13_90_8_if_true:
+C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_88_42_90_8_start:
+[ "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\Activity_StopwatchDelegate.mc" 89 12 ]
+        %tmp.138 = false;
+        ret %tmp.138;
+C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_88_42_90_8_stop:
+        goto @C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_88_13_90_8_if_end;
+C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_88_13_90_8_if_end:
+C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_78_13_90_8_if_end:
+C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_68_13_90_8_if_end:
+C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_39_8_90_8_if_end:
+[ "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\Activity_StopwatchDelegate.mc" 92 8 ]
+        %tmp.139 = false;
+        ret %tmp.139;
+C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_23_35_93_4_stop:
     }
-    [ @file = "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\Activity_StopwatchDelegate.mc"; @line = 71; @symbol_functiondef = [onKeyPressed,71,13,25]; @symbol_param<0> = [keyEvent,71,26,34]; ]
+    [ @file = "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\Activity_StopwatchDelegate.mc"; @line = 96; @symbol_functiondef = [onKeyPressed,96,13,25]; @symbol_param<0> = [keyEvent,96,26,34]; ]
     function onKeyPressed(keyEvent) {
-C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_71_36_83_4_start:
-[ "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\Activity_StopwatchDelegate.mc" 72 8 ]
-        [ "C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_71_36_83_4_start" "C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_71_36_83_4_stop" ]
+C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_96_36_108_4_start:
+[ "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\Activity_StopwatchDelegate.mc" 97 8 ]
+        [ "C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_96_36_108_4_start" "C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_96_36_108_4_stop" ]
         %key.1 = local;
-        symbol [ key %key.1 72 12 15 ];
+        symbol [ key %key.1 97 12 15 ];
         %tmp.1 = lgetv %keyEvent;
-        symbol [ keyEvent %tmp.1 72 18 26 ];
-        symbol [ getKey %tmp.2 72 27 33 ];
+        symbol [ keyEvent %tmp.1 97 18 26 ];
+        symbol [ getKey %tmp.2 97 27 33 ];
         %tmp.2 = getv function %tmp.1 :getKey;
         %tmp.3 = invoke %tmp.1 %tmp.2();
         lputv %key.1 %tmp.3;
-        symbol [ key %key.1 72 12 15 ];
-[ "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\Activity_StopwatchDelegate.mc" 74 8 ]
-        symbol [ System %tmp.4 74 8 14 ];
+        symbol [ key %key.1 97 12 15 ];
+[ "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\Activity_StopwatchDelegate.mc" 99 8 ]
+        symbol [ System %tmp.4 99 8 14 ];
         %tmp.4 = getm $.Toybox.System;
-        symbol [ println %tmp.5 74 15 22 ];
+        symbol [ println %tmp.5 99 15 22 ];
         %tmp.5 = getv function %tmp.4 :println;
         %tmp.6 = "key Pressed:";
         %tmp.7 = lgetv %key.1;
-        symbol [ key %tmp.7 74 38 41 ];
+        symbol [ key %tmp.7 99 38 41 ];
         %tmp.8 = add %tmp.6 %tmp.7;
         invoke %tmp.4 %tmp.5(%tmp.8);
-[ "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\Activity_StopwatchDelegate.mc" 76 8 ]
-C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_76_8_81_8_if_stmt:
+[ "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\Activity_StopwatchDelegate.mc" 101 8 ]
+C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_101_8_106_8_if_stmt:
         %tmp.9 = lgetv %key.1;
-        symbol [ key %tmp.9 76 12 15 ];
-        symbol [ WatchUi %tmp.10 76 19 26 ];
+        symbol [ key %tmp.9 101 12 15 ];
+        symbol [ WatchUi %tmp.10 101 19 26 ];
         %tmp.10 = getm $.Toybox.WatchUi;
-        symbol [ KEY_UP %tmp.11 76 27 33 ];
+        symbol [ KEY_UP %tmp.11 101 27 33 ];
         %tmp.11 = getv %tmp.10 :KEY_UP;
         %tmp.12 = eq %tmp.9 %tmp.11;
-        bf %tmp.12 @C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_76_8_81_8_if_end;
-C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_76_8_81_8_if_true:
-C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_76_35_81_8_start:
-[ "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\Activity_StopwatchDelegate.mc" 77 12 ]
-        symbol [ System %tmp.13 77 30 36 ];
+        bf %tmp.12 @C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_101_8_106_8_if_end;
+C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_101_8_106_8_if_true:
+C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_101_35_106_8_start:
+[ "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\Activity_StopwatchDelegate.mc" 102 12 ]
+        symbol [ System %tmp.13 102 30 36 ];
         %tmp.13 = getm $.Toybox.System;
-        symbol [ getTimer %tmp.14 77 37 45 ];
+        symbol [ getTimer %tmp.14 102 37 45 ];
         %tmp.14 = getv function %tmp.13 :getTimer;
         %tmp.15 = invoke %tmp.13 %tmp.14();
-        symbol [ mKeyPressedTime ? 77 12 27 ];
+        symbol [ mKeyPressedTime ? 102 12 27 ];
         putv self :mKeyPressedTime %tmp.15;
-[ "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\Activity_StopwatchDelegate.mc" 78 12 ]
-        symbol [ System %tmp.16 78 12 18 ];
+[ "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\Activity_StopwatchDelegate.mc" 103 12 ]
+        symbol [ System %tmp.16 103 12 18 ];
         %tmp.16 = getm $.Toybox.System;
-        symbol [ println %tmp.17 78 19 26 ];
+        symbol [ println %tmp.17 103 19 26 ];
         %tmp.17 = getv function %tmp.16 :println;
         %tmp.18 = "mKeyPressedTime:";
-        symbol [ mKeyPressedTime %tmp.20 78 46 61 ];
+        symbol [ mKeyPressedTime %tmp.20 103 46 61 ];
         %tmp.20 = getv ? :mKeyPressedTime;
         %tmp.21 = add %tmp.18 %tmp.20;
         invoke %tmp.16 %tmp.17(%tmp.21);
-[ "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\Activity_StopwatchDelegate.mc" 79 12 ]
+[ "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\Activity_StopwatchDelegate.mc" 104 12 ]
         %tmp.22 = false;
-        symbol [ mIsKeyHeld ? 79 12 22 ];
+        symbol [ mIsKeyHeld ? 104 12 22 ];
         putv self :mIsKeyHeld %tmp.22;
-[ "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\Activity_StopwatchDelegate.mc" 80 12 ]
+[ "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\Activity_StopwatchDelegate.mc" 105 12 ]
         %tmp.23 = false;
         ret %tmp.23;
-C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_76_35_81_8_stop:
-        goto @C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_76_8_81_8_if_end;
-C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_76_8_81_8_if_end:
-[ "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\Activity_StopwatchDelegate.mc" 82 8 ]
+C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_101_35_106_8_stop:
+        goto @C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_101_8_106_8_if_end;
+C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_101_8_106_8_if_end:
+[ "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\Activity_StopwatchDelegate.mc" 107 8 ]
         %tmp.24 = false;
         ret %tmp.24;
-C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_71_36_83_4_stop:
+C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_96_36_108_4_stop:
     }
-    [ @file = "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\Activity_StopwatchDelegate.mc"; @line = 86; @symbol_functiondef = [onKeyReleased,86,13,26]; @symbol_param<0> = [keyEvent,86,27,35]; ]
+    [ @file = "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\Activity_StopwatchDelegate.mc"; @line = 111; @symbol_functiondef = [onKeyReleased,111,13,26]; @symbol_param<0> = [keyEvent,111,27,35]; ]
     function onKeyReleased(keyEvent) {
-C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_86_37_112_4_start:
-[ "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\Activity_StopwatchDelegate.mc" 87 8 ]
-        [ "C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_86_37_112_4_start" "C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_86_37_112_4_stop" ]
+C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_111_37_137_4_start:
+[ "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\Activity_StopwatchDelegate.mc" 112 8 ]
+        [ "C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_111_37_137_4_start" "C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_111_37_137_4_stop" ]
         %key.1 = local;
-        symbol [ key %key.1 87 12 15 ];
+        symbol [ key %key.1 112 12 15 ];
         %tmp.1 = lgetv %keyEvent;
-        symbol [ keyEvent %tmp.1 87 18 26 ];
-        symbol [ getKey %tmp.2 87 27 33 ];
+        symbol [ keyEvent %tmp.1 112 18 26 ];
+        symbol [ getKey %tmp.2 112 27 33 ];
         %tmp.2 = getv function %tmp.1 :getKey;
         %tmp.3 = invoke %tmp.1 %tmp.2();
         lputv %key.1 %tmp.3;
-        symbol [ key %key.1 87 12 15 ];
-[ "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\Activity_StopwatchDelegate.mc" 89 8 ]
-        symbol [ System %tmp.4 89 8 14 ];
+        symbol [ key %key.1 112 12 15 ];
+[ "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\Activity_StopwatchDelegate.mc" 114 8 ]
+        symbol [ System %tmp.4 114 8 14 ];
         %tmp.4 = getm $.Toybox.System;
-        symbol [ println %tmp.5 89 15 22 ];
+        symbol [ println %tmp.5 114 15 22 ];
         %tmp.5 = getv function %tmp.4 :println;
         %tmp.6 = "key released:";
         %tmp.7 = lgetv %key.1;
-        symbol [ key %tmp.7 89 39 42 ];
+        symbol [ key %tmp.7 114 39 42 ];
         %tmp.8 = add %tmp.6 %tmp.7;
         invoke %tmp.4 %tmp.5(%tmp.8);
-[ "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\Activity_StopwatchDelegate.mc" 91 8 ]
-C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_91_8_110_8_if_stmt:
+[ "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\Activity_StopwatchDelegate.mc" 116 8 ]
+C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_116_8_135_8_if_stmt:
         %tmp.9 = lgetv %key.1;
-        symbol [ key %tmp.9 91 12 15 ];
-        symbol [ WatchUi %tmp.10 91 19 26 ];
+        symbol [ key %tmp.9 116 12 15 ];
+        symbol [ WatchUi %tmp.10 116 19 26 ];
         %tmp.10 = getm $.Toybox.WatchUi;
-        symbol [ KEY_UP %tmp.11 91 27 33 ];
+        symbol [ KEY_UP %tmp.11 116 27 33 ];
         %tmp.11 = getv %tmp.10 :KEY_UP;
         %tmp.12 = eq %tmp.9 %tmp.11;
-        bf %tmp.12 @C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_91_8_110_8_if_false;
-C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_91_8_110_8_if_true:
-C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_91_35_105_8_start:
-[ "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\Activity_StopwatchDelegate.mc" 92 12 ]
-        [ "C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_91_35_105_8_start" "C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_91_35_105_8_stop" ]
+        bf %tmp.12 @C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_116_8_135_8_if_false;
+C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_116_8_135_8_if_true:
+C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_116_35_130_8_start:
+[ "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\Activity_StopwatchDelegate.mc" 117 12 ]
+        [ "C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_116_35_130_8_start" "C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_116_35_130_8_stop" ]
         %pressDuration.2 = local;
-        symbol [ pressDuration %pressDuration.2 92 16 29 ];
-        symbol [ System %tmp.13 92 32 38 ];
+        symbol [ pressDuration %pressDuration.2 117 16 29 ];
+        symbol [ System %tmp.13 117 32 38 ];
         %tmp.13 = getm $.Toybox.System;
-        symbol [ getTimer %tmp.14 92 39 47 ];
+        symbol [ getTimer %tmp.14 117 39 47 ];
         %tmp.14 = getv function %tmp.13 :getTimer;
         %tmp.15 = invoke %tmp.13 %tmp.14();
-        symbol [ mKeyPressedTime %tmp.17 92 52 67 ];
+        symbol [ mKeyPressedTime %tmp.17 117 52 67 ];
         %tmp.17 = getv ? :mKeyPressedTime;
         %tmp.18 = sub %tmp.15 %tmp.17;
         lputv %pressDuration.2 %tmp.18;
-        symbol [ pressDuration %pressDuration.2 92 16 29 ];
-[ "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\Activity_StopwatchDelegate.mc" 94 12 ]
-        symbol [ System %tmp.19 94 12 18 ];
+        symbol [ pressDuration %pressDuration.2 117 16 29 ];
+[ "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\Activity_StopwatchDelegate.mc" 119 12 ]
+        symbol [ System %tmp.19 119 12 18 ];
         %tmp.19 = getm $.Toybox.System;
-        symbol [ println %tmp.20 94 19 26 ];
+        symbol [ println %tmp.20 119 19 26 ];
         %tmp.20 = getv function %tmp.19 :println;
         %tmp.21 = "pressDuration: ";
         %tmp.22 = lgetv %pressDuration.2;
-        symbol [ pressDuration %tmp.22 94 45 58 ];
+        symbol [ pressDuration %tmp.22 119 45 58 ];
         %tmp.23 = add %tmp.21 %tmp.22;
         %tmp.24 = " system_time: ";
         %tmp.25 = add %tmp.23 %tmp.24;
-        symbol [ System %tmp.26 94 80 86 ];
+        symbol [ System %tmp.26 119 80 86 ];
         %tmp.26 = getm $.Toybox.System;
-        symbol [ getTimer %tmp.27 94 87 95 ];
+        symbol [ getTimer %tmp.27 119 87 95 ];
         %tmp.27 = getv function %tmp.26 :getTimer;
         %tmp.28 = invoke %tmp.26 %tmp.27();
         %tmp.29 = add %tmp.25 %tmp.28;
         %tmp.30 = " mKeyPressedTime: ";
         %tmp.31 = add %tmp.29 %tmp.30;
-        symbol [ mKeyPressedTime %tmp.33 94 121 136 ];
+        symbol [ mKeyPressedTime %tmp.33 119 121 136 ];
         %tmp.33 = getv ? :mKeyPressedTime;
         %tmp.34 = add %tmp.31 %tmp.33;
         invoke %tmp.19 %tmp.20(%tmp.34);
-[ "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\Activity_StopwatchDelegate.mc" 95 12 ]
-        symbol [ System %tmp.35 95 12 18 ];
+[ "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\Activity_StopwatchDelegate.mc" 120 12 ]
+        symbol [ System %tmp.35 120 12 18 ];
         %tmp.35 = getm $.Toybox.System;
-        symbol [ println %tmp.36 95 19 26 ];
+        symbol [ println %tmp.36 120 19 26 ];
         %tmp.36 = getv function %tmp.35 :println;
         %tmp.37 = "LONG_PRESS_THRESHOLD: ";
-        symbol [ LONG_PRESS_THRESHOLD %tmp.39 95 52 72 ];
+        symbol [ LONG_PRESS_THRESHOLD %tmp.39 120 52 72 ];
         %tmp.39 = getv ? :LONG_PRESS_THRESHOLD;
         %tmp.40 = add %tmp.37 %tmp.39;
         invoke %tmp.35 %tmp.36(%tmp.40);
-[ "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\Activity_StopwatchDelegate.mc" 96 12 ]
-C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_96_12_104_12_if_stmt:
+[ "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\Activity_StopwatchDelegate.mc" 121 12 ]
+C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_121_12_129_12_if_stmt:
         %tmp.41 = lgetv %pressDuration.2;
-        symbol [ pressDuration %tmp.41 96 16 29 ];
-        symbol [ LONG_PRESS_THRESHOLD %tmp.43 96 33 53 ];
+        symbol [ pressDuration %tmp.41 121 16 29 ];
+        symbol [ LONG_PRESS_THRESHOLD %tmp.43 121 33 53 ];
         %tmp.43 = getv ? :LONG_PRESS_THRESHOLD;
         %tmp.44 = gte %tmp.41 %tmp.43;
-        bf %tmp.44 @C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_96_12_104_12_if_end;
-C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_96_12_104_12_if_true:
-C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_96_55_104_12_start:
-[ "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\Activity_StopwatchDelegate.mc" 98 16 ]
+        bf %tmp.44 @C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_121_12_129_12_if_end;
+C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_121_12_129_12_if_true:
+C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_121_55_129_12_start:
+[ "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\Activity_StopwatchDelegate.mc" 123 16 ]
         %tmp.45 = true;
-        symbol [ mIsKeyHeld ? 98 16 26 ];
+        symbol [ mIsKeyHeld ? 123 16 26 ];
         putv self :mIsKeyHeld %tmp.45;
-[ "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\Activity_StopwatchDelegate.mc" 99 16 ]
-        symbol [ System %tmp.46 99 16 22 ];
+[ "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\Activity_StopwatchDelegate.mc" 124 16 ]
+        symbol [ System %tmp.46 124 16 22 ];
         %tmp.46 = getm $.Toybox.System;
-        symbol [ println %tmp.47 99 23 30 ];
+        symbol [ println %tmp.47 124 23 30 ];
         %tmp.47 = getv function %tmp.46 :println;
         %tmp.48 = "Long press detected - exiting to watch face";
         invoke %tmp.46 %tmp.47(%tmp.48);
-[ "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\Activity_StopwatchDelegate.mc" 102 16 ]
+[ "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\Activity_StopwatchDelegate.mc" 127 16 ]
         %tmp.49 = self;
-        symbol [ exitToWatchFace %tmp.50 102 16 31 ];
+        symbol [ exitToWatchFace %tmp.50 127 16 31 ];
         %tmp.50 = getv function %tmp.49 :exitToWatchFace;
         invoke %tmp.49 %tmp.50();
-[ "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\Activity_StopwatchDelegate.mc" 103 16 ]
+[ "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\Activity_StopwatchDelegate.mc" 128 16 ]
         %tmp.51 = true;
         ret %tmp.51;
-C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_96_55_104_12_stop:
-        goto @C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_96_12_104_12_if_end;
-C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_96_12_104_12_if_end:
-C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_91_35_105_8_stop:
-        goto @C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_91_8_110_8_if_end;
-C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_91_8_110_8_if_false:
-[ "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\Activity_StopwatchDelegate.mc" 105 15 ]
-C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_105_15_110_8_if_stmt:
+C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_121_55_129_12_stop:
+        goto @C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_121_12_129_12_if_end;
+C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_121_12_129_12_if_end:
+C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_116_35_130_8_stop:
+        goto @C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_116_8_135_8_if_end;
+C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_116_8_135_8_if_false:
+[ "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\Activity_StopwatchDelegate.mc" 130 15 ]
+C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_130_15_135_8_if_stmt:
         %tmp.52 = lgetv %key.1;
-        symbol [ key %tmp.52 105 19 22 ];
-        symbol [ WatchUi %tmp.53 105 26 33 ];
+        symbol [ key %tmp.52 130 19 22 ];
+        symbol [ WatchUi %tmp.53 130 26 33 ];
         %tmp.53 = getm $.Toybox.WatchUi;
-        symbol [ KEY_MENU %tmp.54 105 34 42 ];
+        symbol [ KEY_MENU %tmp.54 130 34 42 ];
         %tmp.54 = getv %tmp.53 :KEY_MENU;
         %tmp.55 = eq %tmp.52 %tmp.54;
-        bf %tmp.55 @C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_105_15_110_8_if_end;
-C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_105_15_110_8_if_true:
-C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_105_44_110_8_start:
-[ "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\Activity_StopwatchDelegate.mc" 106 12 ]
+        bf %tmp.55 @C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_130_15_135_8_if_end;
+C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_130_15_135_8_if_true:
+C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_130_44_135_8_start:
+[ "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\Activity_StopwatchDelegate.mc" 131 12 ]
         %tmp.56 = true;
-        symbol [ mIsKeyHeld ? 106 12 22 ];
+        symbol [ mIsKeyHeld ? 131 12 22 ];
         putv self :mIsKeyHeld %tmp.56;
-[ "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\Activity_StopwatchDelegate.mc" 107 12 ]
-        symbol [ System %tmp.57 107 12 18 ];
+[ "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\Activity_StopwatchDelegate.mc" 132 12 ]
+        symbol [ System %tmp.57 132 12 18 ];
         %tmp.57 = getm $.Toybox.System;
-        symbol [ println %tmp.58 107 19 26 ];
+        symbol [ println %tmp.58 132 19 26 ];
         %tmp.58 = getv function %tmp.57 :println;
         %tmp.59 = "Long press detected - exiting to watch face";
         invoke %tmp.57 %tmp.58(%tmp.59);
-[ "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\Activity_StopwatchDelegate.mc" 108 12 ]
+[ "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\Activity_StopwatchDelegate.mc" 133 12 ]
         %tmp.60 = self;
-        symbol [ exitToWatchFace %tmp.61 108 12 27 ];
+        symbol [ exitToWatchFace %tmp.61 133 12 27 ];
         %tmp.61 = getv function %tmp.60 :exitToWatchFace;
         invoke %tmp.60 %tmp.61();
-[ "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\Activity_StopwatchDelegate.mc" 109 12 ]
+[ "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\Activity_StopwatchDelegate.mc" 134 12 ]
         %tmp.62 = true;
         ret %tmp.62;
-C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_105_44_110_8_stop:
-        goto @C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_105_15_110_8_if_end;
-C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_105_15_110_8_if_end:
-C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_91_8_110_8_if_end:
-[ "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\Activity_StopwatchDelegate.mc" 111 8 ]
+C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_130_44_135_8_stop:
+        goto @C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_130_15_135_8_if_end;
+C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_130_15_135_8_if_end:
+C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_116_8_135_8_if_end:
+[ "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\Activity_StopwatchDelegate.mc" 136 8 ]
         %tmp.63 = false;
         ret %tmp.63;
-C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_86_37_112_4_stop:
+C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_111_37_137_4_stop:
     }
-    [ @file = "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\Activity_StopwatchDelegate.mc"; @line = 115; @symbol_functiondef = [onSwipe,115,13,20]; @symbol_param<0> = [swipeEvent,115,21,31]; ]
+    [ @file = "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\Activity_StopwatchDelegate.mc"; @line = 140; @symbol_functiondef = [onSwipe,140,13,20]; @symbol_param<0> = [swipeEvent,140,21,31]; ]
     function onSwipe(swipeEvent) {
-C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_115_33_125_4_start:
-[ "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\Activity_StopwatchDelegate.mc" 116 8 ]
-        symbol [ System %tmp.1 116 8 14 ];
+C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_140_33_150_4_start:
+[ "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\Activity_StopwatchDelegate.mc" 141 8 ]
+        symbol [ System %tmp.1 141 8 14 ];
         %tmp.1 = getm $.Toybox.System;
-        symbol [ println %tmp.2 116 15 22 ];
+        symbol [ println %tmp.2 141 15 22 ];
         %tmp.2 = getv function %tmp.1 :println;
         %tmp.3 = "Swipe detected, direction=";
         %tmp.4 = lgetv %swipeEvent;
-        symbol [ swipeEvent %tmp.4 116 54 64 ];
-        symbol [ getDirection %tmp.5 116 65 77 ];
+        symbol [ swipeEvent %tmp.4 141 54 64 ];
+        symbol [ getDirection %tmp.5 141 65 77 ];
         %tmp.5 = getv function %tmp.4 :getDirection;
         %tmp.6 = invoke %tmp.4 %tmp.5();
         %tmp.7 = add %tmp.3 %tmp.6;
         invoke %tmp.1 %tmp.2(%tmp.7);
-[ "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\Activity_StopwatchDelegate.mc" 119 8 ]
-C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_119_8_123_8_if_stmt:
+[ "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\Activity_StopwatchDelegate.mc" 144 8 ]
+C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_144_8_148_8_if_stmt:
         %tmp.8 = lgetv %swipeEvent;
-        symbol [ swipeEvent %tmp.8 119 12 22 ];
-        symbol [ getDirection %tmp.9 119 23 35 ];
+        symbol [ swipeEvent %tmp.8 144 12 22 ];
+        symbol [ getDirection %tmp.9 144 23 35 ];
         %tmp.9 = getv function %tmp.8 :getDirection;
         %tmp.10 = invoke %tmp.8 %tmp.9();
-        symbol [ WatchUi %tmp.11 119 41 48 ];
+        symbol [ WatchUi %tmp.11 144 41 48 ];
         %tmp.11 = getm $.Toybox.WatchUi;
-        symbol [ SWIPE_LEFT %tmp.12 119 49 59 ];
+        symbol [ SWIPE_LEFT %tmp.12 144 49 59 ];
         %tmp.12 = getv %tmp.11 :SWIPE_LEFT;
         %tmp.13 = eq %tmp.10 %tmp.12;
-        bf %tmp.13 @C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_119_8_123_8_if_end;
-C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_119_8_123_8_if_true:
-C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_119_61_123_8_start:
-[ "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\Activity_StopwatchDelegate.mc" 120 12 ]
-        symbol [ System %tmp.14 120 12 18 ];
+        bf %tmp.13 @C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_144_8_148_8_if_end;
+C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_144_8_148_8_if_true:
+C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_144_61_148_8_start:
+[ "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\Activity_StopwatchDelegate.mc" 145 12 ]
+        symbol [ System %tmp.14 145 12 18 ];
         %tmp.14 = getm $.Toybox.System;
-        symbol [ println %tmp.15 120 19 26 ];
+        symbol [ println %tmp.15 145 19 26 ];
         %tmp.15 = getv function %tmp.14 :println;
         %tmp.16 = "Right-to-left swipe detected - exiting app";
         invoke %tmp.14 %tmp.15(%tmp.16);
-[ "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\Activity_StopwatchDelegate.mc" 121 12 ]
+[ "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\Activity_StopwatchDelegate.mc" 146 12 ]
         %tmp.17 = self;
-        symbol [ exitToWatchFace %tmp.18 121 12 27 ];
+        symbol [ exitToWatchFace %tmp.18 146 12 27 ];
         %tmp.18 = getv function %tmp.17 :exitToWatchFace;
         invoke %tmp.17 %tmp.18();
-[ "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\Activity_StopwatchDelegate.mc" 122 12 ]
+[ "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\Activity_StopwatchDelegate.mc" 147 12 ]
         %tmp.19 = true;
         ret %tmp.19;
-C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_119_61_123_8_stop:
-        goto @C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_119_8_123_8_if_end;
-C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_119_8_123_8_if_end:
-[ "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\Activity_StopwatchDelegate.mc" 124 8 ]
+C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_144_61_148_8_stop:
+        goto @C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_144_8_148_8_if_end;
+C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_144_8_148_8_if_end:
+[ "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\Activity_StopwatchDelegate.mc" 149 8 ]
         %tmp.20 = false;
         ret %tmp.20;
-C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_115_33_125_4_stop:
+C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_140_33_150_4_stop:
     }
-    [ @file = "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\Activity_StopwatchDelegate.mc"; @line = 128; @symbol_functiondef = [onTap,128,13,18]; @symbol_param<0> = [clickEvent,128,19,29]; ]
+    [ @file = "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\Activity_StopwatchDelegate.mc"; @line = 153; @symbol_functiondef = [onTap,153,13,18]; @symbol_param<0> = [clickEvent,153,19,29]; ]
     function onTap(clickEvent) {
-C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_128_31_132_4_start:
-[ "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\Activity_StopwatchDelegate.mc" 130 8 ]
-        symbol [ System %tmp.1 130 8 14 ];
+C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_153_31_157_4_start:
+[ "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\Activity_StopwatchDelegate.mc" 155 8 ]
+        symbol [ System %tmp.1 155 8 14 ];
         %tmp.1 = getm $.Toybox.System;
-        symbol [ println %tmp.2 130 15 22 ];
+        symbol [ println %tmp.2 155 15 22 ];
         %tmp.2 = getv function %tmp.1 :println;
         %tmp.3 = "touch blocked?";
         invoke %tmp.1 %tmp.2(%tmp.3);
-[ "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\Activity_StopwatchDelegate.mc" 131 8 ]
+[ "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\Activity_StopwatchDelegate.mc" 156 8 ]
         %tmp.4 = true;
         ret %tmp.4;
-C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_128_31_132_4_stop:
+C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_153_31_157_4_stop:
     }
-    [ @file = "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\Activity_StopwatchDelegate.mc"; @line = 135; @symbol_functiondef = [exitToWatchFace,135,13,28]; ]
+    [ @file = "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\Activity_StopwatchDelegate.mc"; @line = 160; @symbol_functiondef = [exitToWatchFace,160,13,28]; ]
     function exitToWatchFace() {
-C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_135_31_164_4_start:
-[ "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\Activity_StopwatchDelegate.mc" 136 8 ]
-        symbol [ System %tmp.1 136 8 14 ];
+C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_160_31_189_4_start:
+[ "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\Activity_StopwatchDelegate.mc" 161 8 ]
+        symbol [ System %tmp.1 161 8 14 ];
         %tmp.1 = getm $.Toybox.System;
-        symbol [ println %tmp.2 136 15 22 ];
+        symbol [ println %tmp.2 161 15 22 ];
         %tmp.2 = getv function %tmp.1 :println;
         %tmp.3 = "Executing exitToWatchFace";
         invoke %tmp.1 %tmp.2(%tmp.3);
-[ "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\Activity_StopwatchDelegate.mc" 139 8 ]
-C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_139_8_142_8_if_stmt:
-C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_139_12_139_49_begin:
-        symbol [ mView %tmp.5 139 12 17 ];
+[ "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\Activity_StopwatchDelegate.mc" 164 8 ]
+C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_164_8_167_8_if_stmt:
+C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_164_12_164_49_begin:
+        symbol [ mView %tmp.5 164 12 17 ];
         %tmp.5 = getv ? :mView;
         %tmp.6 = null;
         %tmp.7 = ne %tmp.5 %tmp.6;
-        bf %tmp.7 @C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_139_8_142_8_if_end;
-C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_139_29_139_49_true:
-        symbol [ mView %tmp.9 139 29 34 ];
+        bf %tmp.7 @C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_164_8_167_8_if_end;
+C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_164_29_164_49_true:
+        symbol [ mView %tmp.9 164 29 34 ];
         %tmp.9 = getv ? :mView;
         %tmp.10 = as %tmp.9 { (!Null) };
-        symbol [ mStopwatch %tmp.11 139 35 45 ];
+        symbol [ mStopwatch %tmp.11 164 35 45 ];
         %tmp.11 = getv %tmp.10 :mStopwatch;
         %tmp.12 = null;
         %tmp.13 = ne %tmp.11 %tmp.12;
         push %tmp.13;
-C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_139_29_139_49_end:
-        %tmp.14 = phi [%tmp.7 @C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_139_12_139_49_begin] [%tmp.13 @C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_139_29_139_49_true] [%tmp.14 @C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_139_29_139_49_end];
-        bf %tmp.14 @C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_139_8_142_8_if_end;
-C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_139_8_142_8_if_true:
-C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_139_55_142_8_start:
-[ "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\Activity_StopwatchDelegate.mc" 140 12 ]
-        symbol [ System %tmp.15 140 12 18 ];
+C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_164_29_164_49_end:
+        %tmp.14 = phi [%tmp.7 @C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_164_12_164_49_begin] [%tmp.13 @C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_164_29_164_49_true] [%tmp.14 @C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_164_29_164_49_end];
+        bf %tmp.14 @C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_164_8_167_8_if_end;
+C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_164_8_167_8_if_true:
+C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_164_55_167_8_start:
+[ "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\Activity_StopwatchDelegate.mc" 165 12 ]
+        symbol [ System %tmp.15 165 12 18 ];
         %tmp.15 = getm $.Toybox.System;
-        symbol [ println %tmp.16 140 19 26 ];
+        symbol [ println %tmp.16 165 19 26 ];
         %tmp.16 = getv function %tmp.15 :println;
         %tmp.17 = "Saving state before exit...";
         invoke %tmp.15 %tmp.16(%tmp.17);
-[ "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\Activity_StopwatchDelegate.mc" 141 12 ]
-        symbol [ mView %tmp.19 141 12 17 ];
+[ "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\Activity_StopwatchDelegate.mc" 166 12 ]
+        symbol [ mView %tmp.19 166 12 17 ];
         %tmp.19 = getv ? :mView;
-        symbol [ mStopwatch %tmp.20 141 18 28 ];
+        symbol [ mStopwatch %tmp.20 166 18 28 ];
         %tmp.20 = getv %tmp.19 :mStopwatch;
-        symbol [ saveState %tmp.21 141 29 38 ];
+        symbol [ saveState %tmp.21 166 29 38 ];
         %tmp.21 = getv function %tmp.20 :saveState;
         invoke %tmp.20 %tmp.21();
-C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_139_55_142_8_stop:
-        goto @C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_139_8_142_8_if_end;
-C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_139_8_142_8_if_end:
-[ "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\Activity_StopwatchDelegate.mc" 145 8 ]
-        [ "C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_135_31_164_4_start" "C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_135_31_164_4_stop" ]
+C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_164_55_167_8_stop:
+        goto @C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_164_8_167_8_if_end;
+C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_164_8_167_8_if_end:
+[ "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\Activity_StopwatchDelegate.mc" 170 8 ]
+        [ "C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_160_31_189_4_start" "C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_160_31_189_4_stop" ]
         %popped.1 = local;
-        symbol [ popped %popped.1 145 12 18 ];
+        symbol [ popped %popped.1 170 12 18 ];
         %tmp.22 = false;
         lputv %popped.1 %tmp.22;
-        symbol [ popped %popped.1 145 12 18 ];
-[ "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\Activity_StopwatchDelegate.mc" 147 8 ]
-        for @C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_147_8_155_8_for_test @C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_147_8_155_8_for_incr @C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_147_8_155_8_for_end;
-C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_147_8_155_8_for_init:
-        [ "C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_147_8_155_8_for_begin" "C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_147_8_155_8_for_end" ]
+        symbol [ popped %popped.1 170 12 18 ];
+[ "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\Activity_StopwatchDelegate.mc" 172 8 ]
+        for @C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_172_8_180_8_for_test @C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_172_8_180_8_for_incr @C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_172_8_180_8_for_end;
+C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_172_8_180_8_for_init:
+        [ "C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_172_8_180_8_for_begin" "C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_172_8_180_8_for_end" ]
         %i.2 = local;
-        symbol [ i %i.2 147 17 18 ];
+        symbol [ i %i.2 172 17 18 ];
         %tmp.23 = 0;
         lputv %i.2 %tmp.23;
-        symbol [ i %i.2 147 17 18 ];
-C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_147_8_155_8_for_test:
+        symbol [ i %i.2 172 17 18 ];
+C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_172_8_180_8_for_test:
         %tmp.24 = lgetv %i.2;
-        symbol [ i %tmp.24 147 24 25 ];
+        symbol [ i %tmp.24 172 24 25 ];
         %tmp.25 = 3;
         %tmp.26 = lt %tmp.24 %tmp.25;
-        bf %tmp.26 @C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_147_8_155_8_for_end;
-C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_147_8_155_8_for_begin:
-C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_147_36_155_8_start:
-[ "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\Activity_StopwatchDelegate.mc" 148 12 ]
-C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_148_12_154_12_if_stmt:
-        symbol [ WatchUi %tmp.27 148 16 23 ];
+        bf %tmp.26 @C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_172_8_180_8_for_end;
+C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_172_8_180_8_for_begin:
+C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_172_36_180_8_start:
+[ "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\Activity_StopwatchDelegate.mc" 173 12 ]
+C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_173_12_179_12_if_stmt:
+        symbol [ WatchUi %tmp.27 173 16 23 ];
         %tmp.27 = getm $.Toybox.WatchUi;
-        symbol [ popView %tmp.28 148 24 31 ];
+        symbol [ popView %tmp.28 173 24 31 ];
         %tmp.28 = getv function %tmp.27 :popView;
-        symbol [ WatchUi %tmp.29 148 32 39 ];
+        symbol [ WatchUi %tmp.29 173 32 39 ];
         %tmp.29 = getm $.Toybox.WatchUi;
-        symbol [ SLIDE_IMMEDIATE %tmp.30 148 40 55 ];
+        symbol [ SLIDE_IMMEDIATE %tmp.30 173 40 55 ];
         %tmp.30 = getv %tmp.29 :SLIDE_IMMEDIATE;
         %tmp.31 = invoke %tmp.27 %tmp.28(%tmp.30);
-        bf %tmp.31 @C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_148_12_154_12_if_else_false;
-C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_148_12_154_12_if_true:
-C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_148_58_151_12_start:
-[ "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\Activity_StopwatchDelegate.mc" 149 16 ]
+        bf %tmp.31 @C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_173_12_179_12_if_else_false;
+C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_173_12_179_12_if_true:
+C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_173_58_176_12_start:
+[ "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\Activity_StopwatchDelegate.mc" 174 16 ]
         %tmp.32 = true;
         lputv %popped.1 %tmp.32;
-        symbol [ popped %popped.1 149 16 22 ];
-[ "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\Activity_StopwatchDelegate.mc" 150 16 ]
-        symbol [ System %tmp.33 150 16 22 ];
+        symbol [ popped %popped.1 174 16 22 ];
+[ "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\Activity_StopwatchDelegate.mc" 175 16 ]
+        symbol [ System %tmp.33 175 16 22 ];
         %tmp.33 = getm $.Toybox.System;
-        symbol [ println %tmp.34 150 23 30 ];
+        symbol [ println %tmp.34 175 23 30 ];
         %tmp.34 = getv function %tmp.33 :println;
         %tmp.35 = "popView success";
         invoke %tmp.33 %tmp.34(%tmp.35);
-C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_148_58_151_12_stop:
-        goto @C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_148_12_154_12_if_end;
-C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_148_12_154_12_if_else_false:
-C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_151_19_154_12_start:
-[ "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\Activity_StopwatchDelegate.mc" 152 16 ]
-        symbol [ System %tmp.36 152 16 22 ];
+C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_173_58_176_12_stop:
+        goto @C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_173_12_179_12_if_end;
+C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_173_12_179_12_if_else_false:
+C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_176_19_179_12_start:
+[ "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\Activity_StopwatchDelegate.mc" 177 16 ]
+        symbol [ System %tmp.36 177 16 22 ];
         %tmp.36 = getm $.Toybox.System;
-        symbol [ println %tmp.37 152 23 30 ];
+        symbol [ println %tmp.37 177 23 30 ];
         %tmp.37 = getv function %tmp.36 :println;
         %tmp.38 = "popView failed, iteration ";
         %tmp.39 = lgetv %i.2;
-        symbol [ i %tmp.39 152 62 63 ];
+        symbol [ i %tmp.39 177 62 63 ];
         %tmp.40 = add %tmp.38 %tmp.39;
         invoke %tmp.36 %tmp.37(%tmp.40);
-[ "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\Activity_StopwatchDelegate.mc" 153 16 ]
-        goto break @C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_147_8_155_8_for_end;
-C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_151_19_154_12_stop:
-C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_148_12_154_12_if_end:
-C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_147_36_155_8_stop:
-C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_147_8_155_8_for_incr:
-[ "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\Activity_StopwatchDelegate.mc" 147 ]
+[ "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\Activity_StopwatchDelegate.mc" 178 16 ]
+        goto break @C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_172_8_180_8_for_end;
+C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_176_19_179_12_stop:
+C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_173_12_179_12_if_end:
+C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_172_36_180_8_stop:
+C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_172_8_180_8_for_incr:
+[ "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\Activity_StopwatchDelegate.mc" 172 ]
         %tmp.43 = lgetv %i.2;
-        symbol [ i %tmp.43 147 31 32 ];
+        symbol [ i %tmp.43 172 31 32 ];
         %tmp.44 = add %tmp.43 1;
         lputv %i.2 %tmp.44;
-        symbol [ i %i.2 147 31 32 ];
-        goto @C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_147_8_155_8_for_test;
-C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_147_8_155_8_for_end:
-[ "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\Activity_StopwatchDelegate.mc" 158 8 ]
-C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_158_8_161_8_if_stmt:
+        symbol [ i %i.2 172 31 32 ];
+        goto @C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_172_8_180_8_for_test;
+C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_172_8_180_8_for_end:
+[ "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\Activity_StopwatchDelegate.mc" 183 8 ]
+C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_183_8_186_8_if_stmt:
         %tmp.45 = lgetv %popped.1;
-        symbol [ popped %tmp.45 158 13 19 ];
+        symbol [ popped %tmp.45 183 13 19 ];
         %tmp.46 = not %tmp.45;
-        bf %tmp.46 @C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_158_8_161_8_if_end;
-C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_158_8_161_8_if_true:
-C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_158_21_161_8_start:
-[ "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\Activity_StopwatchDelegate.mc" 159 12 ]
-        symbol [ System %tmp.47 159 12 18 ];
+        bf %tmp.46 @C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_183_8_186_8_if_end;
+C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_183_8_186_8_if_true:
+C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_183_21_186_8_start:
+[ "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\Activity_StopwatchDelegate.mc" 184 12 ]
+        symbol [ System %tmp.47 184 12 18 ];
         %tmp.47 = getm $.Toybox.System;
-        symbol [ println %tmp.48 159 19 26 ];
+        symbol [ println %tmp.48 184 19 26 ];
         %tmp.48 = getv function %tmp.47 :println;
         %tmp.49 = "All popView failed, trying System.exit()";
         invoke %tmp.47 %tmp.48(%tmp.49);
-[ "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\Activity_StopwatchDelegate.mc" 160 12 ]
-        symbol [ System %tmp.50 160 12 18 ];
+[ "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\Activity_StopwatchDelegate.mc" 185 12 ]
+        symbol [ System %tmp.50 185 12 18 ];
         %tmp.50 = getm $.Toybox.System;
-        symbol [ exit %tmp.51 160 19 23 ];
+        symbol [ exit %tmp.51 185 19 23 ];
         %tmp.51 = getv function %tmp.50 :exit;
         invoke %tmp.50 %tmp.51();
-C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_158_21_161_8_stop:
-        goto @C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_158_8_161_8_if_end;
-C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_158_8_161_8_if_end:
-[ "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\Activity_StopwatchDelegate.mc" 163 8 ]
+C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_183_21_186_8_stop:
+        goto @C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_183_8_186_8_if_end;
+C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_183_8_186_8_if_end:
+[ "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\Activity_StopwatchDelegate.mc" 188 8 ]
         %tmp.52 = true;
         ret %tmp.52;
-C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_135_31_164_4_stop:
+C_Users_SkyJi_Repositories_Stopwatch_Garmin_Activity_Stopwatch_source_Activity_StopwatchDelegate_mc_160_31_189_4_stop:
     }
 }
 [ @file = "C:\Users\SkyJi\Repositories\Stopwatch_Garmin\Activity_Stopwatch\source\Activity_StopwatchDelegate.mc"; @line = 1; ]

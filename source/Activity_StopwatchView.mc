@@ -6,269 +6,424 @@ import Toybox.Timer;
 import Toybox.Lang;
 import Toybox.Application;
 import Toybox.System;
+import Toybox.Attention;
 
 class Activity_StopwatchView extends WatchUi.View {
     public var mStopwatch;
-    private var mScrollPosition = 0;
+    private var mDisplayedLapIndex = 0;
     private var mMaxVisibleLaps = 3;
-    private var mPendingLapIndex = -1;  // Index of lap waiting for activity type selection
+    private var mLastFiveMinuteAlert = false; // Track if 5-minute alert has been triggered
     
     function initialize() {
         View.initialize();
-        mStopwatch = new StopwatchModel(method(:onStopwatchUpdate));
-        System.println("Activity_StopwatchView initialized with StopwatchModel");
+        System.println("Activity_StopwatchView initializing");
+        
+        // Initialize the stopwatch model
+        mStopwatch = new StopwatchModel(method(:updateUI));
     }
-
+    
     // Called when a lap activity type is selected
     function onActivityTypeSelected(activityType) {
-        // Instead of adding a new lap, update the type of the previous lap
-        if (mPendingLapIndex >= 0 && mPendingLapIndex < mStopwatch.getLapCount()) {
-            // Update the type of the previously created lap
-            mStopwatch.updateLapType(mPendingLapIndex, activityType);
-            mPendingLapIndex = -1;  // Reset pending index
-        }
-        WatchUi.requestUpdate();
-    }
-    
-    // Stopwatch tick callback
-    function onStopwatchUpdate() {
-        // System.println("Stopwatch update callback received");
-        WatchUi.requestUpdate();
-    }
-    
-    // Get activity color based on type
-    function getActivityColor(activityType) {
-        if (activityType == ACTIVITY_FOCUSED) {
-            return Graphics.COLOR_DK_GREEN;
-        } else if (activityType == ACTIVITY_NEUTRAL) {
-            return Graphics.COLOR_YELLOW;
-        } else {
-            return Graphics.COLOR_LT_GRAY;
-        }
-    }
-    
-    // Format time based on duration
-    function formatTimeDisplay(timeMs) {
-        var hours = timeMs / 3600000;
-        
-        if (hours >= 1) {
-            // Format as HH:MM:SS if time is an hour or more
-            return StopwatchModel.formatTimeWithHours(timeMs);
-        } else {
-            // Format as MM:SS if less than an hour
-            return StopwatchModel.formatTime(timeMs);
-        }
-    }
-    
-    // Get current lap time color based on duration
-    function getLapTimeColor(timeMs) {
-        var minutes = timeMs / 60000.0; // make sure it's a float
-        var maxMinutes = 60;
-        if (minutes > maxMinutes) {
-            minutes = maxMinutes;
-        }
-        
-        var ratio = minutes / maxMinutes; // 0 ~ 1
-
-        if (ratio < 0.1) {
-            return 0xFFFFFF; // White
-        } else if (ratio < 0.2) {
-            return 0xFFFFAA; // White-Yellow
-        } else if (ratio < 0.3) {
-            return 0xFFFF55; // Light Yellow
-        } else if (ratio < 0.4) {
-            return 0xFFFF00; // Yellow
-        } else if (ratio < 0.5) {
-            return 0xFFDD00; // Yellow-Orange
-        } else if (ratio < 0.6) {
-            return 0xFFBB00; // Light Orange
-        } else if (ratio < 0.7) {
-            return 0xFF9900; // Orange
-        } else if (ratio < 0.8) {
-            return 0xFF6600; // Dark Orange
-        } else if (ratio < 0.9) {
-            return 0xFF3300; // Orange-Red
-        } else {
-            return 0xFF0000; // Red
-        }
-    }
-    
-    // Scroll up in lap history
-    function scrollUp() {
-        if (mScrollPosition > 0) {
-            mScrollPosition--;
+        // Add a new lap with the selected activity type
+        if (mStopwatch != null) {
+            mStopwatch.addLap(activityType);
             WatchUi.requestUpdate();
         }
     }
     
-    // Scroll down in lap history
-    function scrollDown() {
-        var lapCount = mStopwatch.getLapCount();
-        if (mScrollPosition < (lapCount - mMaxVisibleLaps) && lapCount > mMaxVisibleLaps) {
-            mScrollPosition++;
-            WatchUi.requestUpdate();
-        }
-    }
-    
-    // Add a new lap
-    function addLap() {
-        if (!mStopwatch.isRunning()) {
-            // If stopped, start the timer first
-            mStopwatch.start();
-        }
-        
-        // Create a new lap immediately with ACTIVITY_NEUTRAL type
-        var newLap = mStopwatch.addLap(ACTIVITY_VAGUE);
-        
-        // No need to store the index or launch activity selection
-        WatchUi.requestUpdate();
-    }
-    
-    // Toggle stopwatch state
-    function toggleStopwatch() {
-        mStopwatch.toggle();
-        WatchUi.requestUpdate();
-    }
-    
-    // Save activity
-    function saveActivity() {
-        if (!mStopwatch.isRunning()) {
-            // Save stopwatch data
-            var laps = mStopwatch.getLaps();
-            var totalTime = mStopwatch.getElapsedTime();
-            
-            // Here you could save to a file or sync with the phone
-            // For now, we just reset the stopwatch
-            mStopwatch.reset();
-            mScrollPosition = 0;
-            mPendingLapIndex = -1;  // Reset pending index
-            WatchUi.requestUpdate();
-        }
-    }
-
     // Load resources
     function onLayout(dc as Dc) as Void {
-        // We'll draw directly in onUpdate instead of using layouts
+        System.println("onLayout called");
+        setLayout(Rez.Layouts.MainLayout(dc));
     }
-
-    // Called when this View is shown
+    
+    // Called when the view becomes visible
     function onShow() as Void {
+        // Force an update
+        WatchUi.requestUpdate();
+        System.println("View shown");
     }
-
-    // Update the view
+    
+    // Called when the view needs to update
     function onUpdate(dc as Dc) as Void {
-        // Clear the screen
+        // Draw the background
         dc.setColor(Graphics.COLOR_BLACK, Graphics.COLOR_BLACK);
         dc.clear();
         
-        // Get screen dimensions
         var width = dc.getWidth();
         var height = dc.getHeight();
+        var watchTime = System.getClockTime();
         
-        // Draw current time at top - keep at top
-        dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_TRANSPARENT);
-        var clockTime = Gregorian.info(Time.now(), Time.FORMAT_SHORT);
-        var timeString = Lang.format("$1$:$2$", [
-            clockTime.hour.format("%02d"),
-            clockTime.min.format("%02d")
-        ]);
-        dc.drawText(width/2, 10, Graphics.FONT_SMALL, timeString, Graphics.TEXT_JUSTIFY_CENTER);
+        // Draw the system clock time at the top
+        dc.setColor(Graphics.COLOR_LT_GRAY, Graphics.COLOR_TRANSPARENT);
+        dc.drawText(
+            width/2, 
+            height * 0.05, 
+            Graphics.FONT_TINY, 
+            Lang.format("$1$:$2$", [watchTime.hour.format("%02d"), watchTime.min.format("%02d")]),
+            Graphics.TEXT_JUSTIFY_CENTER
+        );
         
-        // Calculate vertical center for better spacing
-        var verticalCenter = height / 2 - 80;  // Adjust to account for other elements
+        // Get battery percentage (removing it from top)
+        var batteryLevel = System.getSystemStats().battery;
         
-        // Get synchronized times to ensure consistent display
-        var syncTimes = mStopwatch.getSynchronizedTimes();
+        // Draw countdown state
+        var countdownState = mStopwatch.getCountdownState();
+        var elapsedMs = mStopwatch.getElapsedMilliseconds();
+        var remainingSeconds = countdownState.get("remaining");
+        var countdownDuration = mStopwatch.getCountdownDuration();
         
-        // Get elapsed time in milliseconds
-        var elapsedTimeMs = syncTimes.get("elapsedTime");
-        var lapTimeMs = syncTimes.get("lapTime");
-        
-        // Format the times dynamically based on duration
-        var elapsedTimeFormatted = formatTimeDisplay(elapsedTimeMs);
-        var lapTimeFormatted = formatTimeDisplay(lapTimeMs);
-        
-        // Draw total elapsed time - move closer to center
-        dc.drawText(width/2, verticalCenter - 30, Graphics.FONT_MEDIUM, elapsedTimeFormatted, Graphics.TEXT_JUSTIFY_CENTER);
-        
-        // Draw current lap time - center vertically
-        dc.setColor(getLapTimeColor(lapTimeMs), Graphics.COLOR_TRANSPARENT);
-        dc.drawText(width/2, verticalCenter + 25, Graphics.FONT_NUMBER_MILD, lapTimeFormatted, Graphics.TEXT_JUSTIFY_CENTER);
-        dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_TRANSPARENT);
-
-        var laps = mStopwatch.getLaps();
-        var lapCount = laps.size();
-        var yPos = verticalCenter + 75;
-
-        // no need to show hint
-        // if (lapCount != 0) {
-        //     dc.drawText(width/2, yPos, Graphics.FONT_SMALL, "Previous Laps", Graphics.TEXT_JUSTIFY_CENTER);
-        // }
-        
-        // Draw previous laps - adjust starting position
-        yPos += 35;
-        if (lapCount == 0) {
-            dc.setColor(Graphics.COLOR_LT_GRAY, Graphics.COLOR_TRANSPARENT);
-            // dc.drawText(width/2, yPos, Graphics.FONT_SMALL, "No laps recorded", Graphics.TEXT_JUSTIFY_CENTER);
-        } else {
-            // Calculate visible range
-            var startIdx = lapCount - 1 - mScrollPosition;
-            var endIdx = startIdx - (mMaxVisibleLaps - 1);
-            if (endIdx < 0) { endIdx = 0; }
+        // Draw circular progress indicator around the watch face
+        if (mStopwatch.isRunning() && remainingSeconds > 0) {
+            // Calculate progress percentage (0.0 to 1.0)
+            var progressPercentage = remainingSeconds.toFloat() / countdownDuration.toFloat();
             
-            // Draw lap entries
-            for (var i = startIdx; i >= endIdx; i--) {
-                var lap = laps[i];
-                var color = getLapTimeColor(lap.lapTime);
-                var lapTimeStr = formatTimeDisplay(lap.lapTime); // Use the dynamic formatting
+            // Draw progress circle
+            var centerX = width / 2;
+            var centerY = height / 2;
+            var radius = (width < height ? width : height) / 2 - 5; // Slightly inset from edge
+            
+            dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_TRANSPARENT);
+            dc.setPenWidth(4);
+            
+            // Calculate the start and end angles for an arc that goes counterclockwise
+            var startAngle = -Math.PI / 2; // Start at top (12 o'clock position)
+            var endAngle = startAngle + (Math.PI * 2 * progressPercentage);
+            
+            // Draw the arc in segments to create a smooth circle
+            var segments = 72; // Number of segments (more = smoother)
+            var angleIncrement = (Math.PI * 2) / segments;
+            
+            for (var i = 0; i < segments * progressPercentage; i++) {
+                var angle1 = startAngle - (i * angleIncrement);
+                var angle2 = angle1 - angleIncrement;
                 
-                // Draw color indicator
-                // dc.setColor(color, Graphics.COLOR_TRANSPARENT);
-                // dc.fillRectangle(15, yPos + 15, 10, 20);
+                var x1 = centerX + radius * Math.cos(angle1);
+                var y1 = centerY + radius * Math.sin(angle1);
+                var x2 = centerX + radius * Math.cos(angle2);
+                var y2 = centerY + radius * Math.sin(angle2);
                 
-                // Draw lap number and time
-                dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_TRANSPARENT);
-                dc.drawText(50, yPos, Graphics.FONT_SMALL, "Lap " + (i + 1), Graphics.TEXT_JUSTIFY_LEFT);
-                dc.setColor(color, Graphics.COLOR_TRANSPARENT);
-                dc.drawText(width - 50, yPos, Graphics.FONT_SMALL, lapTimeStr, Graphics.TEXT_JUSTIFY_RIGHT);
-                
-                yPos += 30;
+                dc.drawLine(x1.toNumber(), y1.toNumber(), x2.toNumber(), y2.toNumber());
+            }
+        }
+        
+        // Check for 5-minute alert (300 seconds)
+        if (mStopwatch.isRunning() && 
+            remainingSeconds > 0 && 
+            remainingSeconds <= 300 && 
+            !mLastFiveMinuteAlert) {
+            
+            mLastFiveMinuteAlert = true; // Set flag to prevent repeated alerts
+            
+            // Vibrate once for 5-minute warning
+            Attention.vibrate([new Attention.VibeProfile(50, 300)]);
+        } else if (remainingSeconds > 300 || !mStopwatch.isRunning()) {
+            // Reset flag when we're above 5 minutes or stopped
+            mLastFiveMinuteAlert = false;
+        }
+        
+        // If countdown has reached zero and we're running, vibrate
+        if (mStopwatch.isRunning() && 
+            countdownState.get("isCountdownReached") && 
+            countdownState.get("remaining") > -1 && 
+            countdownState.get("remaining") <= 0) {
+            // Vibrate twice and play a tone when crossing zero
+            Attention.vibrate([
+                new Attention.VibeProfile(50, 500), 
+                new Attention.VibeProfile(0, 200),
+                new Attention.VibeProfile(50, 500),
+                new Attention.VibeProfile(0, 200),
+                new Attention.VibeProfile(50, 500)
+            ]);
+            
+            // Play an alert tone if supported
+            // if (Attention has :playTone) {
+            //     Attention.playTone(Attention.TONE_ALARM);
+            // }
+            if (Attention has :ToneProfile) {
+                var toneProfile =
+                [
+                    new Attention.ToneProfile( 2500, 250),
+                    new Attention.ToneProfile( 5000, 250),
+                    new Attention.ToneProfile(10000, 250),
+                    new Attention.ToneProfile( 5000, 250),
+                    new Attention.ToneProfile( 2500, 250),
+                ];
+                Attention.playTone({:toneProfile=>toneProfile});
+            }
+
+        }
+        
+        // Display the countdown duration at the top
+        dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_TRANSPARENT);
+        var durationText = formatCountdownDuration(mStopwatch.getCountdownDuration());
+        
+        dc.drawText(
+            width/2, 
+            height * 0.20, 
+            Graphics.FONT_MEDIUM, 
+            durationText, 
+            Graphics.TEXT_JUSTIFY_CENTER
+        );
+        
+        // Display remaining time in large font
+        var remainingText = formatRemainingTime(remainingSeconds);
+        var textColor = Graphics.COLOR_WHITE;
+        
+        // Set color based on remaining time
+        if (remainingSeconds <= 0) {
+            textColor = Graphics.COLOR_RED;  // Red for overtime
+        } else if (remainingSeconds <= 300) {
+            textColor = Graphics.COLOR_YELLOW; // Yellow for <= 5 minutes
+        }
+        
+        dc.setColor(textColor, Graphics.COLOR_TRANSPARENT);
+        dc.drawText(
+            width/2, 
+            height * 0.35, 
+            Graphics.FONT_LARGE, 
+            remainingText, 
+            Graphics.TEXT_JUSTIFY_CENTER
+        );
+        
+        // Draw lap history
+        var lapsToShow = 3;
+        var lapCount = mStopwatch.getLapCount();
+        var startIndex = 0;
+        
+        if (lapCount > 0) {
+            // For reverse order (newest laps first), calculate starting index differently
+            if (lapCount <= lapsToShow) {
+                // Show all laps if there are fewer than lapsToShow
+                startIndex = lapCount - 1;
+            } else {
+                // With scrolling support
+                startIndex = lapCount - 1 - mDisplayedLapIndex;
+                if (startIndex < 0) {
+                    startIndex = 0;
+                }
             }
             
-            // Draw scroll indicators if needed
-            if (lapCount > mMaxVisibleLaps) {
-                if (mScrollPosition > 0) {
-                    // Up arrow
-                    dc.setColor(Graphics.COLOR_LT_GRAY, Graphics.COLOR_TRANSPARENT);
-                    dc.drawText(width - 15, verticalCenter + 50, Graphics.FONT_SMALL, "▲", Graphics.TEXT_JUSTIFY_RIGHT);
-                }
+            var yPosStart = height * 0.55;
+            var yPosIncrement = height * 0.10;
+            
+            // Draw laps in reverse order (newest at top)
+            for (var i = 0; i < lapsToShow && startIndex - i >= 0; i++) {
+                var lapIndex = startIndex - i;
+                var lapData = mStopwatch.getLap(lapIndex);
+                var yPos = yPosStart + (i * yPosIncrement);
                 
-                if (mScrollPosition < (lapCount - mMaxVisibleLaps)) {
-                    // Down arrow
+                if (lapData != null) {
+                    // Set default color for lap number
                     dc.setColor(Graphics.COLOR_LT_GRAY, Graphics.COLOR_TRANSPARENT);
-                    dc.drawText(width - 15, yPos, Graphics.FONT_SMALL, "▼", Graphics.TEXT_JUSTIFY_RIGHT);
+                    dc.drawText(
+                        width * 0.15, 
+                        yPos, 
+                        Graphics.FONT_SMALL, 
+                        (lapIndex + 1).toString(), 
+                        Graphics.TEXT_JUSTIFY_LEFT
+                    );
+                    
+                    // For history display, show actual time vs target (e.g., "35:00/30m")
+                    var lapTimeSeconds = lapData.lapTime / 1000;
+                    var targetSeconds = lapData.countdownDuration;
+                    var durationMinutes = targetSeconds / 60;
+                    
+                    // Format lap time as MM:SS
+                    var actualTime = formatTime(lapTimeSeconds * 1000);
+                    var targetTime = formatTargetTime(durationMinutes);
+                    
+                    // Calculate positions for consistent alignment
+                    var slashX = width * 0.65; // Fixed position for the slash
+                    var timeRightX = slashX - 8; // Actual time right edge (with some space before slash)
+                    var targetLeftX = slashX + 8; // Target time left edge (with some space after slash)
+                    
+                    // If over target time, draw the actual time in red
+                    if (lapTimeSeconds > targetSeconds) {
+                        // Draw the actual time in red (right aligned to slash position)
+                        dc.setColor(Graphics.COLOR_RED, Graphics.COLOR_TRANSPARENT);
+                        dc.drawText(
+                            timeRightX, 
+                            yPos, 
+                            Graphics.FONT_SMALL, 
+                            actualTime, 
+                            Graphics.TEXT_JUSTIFY_RIGHT
+                        );
+                        
+                        // Draw the slash (centered on fixed position)
+                        dc.setColor(Graphics.COLOR_LT_GRAY, Graphics.COLOR_TRANSPARENT);
+                        dc.drawText(
+                            slashX, 
+                            yPos, 
+                            Graphics.FONT_SMALL, 
+                            "/", 
+                            Graphics.TEXT_JUSTIFY_CENTER
+                        );
+                        
+                        // Draw the target time (left aligned from slash position)
+                        dc.drawText(
+                            targetLeftX,
+                            yPos, 
+                            Graphics.FONT_SMALL, 
+                            targetTime, 
+                            Graphics.TEXT_JUSTIFY_LEFT
+                        );
+                    } else {
+                        // Draw normal time (right aligned to slash position)
+                        dc.setColor(Graphics.COLOR_LT_GRAY, Graphics.COLOR_TRANSPARENT);
+                        dc.drawText(
+                            timeRightX, 
+                            yPos, 
+                            Graphics.FONT_SMALL, 
+                            actualTime, 
+                            Graphics.TEXT_JUSTIFY_RIGHT
+                        );
+                        
+                        // Draw the slash (centered on fixed position)
+                        dc.drawText(
+                            slashX, 
+                            yPos, 
+                            Graphics.FONT_SMALL, 
+                            "/", 
+                            Graphics.TEXT_JUSTIFY_CENTER
+                        );
+                        
+                        // Draw the target time (left aligned from slash position)
+                        dc.drawText(
+                            targetLeftX,
+                            yPos, 
+                            Graphics.FONT_SMALL, 
+                            targetTime, 
+                            Graphics.TEXT_JUSTIFY_LEFT
+                        );
+                    }
                 }
             }
         }
         
-        // Draw battery level at the bottom of the screen
-        var battery = System.getSystemStats().battery;
-        var batteryStr = battery.format("%d") + "%";
-        
-        // Choose color based on battery level
-        if (battery <= 20) {
-            dc.setColor(Graphics.COLOR_RED, Graphics.COLOR_TRANSPARENT);
-        } else if (battery <= 40) {
-            dc.setColor(Graphics.COLOR_ORANGE, Graphics.COLOR_TRANSPARENT);
-        } else {
-            dc.setColor(Graphics.COLOR_LT_GRAY, Graphics.COLOR_TRANSPARENT);
-        }
-        
-        // Draw battery text at the bottom center
-        dc.drawText(width/2, height - 35, Graphics.FONT_TINY, batteryStr, Graphics.TEXT_JUSTIFY_CENTER);
+        // Draw battery percentage at the bottom
+        dc.setColor(Graphics.COLOR_LT_GRAY, Graphics.COLOR_TRANSPARENT);
+        dc.drawText(
+            width/2, 
+            height * 0.92, 
+            Graphics.FONT_TINY, 
+            Lang.format("$1$%", [batteryLevel.format("%d")]),
+            Graphics.TEXT_JUSTIFY_CENTER
+        );
     }
-
-    // Called when this View is removed from the screen
-    function onHide() as Void {
+    
+    // Scroll up in the lap display
+    function scrollUp() {
+        if (mDisplayedLapIndex > 0) {
+            mDisplayedLapIndex--;
+            WatchUi.requestUpdate();
+        }
+    }
+    
+    // Scroll down in the lap display
+    function scrollDown() {
+        var totalLaps = mStopwatch.getLapCount();
+        
+        if (totalLaps > mMaxVisibleLaps && mDisplayedLapIndex < totalLaps - mMaxVisibleLaps) {
+            mDisplayedLapIndex++;
+            WatchUi.requestUpdate();
+        }
+    }
+    
+    // Add a lap with activity type
+    function addLap(activityType) {
+        if (mStopwatch != null) {
+            mStopwatch.addLap(activityType);
+            WatchUi.requestUpdate();
+        }
+    }
+    
+    // Save activity and reset
+    function saveActivity() {
+        if (!mStopwatch.isRunning()) {
+            // Save stopwatch data to storage, then reset
+            mStopwatch.reset();
+            mDisplayedLapIndex = 0;
+            WatchUi.requestUpdate();
+        }
+    }
+    
+    // Set countdown duration and start
+    function startCountdown(durationSeconds as Number) {
+        if (mStopwatch != null) {
+            mStopwatch.setCountdownDuration(durationSeconds);
+            WatchUi.requestUpdate();
+        }
+    }
+    
+    // Update the UI, called by the stopwatch model
+    function updateUI() {
+        WatchUi.requestUpdate();
+    }
+    
+    // Format time to display string (MM:SS)
+    function formatTime(time as Number) as String {
+        // Ensure we're working with a positive number
+        if (time < 0) {
+            time = 0;
+        }
+        
+        // Round to nearest second
+        var totalSeconds = (time / 1000).toNumber();
+        var seconds = totalSeconds % 60;
+        var minutes = (totalSeconds / 60) % 60;
+        
+        return Lang.format("$1$:$2$", [
+            minutes.format("%02d"),
+            seconds.format("%02d")
+        ]);
+    }
+    
+    // Format time to display string with hours (HH:MM:SS)
+    function formatTimeWithHours(time as Number) as String {
+        // Ensure we're working with a positive number
+        if (time < 0) {
+            time = 0;
+        }
+        
+        // Round to nearest second
+        var totalSeconds = (time / 1000).toNumber();
+        var seconds = totalSeconds % 60;
+        var minutes = (totalSeconds / 60) % 60;
+        var hours = totalSeconds / 3600;
+        
+        return Lang.format("$1$:$2$:$3$", [
+            hours.format("%02d"),
+            minutes.format("%02d"),
+            seconds.format("%02d")
+        ]);
+    }
+    
+    // Format countdown duration for display (e.g., "30m")
+    function formatCountdownDuration(seconds as Number) as String {
+        var minutes = seconds / 60;
+        return Lang.format("$1$m", [minutes.format("%.0f")]);
+    }
+    
+    // Format remaining countdown time for display
+    function formatRemainingTime(seconds as Number) as String {
+        if (seconds >= 0) {
+            var mins = (seconds / 60).toNumber();
+            var secs = seconds % 60;
+            return Lang.format("$1$:$2$", [mins.format("%02d"), secs.format("%02d")]);
+        } else {
+            // For negative times (overtime)
+            var absSeconds = (-seconds).toNumber();
+            var mins = (absSeconds / 60).toNumber();
+            var secs = absSeconds % 60;
+            return Lang.format("-$1$:$2$", [mins.format("%02d"), secs.format("%02d")]);
+        }
+    }
+    
+    // Format target time for display (e.g., "30m")
+    function formatTargetTime(minutes as Number) as String {
+        // Use zero padding to ensure all numbers are 2-digits wide
+        // This ensures the "m" will be aligned for all entries
+        return minutes.format("%02.0f") + "m";
     }
 }

@@ -23,24 +23,47 @@ class Activity_StopwatchDelegate extends WatchUi.InputDelegate {
     function onKey(evt) as Boolean {
         var key = evt.getKey();
         
-        // Handle Enter key (Start/Stop)
+        // Enter key (START/STOP button)
         if (key == WatchUi.KEY_ENTER) {
-            mView.toggleStopwatch();
+            if (mView != null && mView.mStopwatch != null) {
+                if (mView.mStopwatch.isRunning()) {
+                    mView.mStopwatch.pause();
+                } else {
+                    mView.mStopwatch.start();
+                }
+            }
             return true;
         }
-        // Handle Back key (Add lap)
-        else if (key == WatchUi.KEY_ESC) {
-            System.println("Back key pressed");
-            
-            // 对于物理Back按键，按原有逻辑处理
-            if (mView.mStopwatch.isRunning() || mView.mStopwatch.getElapsedTime() > 0) {
-                mView.addLap();
-                return true;
+        
+        // Back button (always records current countdown and shows countdown selection)
+        if (key == WatchUi.KEY_ESC) {
+            if (mView != null && mView.mStopwatch != null) {
+                // Record the current countdown as completed
+                if (mView.mStopwatch.isRunning()) {
+                    mView.mStopwatch.pause();
+                }
+                
+                // Calculate the current lap duration before adding a new lap
+                var currentCount = mView.mStopwatch.getLapCount();
+                
+                // Add a lap with ACTIVITY_NEUTRAL type to record the completed countdown
+                mView.addLap(ACTIVITY_NEUTRAL);
+                
+                // Verify that the lap was added successfully
+                if (mView.mStopwatch.getLapCount() > currentCount) {
+                    System.println("Successfully recorded lap for countdown");
+                } else {
+                    System.println("Failed to record lap for countdown");
+                }
+                
+                // Show the countdown selection view to set a new duration
+                var countdownView = new CountdownSelectionView();
+                var countdownDelegate = new CountdownSelectionDelegate(countdownView, mView);
+                WatchUi.pushView(countdownView, countdownDelegate, WatchUi.SLIDE_IMMEDIATE);
             }
-            
-            // 如果秒表停止且无累计时间，则退出
-            return false;
+            return true;
         }
+        
         // Handle Up key (Scroll up)
         else if (key == WatchUi.KEY_UP) {
             System.println("key onKey:"+key);
@@ -50,6 +73,7 @@ class Activity_StopwatchDelegate extends WatchUi.InputDelegate {
             }
             return false;
         }
+        
         // Handle Down key (Scroll down or save)
         else if (key == WatchUi.KEY_DOWN) {
             if (mView.mStopwatch.isRunning()) {
@@ -59,6 +83,7 @@ class Activity_StopwatchDelegate extends WatchUi.InputDelegate {
             }
             return true;
         }
+        
         // Handle Menu button
         else if (key == WatchUi.KEY_MENU) {
             return false; // Let system handle it for going to glances

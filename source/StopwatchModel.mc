@@ -16,11 +16,13 @@ class LapData {
     public var lapTime as Number;
     public var lapType as Number;
     public var startTimeOffset as Number;  // Store when the lap started relative to total time
+    public var countdownDuration as Number; // Store the countdown duration for this lap
     
-    function initialize(time as Number, type as Number, startOffset as Number) {
+    function initialize(time as Number, type as Number, startOffset as Number, duration as Number) {
         lapTime = time;
         lapType = type;
         startTimeOffset = startOffset;
+        countdownDuration = duration;
     }
     
     // Convert to serializable dictionary
@@ -28,7 +30,8 @@ class LapData {
         return {
             "lapTime" => lapTime,
             "lapType" => lapType,
-            "startOffset" => startTimeOffset
+            "startOffset" => startTimeOffset,
+            "countdownDuration" => countdownDuration
         };
     }
     
@@ -39,10 +42,16 @@ class LapData {
             startOffset = dict.get("startOffset");
         }
         
+        var duration = 0;
+        if (dict.hasKey("countdownDuration") && dict.get("countdownDuration") instanceof Number) {
+            duration = dict.get("countdownDuration");
+        }
+        
         return new LapData(
             dict.get("lapTime") as Number,
             dict.get("lapType") as Number,
-            startOffset
+            startOffset,
+            duration
         );
     }
 }
@@ -59,6 +68,10 @@ class StopwatchModel {
     private var mIsRunning as Boolean = false;
     private var mLaps as Array<LapData>;
     private var mCallback;
+    
+    // Countdown properties
+    private var mCountdownDuration as Number = 15 * 60;  // Default countdown duration in seconds (15 minutes)
+    private var mCountdownReached as Boolean = false;    // Flag to track if countdown has reached zero
     
     // Initialize model
     function initialize(callback) {
@@ -83,6 +96,17 @@ class StopwatchModel {
             if (lastLapTime instanceof Number) {
                 mLastLapTime = lastLapTime;
                 System.println("Restored last lap time: " + mLastLapTime);
+            }
+            
+            // Restore countdown settings
+            var countdownDuration = stored.get("countdownDuration");
+            if (countdownDuration instanceof Number) {
+                mCountdownDuration = countdownDuration;
+            }
+            
+            var countdownReached = stored.get("countdownReached");
+            if (countdownReached instanceof Boolean) {
+                mCountdownReached = countdownReached;
             }
             
             // Restore running state and startTime if it was running
@@ -133,7 +157,7 @@ class StopwatchModel {
             }
         }
             
-        // 确保UI每秒更新一次
+        // Start the UI update timer
         if (mTimer == null) {
             mTimer = new Timer.Timer();
             mTimer.start(method(:onTick), 1000, true);
@@ -149,19 +173,19 @@ class StopwatchModel {
         }
     }
     
-    // Start the stopwatch
+    // Start the timer
     function start() {
         if (!mIsRunning) {
             mStartTime = System.getTimer();
             
-            // 如果定时器不存在，创建一个新的
+            // Create a new timer if needed
             if (mTimer == null) {
                 mTimer = new Timer.Timer();
                 mTimer.start(method(:onTick), 1000, true);
             }
             
             mIsRunning = true;
-            System.println("Stopwatch started: " + mStartTime);
+            System.println("Timer started: " + mStartTime);
             saveState();
             
             // Force an immediate update
@@ -171,17 +195,16 @@ class StopwatchModel {
         }
     }
     
-    // Pause the stopwatch
+    // Pause the timer
     function pause() {
         if (mIsRunning) {
-            // 保留定时器用于UI更新，但停止实际计时
             // Add the time since start to the accumulated time
             var now = System.getTimer();
             mAccumulatedTime += now - mStartTime;
             mStartTime = 0; // Reset start time
             mIsRunning = false;
             
-            System.println("Stopwatch paused. Accumulated: " + mAccumulatedTime);
+            System.println("Timer paused. Accumulated: " + mAccumulatedTime);
             saveState();
             
             // Force an immediate update
@@ -191,14 +214,75 @@ class StopwatchModel {
         }
     }
     
-    // Reset the stopwatch
+    // Set countdown duration in seconds
+    function setCountdownDuration(durationSeconds as Number) {
+        // Don't reset the timer completely; preserve lap history
+        
+        // Stop the timer if it's running
+        if (mIsRunning) {
+            pause();
+        }
+        
+        // Reset timing state but keep laps
+        mStartTime = 0;
+        mAccumulatedTime = 0;
+        mLastLapTime = 0;
+        
+        // Set countdown parameters
+        mCountdownDuration = durationSeconds;
+        mCountdownReached = false;
+        
+        // Start the timer
+        start();
+        
+        System.println("Countdown set to: " + durationSeconds + " seconds");
+        saveState();
+    }
+    
+    // Get the current countdown state
+    function getCountdownState() as Dictionary {
+        var elapsedMilliseconds = getElapsedMilliseconds();
+        var elapsedSeconds = elapsedMilliseconds / 1000;
+        var remainingSeconds = mCountdownDuration - elapsedSeconds;
+        
+        return {
+            "duration" => mCountdownDuration,
+            "elapsed" => elapsedSeconds,
+            "remaining" => remainingSeconds,
+            "isCountdownReached" => mCountdownReached || remainingSeconds <= 0
+        };
+    }
+    
+    // Check and notify if countdown has reached zero
+    function checkCountdownCompletion() as Boolean {
+        if (mCountdownReached) {
+            return false;
+        }
+        
+        var countdownState = getCountdownState();
+        var remaining = countdownState.get("remaining");
+        
+        // Check if remaining is a number and less than or equal to zero
+        if (remaining != null && remaining instanceof Number && remaining <= 0 && !mCountdownReached) {
+            mCountdownReached = true;
+            saveState();
+            return true;
+        }
+        
+        return false;
+    }
+    
+    // Reset the timer
     function reset() {
-        // 保留定时器，但重置所有状态
+        // Preserve the timer, but reset all state
         mStartTime = 0;
         mAccumulatedTime = 0;
         mLastLapTime = 0;
         mIsRunning = false;
         mLaps = [] as Array<LapData>;
+        mCountdownReached = false;
+        
+        System.println("Timer reset");
         saveState();
         
         // Force an immediate update
@@ -207,187 +291,103 @@ class StopwatchModel {
         }
     }
     
-    // Toggle between start and pause
-    function toggle() {
-        System.println("Toggle called. Current state: " + (mIsRunning ? "running" : "stopped"));
-        if (mIsRunning) {
-            pause();
-        } else {
-            start();
-        }
-    }
-    
-    // Add a new lap
-    function addLap(activityType as Number) {
-        // Get the precise current elapsed time
-        var currentElapsedTime = getElapsedTime();
+    // Add a lap with the specified type
+    function addLap(lapType as Number) as Void {
+        var currentTotalTime = getElapsedMilliseconds();
+        var lapTime = currentTotalTime - mLastLapTime;
         
-        // Calculate lap time as the difference between current elapsed time and last lap time
-        var lapTime = currentElapsedTime - mLastLapTime;
-        
-        // Update last lap time to current elapsed time
-        mLastLapTime = currentElapsedTime;
-        
-        System.println("New lap - Elapsed: " + currentElapsedTime + 
-                      ", Lap time: " + lapTime);
-        
-        // Create the lap with timing info
-        var lap = new LapData(lapTime, activityType, currentElapsedTime - lapTime);
-        mLaps.add(lap);
-        saveState();
-        return lap;
-    }
-    
-    // Update the activity type for a specific lap
-    function updateLapType(index as Number, activityType as Number) {
-        if (index >= 0 && index < mLaps.size()) {
-            mLaps[index].lapType = activityType;
-            System.println("Updated lap " + index + " type to " + activityType);
+        if (lapTime > 0) {
+            var lap = new LapData(lapTime, lapType, mLastLapTime, mCountdownDuration);
+            mLaps.add(lap);
+            mLastLapTime = currentTotalTime;
+            
+            System.println("Lap added: " + lapTime + "ms, type: " + lapType);
             saveState();
         }
     }
     
-    // Get total elapsed time
-    function getElapsedTime() as Number {
-        if (mIsRunning) {
-            var currentTime = System.getTimer();
-            var runningTime = currentTime - mStartTime;
-            return mAccumulatedTime + runningTime;
-        } else {
-            return mAccumulatedTime;
-        }
-    }
-    
-    // Get current lap time
-    function getCurrentLapTime() as Number {
-        // Current lap time is exactly (total elapsed time - last lap time)
-        return getElapsedTime() - mLastLapTime;
-    }
-    
-    // Get the formatted display times that are guaranteed to be synchronized
-    function getSynchronizedTimes() as Dictionary {
-        // 直接获取当前时间，确保每次调用都是最新值
-        var elapsedTime = getElapsedTime();
-        var lapTime = getCurrentLapTime();
-        
-        /* 减少日志输出
-        System.println("getSynchronizedTimes called:");
-        System.println(" - System time: " + System.getTimer());
-        System.println(" - Elapsed: " + elapsedTime + "ms, Lap: " + lapTime + "ms");
-        System.println(" - Running: " + mIsRunning + ", StartTime: " + mStartTime + ", AccTime: " + mAccumulatedTime);
-        */
-        
-        // Process the times to ensure they're perfectly in sync
-        var elapsedSeconds = (elapsedTime / 1000).toNumber();
-        var lapSeconds = (lapTime / 1000).toNumber();
-        
-        return {
-            "elapsedTime" => elapsedTime,
-            "lapTime" => lapTime,
-            "elapsedSeconds" => elapsedSeconds,
-            "lapSeconds" => lapSeconds,
-            "elapsedTimeFormatted" => formatTimeWithHours(elapsedTime),
-            "lapTimeFormatted" => formatTime(lapTime)
-        };
-    }
-    
-    // Get all laps
-    function getLaps() as Array<LapData> {
-        return mLaps;
-    }
-    
-    // Get the number of laps
-    function getLapCount() as Number {
-        return mLaps.size();
-    }
-    
-    // Check if stopwatch is running
+    // Get whether the timer is currently running
     function isRunning() as Boolean {
         return mIsRunning;
     }
     
-    // Timer tick callback - 每秒更新一次UI
-    function onTick() as Void {
-        // This is called every second to update the UI
-        if (mCallback != null) {
-            // 减少日志输出，仅在调试时需要时开启
-            // System.println("Tick: UI update at " + System.getTimer());
-            
-            // 检查是否有时间在运行
-            /* 减少日志输出
-            if (mIsRunning) {
-                System.println("Running mode - Time: " + getElapsedTime() + "ms");
-            } else if (mAccumulatedTime > 0) {
-                System.println("Paused mode - Accumulated: " + mAccumulatedTime + "ms");
-            }
-            */
-            
-            // 强制更新UI
-            mCallback.invoke();
-        } else {
-            System.println("Tick: WARNING - no callback registered");
-        }
+    // Get the countdown duration in seconds
+    function getCountdownDuration() as Number {
+        return mCountdownDuration;
     }
     
-    // Save state to storage
+    // Get whether the countdown has reached zero
+    function hasCountdownReached() as Boolean {
+        return mCountdownReached;
+    }
+    
+    // The number of recorded laps
+    function getLapCount() as Number {
+        return mLaps.size();
+    }
+    
+    // Get a specific lap data object
+    function getLap(index as Number) as LapData? {
+        if (index >= 0 && index < mLaps.size()) {
+            return mLaps[index];
+        }
+        return null;
+    }
+    
+    // Get all lap data objects
+    function getAllLaps() as Array<LapData> {
+        return mLaps;
+    }
+    
+    // Get the current total elapsed time in milliseconds
+    function getElapsedMilliseconds() as Number {
+        var elapsed = mAccumulatedTime;
+        
+        if (mIsRunning && mStartTime > 0) {
+            var now = System.getTimer();
+            elapsed += now - mStartTime;
+        }
+        
+        return elapsed;
+    }
+    
+    // Get the current lap time (time since last lap) in milliseconds
+    function getCurrentLapMilliseconds() as Number {
+        return getElapsedMilliseconds() - mLastLapTime;
+    }
+    
+    // Save the current state to persistent storage
     function saveState() as Void {
-        // Convert LapData objects to serializable dictionaries
+        // Prepare an array of lap dictionaries for storage
         var lapDicts = [] as Array<Dictionary>;
         for (var i = 0; i < mLaps.size(); i++) {
             lapDicts.add(mLaps[i].toDict());
         }
         
+        // Create state dictionary with all relevant state
         var state = {
             "accTime" => mAccumulatedTime,
             "lastLapTime" => mLastLapTime,
             "isRunning" => mIsRunning,
-            "startTime" => mIsRunning ? mStartTime : 0,  // Only save real start time if running
-            "laps" => lapDicts
+            "startTime" => mStartTime,
+            "laps" => lapDicts,
+            "countdownDuration" => mCountdownDuration,
+            "countdownReached" => mCountdownReached
         };
         
-        System.println("Saving state - accTime: " + mAccumulatedTime + 
-                      ", lastLapTime: " + mLastLapTime + 
-                      ", isRunning: " + mIsRunning + 
-                      ", startTime: " + (mIsRunning ? mStartTime : 0));
-                      
+        // Store the state
         Storage.setValue("stopwatchState", state);
     }
     
-    // Format time to display string (MM:SS)
-    static function formatTime(time as Number) as String {
-        // Ensure we're working with a positive number
-        if (time < 0) {
-            time = 0;
+    // Called every second by the timer to update the UI
+    function onTick() as Void {
+        if (mCallback != null) {
+            // Check countdown completion before updating UI
+            if (mIsRunning) {
+                checkCountdownCompletion();
+            }
+            
+            mCallback.invoke();
         }
-        
-        // Round to nearest second
-        var totalSeconds = (time / 1000).toNumber();
-        var seconds = totalSeconds % 60;
-        var minutes = (totalSeconds / 60) % 60;
-        
-        return Lang.format("$1$:$2$", [
-            minutes.format("%02d"),
-            seconds.format("%02d")
-        ]);
-    }
-    
-    // Format time to display string with hours (HH:MM:SS)
-    static function formatTimeWithHours(time as Number) as String {
-        // Ensure we're working with a positive number
-        if (time < 0) {
-            time = 0;
-        }
-        
-        // Round to nearest second
-        var totalSeconds = (time / 1000).toNumber();
-        var seconds = totalSeconds % 60;
-        var minutes = (totalSeconds / 60) % 60;
-        var hours = totalSeconds / 3600;
-        
-        return Lang.format("$1$:$2$:$3$", [
-            hours.format("%02d"),
-            minutes.format("%02d"),
-            seconds.format("%02d")
-        ]);
     }
 } 
